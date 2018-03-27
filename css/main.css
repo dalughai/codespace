@@ -1,0 +1,279 @@
+/*
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Lustria|Marcellus+SC|Slabo+13px|Tauri');
+/*GENERAL-----------------------------------------------------------------------*/
+h3{
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Lustria';
+}
+
+body {
+    background-color: #FFFFFF;
+    color: #171717;
+    margin: 0;
+}
+div {
+}
+
+video{
+    width: 100%;
+}
+/*HEADER--------------------------------------------------------------------------*/
+header{
+
+    background: rgba(226,226,226,1);
+background: rgba(0,0,0,1);
+background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(64%, rgba(23,23,23,1)), color-stop(100%, rgba(23,23,23,1)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#171717', GradientType=0 );
+    }
+
+#menu {
+}
+
+#menu div{
+    border: solid white 1px;
+}
+#logo {
+    width: 230px;
+}
+
+#logo img{
+    width: 200px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+#carrito img{
+    width: 25px;
+    height: auto;
+    margin-left: 3px;
+    
+}
+#carrito{
+    float: right;
+    margin-right: 25px;
+    width: 200px;
+    height: 30px;
+    border: solid black 1px;
+    background-color: #FFFFFF;
+}
+
+#buscar{
+    width: 480px;
+    margin-top: 20px;
+}
+.texto{
+    width: 400px;
+}
+#sesion{
+    width: 200px;
+    float: right;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+#menu-categorias{
+    height: 25px;
+    border-top: solid #FFC300 1px;
+}
+.categorias-menu a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Lustria';
+}
+.botonc {
+    width: 300px;
+    /*margin-top: -13px;   */
+    text-align: center;
+
+}
+.botonc a:hover{
+    color: #000000;
+}
+.botonc:hover{
+    background-color: #FFC300;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+}
+
+#boxs img{
+    width: 400px;
+    height: 350px;
+}
+
+/*INDEX---------------------------------------------------------------------------*/
+
+main {
+}
+
+#banners img{
+    width: 100%;
+    height: 350px;
+}
+
+#view-product{
+    display: flex;
+    margin: 0 auto;
+}
+
+#presentacion{
+    margin-bottom: 50px;
+}
+.producto {
+    display: inline-block;
+    margin: 0 auto;
+}
+.cab_producto{
+    margin-bottom: 10px;
+}
+.producto img{
+    width: 250px;
+    height: 250px;
+}
+.img_producto{
+    padding-top: 10px;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    margin: 10px;
+}
+.info_producto{
+    padding: 0px 10px 5px 10px;
+    margin-bottom: 20px;
+}
+.index_view{
+    display: inline-block;
+    margin-left: 20px;
+    width: 390px;
+    height: 300px;
+    background-color: #D7D7D7;
+}
+.index_view img {
+    
+}
+
+#product-carrusel{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+/*QUIENES SOMOS--------------------------------------------------------------------*/
+#cuerpo_who{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+}
+
+#info{
+    width: 80%;
+}
+
+#menu_vertical{
+    left: 550px;
+    margin-left: 50px;
+}
+
+.productov img{
+    width: 250px;
+    height: 250px;
+}
+
+/*CATALOGO----------------------------------------------------------------*/
+
+#categorias{
+    display: inline-block;
+    float: left;
+}
+#catalogo{
+    height: 140px;
+}
+
+/*CONTACTO----------------------------------------------------------------*/
+
+#formulario{
+    display: inline-block;
+    float: left;
+    width: 300px;
+    margin-right: 30px;
+}
+#mapa{
+    display: inline-block;
+    width: 700px;
+}
+
+/*DETALLE PRODUCTO-------------------------------------------------------*/
+
+
+/*PIE DE PAGINA----------------------------------------------------------*/
+footer {
+background: rgba(226,226,226,1);
+background: rgba(0,0,0,1);
+background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(64%, rgba(23,23,23,1)), color-stop(100%, rgba(23,23,23,1)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#171717', GradientType=0 );
+}
+#foot-contacto img{
+    width: 200px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 850px;
+    display: block;
+}
+#fimglogo{
+    padding-top: 15px;
+}
+
+#foot-contacto {
+    
+    margin-bottom: 20px;
+}
+
+.fi{
+    width: 30px;
+    height: auto;
+}
+#column_1{
+    display: inline-block;
+}
+#column_2{
+    display: inline-block;
+}
+#column_3{
+    display: inline-block;
+}
+#column_4{
+    display: inline-block;
+}
+.foot_datos{
+    margin-left: 232px;
+}
+#foot-img{
+    margin-left: 350px;
+}
+
+footer li{
+    color: #E0E0E0;
+    font-family:'Roboto';
+    list-style: none;
+}
+footer a{
+    font-size: 13px;
+    color: #E0E0E0;
+    text-decoration: none;
+}
+
