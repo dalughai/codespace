@@ -20,10 +20,11 @@ END
 
 --Creación de la tabla
 CREATE TABLE usuario_direccion(
-	id BIGINT IDENTITY(1,1),
-
-	CONSTRAINT PK_usuario_direccion PRIMARY KEY(id),
-	CONSTRAINT FK_usuario_direccion_SEXO FOREIGN KEY (usuario_direccion_fk) REFERENCES usuario_direccion_fk (id) ON DELETE CASCADE ON UPDATE CASCADE
+	id_usuario BIGINT,
+	id_direccion BIGINT,
+	CONSTRAINT PK_usuario_direccion PRIMARY KEY(id_usuario, id_direccion),
+	CONSTRAINT FK_usuario_direccion_usuario FOREIGN KEY (id_usuario) REFERENCES usuarios (id) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FK_usuario_direccion_direccion FOREIGN KEY (id_direccion) REFERENCES direcciones (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
@@ -31,8 +32,9 @@ CREATE TABLE usuario_direccion(
 	--	INSERTO VALORES--
 --------------------------------------------------------------------------------------------
 
-INSERT INTO dbo.usuario_direccion()
-	VALUES  ();
+INSERT INTO dbo.usuario_direccion(id_usuario,id_direccion)
+	VALUES  (1,1),
+			(1,2);
 			
 
 SELECT*

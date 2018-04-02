@@ -28,14 +28,10 @@ if($conexion === false){
 
 //conexion A SQL_SERVER
 
-$serverName = "DESKTOP-GGLT061"; 
+$serverName = "localhost"; 
 $connectionInfo = array( "Database"=>"tostringshop", "UID"=>"tostringshop", "PWD"=>"123456");
 $conn = sqlsrv_connect( $serverName, $connectionInfo);
-if( $conn )  
-{  
-     echo "Connection established.\n";  
-}  
-else  
+if( $conn === false )
 {  
      echo "Connection could not be established.\n";  
      die( print_r( sqlsrv_errors(), true));  

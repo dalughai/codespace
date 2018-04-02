@@ -61,6 +61,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 #carrito{
     float: right;
     margin-right: 25px;
+    
     width: 200px;
     height: 30px;
     border: solid black 1px;
@@ -68,11 +69,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 
 #buscar{
-    width: 480px;
+    width: 380px;
     margin-top: 20px;
 }
 .texto{
-    width: 400px;
+    width: 300px;
 }
 #sesion{
     width: 200px;
@@ -82,17 +83,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 
 #menu-categorias{
-    height: 25px;
+    height: 35px;
     border-top: solid #FFC300 1px;
 }
 .categorias-menu a{
     text-decoration: none;
-    color: #ffffff;
+    color: #FFC300;
     font-family: 'Lustria';
 }
 .botonc {
-    width: 300px;
-    /*margin-top: -13px;   */
+    width: 250px;
     text-align: center;
 
 }
@@ -112,7 +112,9 @@ header ul{
     width: 400px;
     height: 350px;
 }
-
+.form-control:focus{
+    border-color: #FFC300;
+    box-shadow: 0 0 10px 0rem #ffc107;}
 /*INDEX---------------------------------------------------------------------------*/
 
 main {
