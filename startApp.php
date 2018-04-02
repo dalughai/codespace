@@ -1,6 +1,6 @@
 <?php
 
-$root = "/tostring_ver1.2/";
+$root = "/codespace/";
 $carpeta_fotos = $root . "images/fotos_tienda/";
 $fotos_productos = $root . "images/productos/";
     
@@ -13,7 +13,7 @@ require 'libs/funciones.php';
 */
 
 /** CONECTAR A BASE DE DATOS */
-
+/*
 define("HOST_BBDD","localhost");
 define("USER_BBDD","root");
 define("PASS_BBDD","");
@@ -24,10 +24,19 @@ $conexion = mysqli_connect(HOST_BBDD, USER_BBDD, PASS_BBDD, NAME_BBDD);
 if($conexion === false){
     die("ERROR: Error de conexión " . mysqli_connect_error());
 }
-
+*/
 
 //conexion A SQL_SERVER
-/*
-$serverName = "localhost"; 
-$connectionInfo = array( "Database"=>"MiTienda", "UID"=>"appLogin", "PWD"=>"1234");
-$conn = sqlsrv_connect( $serverName, $connectionInfo);*/
+
+$serverName = "DESKTOP-GGLT061"; 
+$connectionInfo = array( "Database"=>"tostringshop", "UID"=>"tostringshop", "PWD"=>"123456");
+$conn = sqlsrv_connect( $serverName, $connectionInfo);
+if( $conn )  
+{  
+     echo "Connection established.\n";  
+}  
+else  
+{  
+     echo "Connection could not be established.\n";  
+     die( print_r( sqlsrv_errors(), true));  
+}  
