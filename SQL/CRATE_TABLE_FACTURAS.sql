@@ -22,7 +22,6 @@ END
 CREATE TABLE factura(
 	id BIGINT IDENTITY(1,1),
 	id_cliente BIGINT,
-	id_pedido BIGINT,
 	fecha_factura DATETIME,
 	precio_sin_iva decimal,
 	precio_iva decimal,
