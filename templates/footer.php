@@ -1,10 +1,27 @@
 <footer>
-        <div id="foot-contacto">
-            <img id="fimglogo" src="<?php echo $carpeta_fotos?>/logo.svg" alt="img">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 m-auto">
+                <img id="fimglogo" src="<?php echo $carpeta_fotos?>/logo4.png" alt="img">
+            </div>
+        </div>
     </div>
-            <section id="column_1">
-                <div class="foot_datos">
-                    <ul>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo05" aria-controls="navbarTogglerDemo05" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> 
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo06" aria-controls="navbarTogglerDemo05" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> 
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo07" aria-controls="navbarTogglerDemo05" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> 
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo08" aria-controls="navbarTogglerDemo05" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> 
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo05">
+        <div class="row">
+            <div class="foot_datos">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li><strong>MI CUENTA</strong></li>
                         <li><a href="">Mis pedidos</a></li>
                         <li><a href="">Mis vales descuento</a></li>
@@ -16,10 +33,13 @@
                         <li><br></li>
                     </ul>
                 </div>
-            </section>
-            <section id="column_2">
+        </div>
+    </div>  
+    
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo06">
+            <div class="row">
                 <div class="foot_datos">
-                    <ul>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li><strong>SIGANOS</strong></li>
                         <li><a href="">Facebook</a></li>
                         <li><a href="">Twitter</a></li>
@@ -31,10 +51,12 @@
                         <li><br></li>
                     </ul>
                 </div>
-            </section>
-            <section id="column_3">
+        </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo07">
+            <div class="row">
                 <div class="foot_datos">
-                    <ul>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li><strong>INFORMACIÓN</strong></li>
                         <li><a href="">Politica de privacidad</a></li>
                         <li><a href="">Condiciones Generales</a></li>
@@ -46,10 +68,13 @@
                         <li><a href="">Preguntas Frecuentes</a></li>
                     </ul>
                 </div>
-            </section>
-            <section id="column_4">
+        </div>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo08">
+            <div class="row">
                 <div class="foot_datos">
-                    <ul>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li><strong>CONTACTE CON NOSOTROS</strong></li>
                         <li><a href="">ToStringShop.com</a></li>
                         <li><a href="">C/Alextebuna Nº35</a></li>
@@ -61,15 +86,12 @@
                         <li><br></li>
                     </ul>
                 </div>
-            </section>
-            <section>
+        </div>
+    </div>
+          
                 <div id="foot-img">
                     <img src="<?php echo $carpeta_fotos?>/footer.png">
                 </div>
-            </section>
             
             
-            
-        
-   
 </footer>

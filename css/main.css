@@ -24,7 +24,7 @@ video{
 /*HEADER--------------------------------------------------------------------------*/
 header{
 
-    background: rgba(226,226,226,1);
+background: rgba(226,226,226,1);
 background: rgba(0,0,0,1);
 background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%);
 background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(64%, rgba(23,23,23,1)), color-stop(100%, rgba(23,23,23,1)));
@@ -33,13 +33,19 @@ background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba
 background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%);
 background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#171717', GradientType=0 );
-    }
+
+}
 
 #menu {
 }
 
 #menu div{
     border: solid white 1px;
+}
+
+#navlogo{
+    border-bottom: solid #FFC300 1px;
+}
 }
 #logo {
     width: 230px;
@@ -51,7 +57,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     margin-bottom: 20px;
     margin-left: 15px;
 }
-
+ @media screen and (max-width: 768px) {
+            #logo img {
+                    width: 310px;
+                    margin-top: 15px;
+                    margin-bottom: 20px;
+                    margin-left: 170px;
+            }
+}
+.navbar-collapse{
+    z-index: 2;
+}
+ 
 #carrito img{
     width: 25px;
     height: auto;
@@ -59,19 +76,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     
 }
 #carrito{
-    float: right;
-    margin-right: 25px;
-    
+    margin-left: -225px;
     width: 200px;
     height: 30px;
     border: solid black 1px;
     background-color: #FFFFFF;
 }
 
-#buscar{
-    width: 380px;
-    margin-top: 20px;
-}
 .texto{
     width: 300px;
 }
@@ -81,8 +92,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     margin-right: 15px;
     margin-bottom: 5px;
 }
-
-#menu-categorias{
+#form-buscador{
+    width: 500px;
+}
+#sesion{
+    margin-bottom: 100px;
+    margin-left: 200px;
+}
+.menu-categorias{
     height: 35px;
     border-top: solid #FFC300 1px;
 }
@@ -92,7 +109,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     font-family: 'Lustria';
 }
 .botonc {
-    width: 250px;
+    width: 200px;
     text-align: center;
 
 }
@@ -108,6 +125,9 @@ header ul{
     display: flex;
 }
 
+#colapse-categorias{
+    background-color: #FFC300;
+}
 #boxs img{
     width: 400px;
     height: 350px;
@@ -118,6 +138,7 @@ header ul{
 /*INDEX---------------------------------------------------------------------------*/
 
 main {
+    margin-top: 5px;
 }
 
 #banners img{
@@ -238,6 +259,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 #fimglogo{
     padding-top: 15px;
+    width: 200px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 15px;
 }
 
 #foot-contacto {
@@ -265,7 +290,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     margin-left: 232px;
 }
 #foot-img{
-    margin-left: 350px;
+
 }
 
 footer li{

@@ -31,8 +31,8 @@ if($conexion === false){
 $serverName = "localhost"; 
 $connectionInfo = array( "Database"=>"tostringshop", "UID"=>"tostringshop", "PWD"=>"123456");
 $conn = sqlsrv_connect( $serverName, $connectionInfo);
-if( $conn === false )
+/*if( $conn === false )
 {  
      echo "Connection could not be established.\n";  
      die( print_r( sqlsrv_errors(), true));  
-}  
+}  */
