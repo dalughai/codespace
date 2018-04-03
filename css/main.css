@@ -11,9 +11,13 @@ a {
 }
 
 body {
-    background-color: #FFFFFF;
+    background-color: #3B3B3B;
     color: #171717;
     margin: 0;
+}
+
+#body-container{
+    background-color: gainsboro;
 }
 div {
 }
@@ -35,20 +39,59 @@ background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, r
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#171717', GradientType=0 );
 
 }
-
-#menu {
+.dropdown-menu{
+    background-color: transparent;
 }
-
+.btn-secondary {
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+}
+.btn-secondary:active {
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+}
+.btn-secondary:hover {
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+}
+#prueba{
+    visibility: hidden;
+}
+#responsive-menu{
+    position: absolute;
+    visibility: hidden;
+}
+.header-list li {
+    color: lightgrey;
+    margin: 15px;
+    margin-top: 25px;
+}
+#user{
+    color: #FFC300;
+}
+.fas {
+    color: #FFC300;
+}
 #menu div{
     border: solid white 1px;
 }
 
-#navlogo{
-    border-bottom: solid #FFC300 1px;
+#header-categorias{
+    margin-top: 20px;
+    border-top: solid #FFC300 1px;
 }
+#h2-categorias{
+    margin-top: 20px;
+    border-top: solid #FFC300 1px;
 }
+
 #logo {
-    width: 230px;
+      width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #logo img{
@@ -57,18 +100,58 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     margin-bottom: 20px;
     margin-left: 15px;
 }
- @media screen and (max-width: 768px) {
-            #logo img {
-                    width: 310px;
-                    margin-top: 15px;
-                    margin-bottom: 20px;
-                    margin-left: 170px;
-            }
+
+.container{
+    max-width: 1300px;
+    min-width: 575px;
+    padding: 0;
 }
+
 .navbar-collapse{
     z-index: 2;
 }
- 
+
+.texto{
+    width: 300px;
+}
+
+#form-buscador{
+}
+
+#menu-categorias{
+    height: 35px;
+    width: 100%;
+}
+#navbarTogglerDemo01{
+    width: 100%;
+}
+#navbarTogglerDemo03{
+    height: 15px;
+    margin-bottom: 100px;
+}
+.categorias-menu a{
+    text-decoration: none;
+    color: #FFC300;
+    font-family: 'Lustria';
+}
+.categorias-menu li{
+    margin-left: 0;  
+}
+.categorias-menu-hidden ul{
+    display: block;
+    height: 100px;
+}
+.botonc {
+    width: 220px;
+    text-align: center;
+}
+#sesion{
+    width: 200px;   
+    margin-left: 0px;
+}
+#sesion-hidden{
+    margin-right: 15px;
+}
 #carrito img{
     width: 25px;
     height: auto;
@@ -76,42 +159,58 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     
 }
 #carrito{
-    margin-left: -225px;
     width: 200px;
     height: 30px;
     border: solid black 1px;
     background-color: #FFFFFF;
+    margin-left: 45%;
 }
 
-.texto{
-    width: 300px;
+ @media screen and (max-width: 1300px) {
+            .botonc {
+                width: 200px;
+            }        
 }
-#sesion{
-    width: 200px;
-    float: right;
-    margin-right: 15px;
-    margin-bottom: 5px;
-}
-#form-buscador{
-    width: 500px;
-}
-#sesion{
-    margin-bottom: 100px;
-    margin-left: 200px;
-}
-.menu-categorias{
-    height: 35px;
-    border-top: solid #FFC300 1px;
-}
-.categorias-menu a{
-    text-decoration: none;
-    color: #FFC300;
-    font-family: 'Lustria';
-}
-.botonc {
-    width: 200px;
-    text-align: center;
-
+ @media screen and (max-width: 1000px) {
+     /*       
+    #enlaces-derecha{
+        position: absolute;
+        visibility:hidden;
+     }            
+    #enlaces-izquierda{
+        position: absolute;
+        visibility:hidden;
+     }  */          
+    #buscador{
+        position: absolute;
+        visibility:hidden;
+     }            
+    #sesion{
+        position: absolute;
+        visibility:hidden;
+     }            
+    #carrito-div{
+        position: absolute;
+        visibility:hidden;
+     }
+    #header-categorias{
+        position: absolute;
+        visibility: hidden;
+    } 
+    #responsive-menu{
+        position: relative;
+        visibility: visible;
+        padding-bottom: 10px;
+    }
+     #footer-hidden{
+        position: relative;
+        visibility: visible;
+        padding-bottom: 10px;
+     }
+     #footer-datos{
+        position: absolute;
+        visibility: hidden;
+     }
 }
 .botonc a:hover{
     color: #000000;
@@ -128,9 +227,14 @@ header ul{
 #colapse-categorias{
     background-color: #FFC300;
 }
-#boxs img{
+.box img{
     width: 400px;
     height: 350px;
+}
+ @media screen and (max-width: 1230px) {
+            .box {
+                margin-top: 20px;
+            }        
 }
 .form-control:focus{
     border-color: #FFC300;
@@ -138,7 +242,7 @@ header ul{
 /*INDEX---------------------------------------------------------------------------*/
 
 main {
-    margin-top: 5px;
+    padding-top: 5px;
 }
 
 #banners img{
@@ -188,8 +292,16 @@ main {
 
 #product-carrusel{
     margin-top: 25px;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
+    padding-left: 60px;
 }
+
+#product-carrusel img{
+    width: 150px;
+    height: auto;
+    margin-left: 20px;
+}
+
 /*QUIENES SOMOS--------------------------------------------------------------------*/
 #cuerpo_who{
     margin-top: 10px;
@@ -266,8 +378,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 
 #foot-contacto {
-    
-    margin-bottom: 20px;
+
 }
 
 .fi{
@@ -286,13 +397,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 #column_4{
     display: inline-block;
 }
-.foot_datos{
-    margin-left: 232px;
-}
-#foot-img{
 
+.foot-datos{
+    margin-left: 35px;
+    width: 150px;
 }
-
 footer li{
     color: #E0E0E0;
     font-family:'Roboto';
@@ -302,5 +411,14 @@ footer a{
     font-size: 13px;
     color: #E0E0E0;
     text-decoration: none;
+}
+#footer-hidden{
+        position: absolute;
+        visibility: hidden;
+}
+
+#foot-img img{
+    position: relative;
+    width: 90%;
 }
 

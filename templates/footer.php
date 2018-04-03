@@ -1,62 +1,31 @@
-<footer>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 m-auto">
+<div class="container">
+    <footer>
+    <div class="row">
+        <div class="col-12 text-center">
                 <img id="fimglogo" src="<?php echo $carpeta_fotos?>/logo4.png" alt="img">
-            </div>
-        </div>
+        </div>    
     </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo05" aria-controls="navbarTogglerDemo05" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button> 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo06" aria-controls="navbarTogglerDemo05" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button> 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo07" aria-controls="navbarTogglerDemo05" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button> 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo08" aria-controls="navbarTogglerDemo05" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button> 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo05">
-        <div class="row">
-            <div class="foot_datos">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <div id="footer-datos" class="row">
+        <div class="col-3">
+            <ul class="">
                         <li><strong>MI CUENTA</strong></li>
                         <li><a href="">Mis pedidos</a></li>
                         <li><a href="">Mis vales descuento</a></li>
                         <li><a href="">Mis direcciones</a></li>
                         <li><a href="">Mis datos personales</a></li>
                         <li><a href="">Mis vales</a></li>
-                        <li><br></li>
-                        <li><br></li>
-                        <li><br></li>
-                    </ul>
-                </div>
+            </ul>            
         </div>
-    </div>  
-    
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo06">
-            <div class="row">
-                <div class="foot_datos">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <div class="col-3">
+            <ul class="">
                         <li><strong>SIGANOS</strong></li>
                         <li><a href="">Facebook</a></li>
                         <li><a href="">Twitter</a></li>
                         <li><a href="">Instagram</a></li>
-                        <li><br></li>
-                        <li><br></li>
-                        <li><br></li>
-                        <li><br></li>
-                        <li><br></li>
-                    </ul>
-                </div>
+            </ul>            
         </div>
-    </div>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo07">
-            <div class="row">
-                <div class="foot_datos">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <div class="col-3">
+            <ul class="">
                         <li><strong>INFORMACIÓN</strong></li>
                         <li><a href="">Politica de privacidad</a></li>
                         <li><a href="">Condiciones Generales</a></li>
@@ -66,32 +35,91 @@
                         <li><a href="">Información de Envios</a></li>
                         <li><a href="">Sobre Nosotros</a></li>
                         <li><a href="">Preguntas Frecuentes</a></li>
-                    </ul>
-                </div>
-        </div>
-    </div>
-    
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo08">
-            <div class="row">
-                <div class="foot_datos">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            </ul>            
+        </div>    
+        <div class="col-3">
+            <ul class="">
                         <li><strong>CONTACTE CON NOSOTROS</strong></li>
                         <li><a href="">ToStringShop.com</a></li>
                         <li><a href="">C/Alextebuna Nº35</a></li>
                         <li><a href="">Tel: 666 66 66 66</a></li>
                         <li><a href="">e-mail: info@tostringshop.com</a></li>
-                        <li><br></li>
-                        <li><br></li>
-                        <li><br></li>
-                        <li><br></li>
+            </ul>            
+        </div>    
+    </div>
+    <div id="footer-hidden" class="row">
+        <div class="col-3">
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo09" aria-controls="navbarTogglerDemo09" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-angle-right"> <span> Mi Cuenta</span></i>
+                </button>
+                <div id="navbarTogglerDemo09" class="foot-datos">
+                    <ul class="navbar-nav">
+                        <li><a href="">Mis pedidos</a></li>
+                        <li><a href="">Mis vales descuento</a></li>
+                        <li><a href="">Mis direcciones</a></li>
+                        <li><a href="">Mis datos personales</a></li>
+                        <li><a href="">Mis vales</a></li>
                     </ul>
                 </div>
+            </nav>
+        </div>        
+        <div class="col-3">
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo10" aria-controls="navbarTogglerDemo10" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-angle-right"> <span> Mi Cuenta</span></i>
+                </button>
+                <div id="navbarTogglerDemo10" class="foot-datos">
+                    <ul class="navbar-nav">
+                        <li><a href="">Mis pedidos</a></li>
+                        <li><a href="">Mis vales descuento</a></li>
+                        <li><a href="">Mis direcciones</a></li>
+                        <li><a href="">Mis datos personales</a></li>
+                        <li><a href="">Mis vales</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </div>
-          
+        <div class="col-3">
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo11" aria-controls="navbarTogglerDemo11" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-angle-right"> <span> Mi Cuenta</span></i>
+                </button>
+                <div id="navbarTogglerDemo11" class="foot-datos">
+                    <ul class="navbar-nav">
+                        <li><a href="">Mis pedidos</a></li>
+                        <li><a href="">Mis vales descuento</a></li>
+                        <li><a href="">Mis direcciones</a></li>
+                        <li><a href="">Mis datos personales</a></li>
+                        <li><a href="">Mis vales</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>    
+        <div class="col-3">
+            <nav class="navbar navbar-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo12" aria-controls="navbarTogglerDemo12" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-angle-right"> <span> Mi Cuenta</span></i>
+                </button>
+                <div id="navbarTogglerDemo12" class="foot-datos">
+                    <ul class="navbar-nav">
+                        <li><a href="">Mis pedidos</a></li>
+                        <li><a href="">Mis vales descuento</a></li>
+                        <li><a href="">Mis direcciones</a></li>
+                        <li><a href="">Mis datos personales</a></li>
+                        <li><a href="">Mis vales</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>    
+    </div> 
+    <div class="row">
+        <div class="col-12 text-center">
                 <div id="foot-img">
                     <img src="<?php echo $carpeta_fotos?>/footer.png">
                 </div>
-            
-            
-</footer>
+        </div>
+    </div>
+</div>
+    </footer>    
+</div>
