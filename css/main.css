@@ -1,5 +1,5 @@
-/*
-@import url('https://fonts.googleapis.com/css?family=Cinzel|Lustria|Marcellus+SC|Slabo+13px|Tauri');
+
+@import url('https://fonts.googleapis.com/css?family=Cutive Mono|Lustria|Palanquin Dark|Slabo+13px|Candal');
 /*GENERAL-----------------------------------------------------------------------*/
 h3{
     text-align: center;
@@ -39,6 +39,15 @@ background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, r
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#171717', GradientType=0 );
 
 }
+
+.enlaces-header a{
+    color: #FFC300;
+    text-decoration: none;
+    font-family: 'Lustria';
+    font-size: 14px;
+
+}
+
 .dropdown-menu{
     background-color: transparent;
 }
@@ -99,6 +108,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     margin-top: 15px;
     margin-bottom: 20px;
     margin-left: 15px;
+    transition: 0.3s;
+}
+#logo img:hover{
+    width: 225px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
 }
 
 .container{
@@ -231,9 +247,64 @@ header ul{
     width: 400px;
     height: 350px;
 }
- @media screen and (max-width: 1230px) {
-            .box {
+ @media screen and (max-width: 1250px) {
+            .box img {
+                width: 375px;
+                height: 325px;
                 margin-top: 20px;
+                margin-bottom: 20px;
+                
+                
+            }        
+}
+ @media screen and (max-width: 1160px) {
+            .box img {
+                width: 350px;
+                height: 300px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                
+                
+            }        
+}
+ @media screen and (max-width: 1100px) {
+            .box img {
+                width: 350px;
+                height: 300px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                
+                
+            }        
+}
+ @media screen and (max-width: 1090px) {
+            .box img {
+                width: 300px;
+                height: 250px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                
+                
+            }        
+}
+ @media screen and (max-width: 992px) {
+            .box img {
+                width: 650px;
+                height: 350px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                
+                
+            }        
+}
+ @media screen and (max-width: 700px) {
+            .box img {
+                width: 80%;
+                height: 350px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                
+                
             }        
 }
 .form-control:focus{
@@ -290,16 +361,81 @@ main {
     
 }
 
+
+/*Carrusel*/
+ @media screen and (max-width: 1100px) {
+            .item-carrusel img{
+                margin-left: 15px;
+            }        
+}
+ @media screen and (max-width: 940px) {
+            .item-carrusel img{
+                width: 100px;
+                margin-left: 15px;
+            }        
+}
+ @media screen and (max-width: 700px) {
+            .item-carrusel img{
+                width: 100px;
+                margin: 0;
+            }        
+}
 #product-carrusel{
     margin-top: 25px;
     padding-bottom: 25px;
-    padding-left: 60px;
 }
-
-#product-carrusel img{
+item-carrusel{
+    
+    
+}
+.precio-producto{
+    color: #FFC300;
+}
+.imagen-carrusel{
     width: 150px;
     height: auto;
     margin-left: 20px;
+}
+
+/*LOGIN /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.login-head{
+    padding-top: 50px;
+    border-bottom: solid black 1px;
+}
+.login-sesion{
+    margin-top: 35px;
+    margin-bottom: 35px;;
+}
+
+.login-titulo{
+    border-bottom: solid black 1px;
+}
+.formulario{
+    border: #F7F7F7 solid 1px;
+    width: 100%;
+    background-color: #F8F8F8;
+    
+    height: 350px;
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.registro{
+    border: #F7F7F7 solid 1px;
+    width: 100%;
+    background-color: #F8F8F8;
+    height: 600px;
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.registrado{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /*QUIENES SOMOS--------------------------------------------------------------------*/
@@ -373,7 +509,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     padding-top: 15px;
     width: 200px;
     margin-top: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin-left: 15px;
 }
 
@@ -419,6 +555,6 @@ footer a{
 
 #foot-img img{
     position: relative;
-    width: 90%;
+    width: 50%;
 }
 

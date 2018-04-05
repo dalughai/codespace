@@ -1,39 +1,39 @@
 <div class="container">
 <header>
-    <div class="row">
-        <div id="enlaces-izquierda" class="col-4">
+    <div class="row ">
+        <div id="enlaces-izquierda" class="col-4 enlaces-header">
             <ul class="header-list">
                 <li>
-                    <a>Envios</a>
+                    <a href="">Envios</a>
                 </li>
                 <li>
-                    <a>Contacto</a>
+                    <a href="">Contacto</a>
                 </li>
                 <li>
-                    <a>Ayuda</a>
+                    <a href="">Ayuda</a>
                 </li>
                 <li>
-                    <a>Sugerencias</a>
+                    <a href="">Sugerencias</a>
                 </li>
             </ul>
         </div>
 
         <div id="logo" class="col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
-            <img src="<?php echo $carpeta_fotos?>/logo4.png">
+            <a href="<?php echo $root ?>index.php"><img src="<?php echo $carpeta_fotos?>/logo4.png"></a>
         </div>
-        <div id="enlaces-derecha" class="col-4">
+        <div id="enlaces-derecha" class="col-4 enlaces-header">
             <ul class="header-list">
                 <li>
-                    <a>Envios</a>
+                    <a href="">Noticias</a>
                 </li>
                 <li>
-                    <a>Contacto</a>
+                    <a href="">Marcas</a>
                 </li>
                 <li>
-                    <a>Ayuda</a>
+                    <a href="">Novedades</a>
                 </li>
                 <li>
-                    <a>Sugerencias</a>
+                    <a href="<?php echo $root ?>micuenta">Mi Cuenta</a>
                 </li>
             </ul>
             
@@ -47,9 +47,19 @@
             </form>
         </div>
         <div id="sesion" class="col-4 text-center">
-        <a href="">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Iniciar Sesion / Registrarse</button>
-        </a>
+        
+        
+        <?php if(isset($_SESSION["usuario"])) { ?>
+            <div class="d-flex justify-content-around"> 
+                <a href="<?php echo $root ?>micuenta">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Bienvenido <?php echo $_SESSION['usuario']['nombre']?></button>
+                </a>
+            </div>
+        <?php } else { ?>
+            <a href="<?php echo $root ?>login">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Iniciar Sesion / Registrarse</button>
+            </a>
+        <?php } ?>
     </div>
         <div id="carrito-div" class="col-4 text-right">
         <div id="carrito">
@@ -225,7 +235,6 @@
 </nav>
     </div>
 
-    
 
 </header>
 </div>

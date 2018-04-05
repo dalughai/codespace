@@ -5,12 +5,12 @@ $carpeta_fotos = $root . "images/fotos_tienda/";
 $fotos_productos = $root . "images/productos/";
     
 /** CARGAR LIBRERIAS NECESARIAS PARA NUESTRO PROYECTO */
-/*
+
 require 'libs/PHPMailer/src/Exception.php';
 require 'libs/PHPMailer/src/PHPMailer.php';
 require 'libs/PHPMailer/src/SMTP.php';
 require 'libs/funciones.php';
-*/
+
 
 /** CONECTAR A BASE DE DATOS */
 /*
@@ -36,3 +36,5 @@ if( $conexion === false )
      echo "Connection could not be established.\n";  
      die( print_r( sqlsrv_errors(), true));  
 }
+
+?>

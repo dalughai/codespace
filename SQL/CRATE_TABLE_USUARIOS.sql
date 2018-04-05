@@ -27,7 +27,7 @@ CREATE TABLE usuarios(
 	sexo TINYINT,
 	active tinyint,
 	email VARCHAR(100),
-	contraseña VARCHAR(30),
+	passwd VARCHAR(30),
 	fecha_nacimiento VARCHAR(30),
 	direccion bigint,
 	date_add datetime,
@@ -45,7 +45,7 @@ CREATE TABLE usuarios(
 	--	INSERTO VALORES--
 --------------------------------------------------------------------------------------------
 
-INSERT INTO dbo.usuarios(nombre,apellido_1,apellido_2,sexo,active,email,contraseña,fecha_nacimiento,direccion,date_add)
+INSERT INTO dbo.usuarios(nombre,apellido_1,apellido_2,,sexo,active,email,passwd,fecha_nacimiento,direccion,date_add)
 	VALUES  ('Sergio', 'Álvarez','García','1','1','sergioalvarez@tostringshop.com','123456','10-09-1991','1',GETDATE());
 			
 
