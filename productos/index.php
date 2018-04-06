@@ -1,8 +1,8 @@
 <?php
 require '../startApp.php';
-$titulo = "Login";
+$titulo = "Productos";
 
-$template_seccion = "../templates/login.php";
+$template_seccion = "../templates/producto.php";
 
 include "../templates/main.php";
 

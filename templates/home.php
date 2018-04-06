@@ -57,7 +57,6 @@
     $sql = "SELECT * FROM productos ";
 
     $resultado = sqlsrv_query($conexion, $sql);
-    //$resultado = false;
 
     if ($resultado) {
 

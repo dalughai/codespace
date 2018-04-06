@@ -210,22 +210,22 @@
 
     <ul class="categorias-menu">
       <li class="nav-item botonc">
-        <a href="">Guitarra Electrica</a>
+        <a href="<?php echo $root ?>categorias?id=1">Guitarra Electrica</a>
       </li>
       <li class="nav-item botonc">
-        <a href="">Guitarra Acustica</a>
+        <a href="<?php echo $root ?>categorias?id=2">Guitarra Acustica</a>
       </li>
       <li class="nav-item botonc">
-        <a href="">Guitarra Clasica</a>
+        <a href="<?php echo $root ?>categorias?id=3">Guitarra Clasica</a>
       </li>
       <li class="nav-item botonc">
-        <a href="">Bajo Electrico</a>
+        <a href="<?php echo $root ?>categorias?id=4">Bajo Electrico</a>
       </li>
       <li class="nav-item botonc">
-        <a href="">Bajo Acustico</a>
+        <a href="<?php echo $root ?>categorias?id=5">Bajo Acustico</a>
       </li>
       <li class="nav-item botonc">
-        <a href="">Accesorios</a>
+        <a href="<?php echo $root ?>categorias?id=6">Accesorios</a>
       </li>
     </ul>
       </div>

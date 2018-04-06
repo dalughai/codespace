@@ -14,4 +14,8 @@
     <script src="<?php echo $root?>js/slick.min.js"></script>
     <link href="<?php echo $root?>css/slick.css" rel="stylesheet" type="text/css"> 
     <link href="<?php echo $root?>css/slick-theme.css" rel="stylesheet" type="text/css"> 
+    <script src="<?php echo $root?>js/PC/classie.js"></script>
+    <script src="<?php echo $root?>js/PC/main.js"></script>
+    <script src="<?php echo $root?>js/PC/modernizr.custom.js"></script>
+    <link href="<?php echo $root?>css/component.css" rel="stylesheet" type="text/css"> 
 </head>
