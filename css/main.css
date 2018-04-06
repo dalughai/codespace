@@ -168,20 +168,43 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 #sesion-hidden{
     margin-right: 15px;
 }
-#carrito img{
-    width: 25px;
-    height: auto;
-    margin-left: 3px;
-    
+#carrito-div{
+    position: relative; 
 }
 #carrito{
-    width: 200px;
-    height: 30px;
+    display: inline-flex;
+    width: 250px;
+    height: 40px;
     border: solid black 1px;
-    background-color: #FFFFFF;
-    margin-left: 45%;
+    background-color: #DCDCDC;
+    margin-right: 5px;
 }
 
+#carrito .fas {
+    margin: 5px;
+    margin-right: 15px;
+    color: #131313;
+}
+#carrito .cantidad{
+    margin: 5px;
+}
+#carrito .precio{
+    margin: 5px;
+    color: firebrick;
+}
+#carrito-div:hover{
+    
+}
+#carritod{
+    z-index: 2;
+    visibility: hidden;
+    position: absolute;
+    top: 45px;
+    right: 40px;
+    width: 300px;
+    height: 400px;
+    background-color: #DCDCDC; 
+}
  @media screen and (max-width: 1300px) {
             .botonc {
                 width: 200px;
@@ -389,7 +412,7 @@ item-carrusel{
     
 }
 .precio-producto{
-    color: #FFC300;
+    color: black;
 }
 .imagen-carrusel{
     width: 150px;
@@ -440,10 +463,39 @@ item-carrusel{
 
 /*////////////////////// CATEGORIAS   ////////////////////////////////////////////////////////////////////////////////////*/
 .categoria-show img{
+    margin-top: 30px;
     width: 150px;
     height: 150px;
 }
 
+.filtro {
+    padding: 15px;
+    background-color: #E9ECEF;
+}
+
+.titulo-filtro{
+    border-right: black solid 1px;
+    padding-right: 10px;
+}
+
+.filtro div{
+    display: inline-flex;
+}
+
+
+/*/////////////PRODUCTO///////////////////////////////////////*/
+
+.producto-imagen{
+    margin-left: 35px;
+    border: #3B3B3B solid 1px;
+    padding: 25px;
+}
+.producto-imagen img{
+    width: 350px;
+}
+.descripcion{
+    margin-top: 25px;
+}
 
 /*QUIENES SOMOS--------------------------------------------------------------------*/
 #cuerpo_who{

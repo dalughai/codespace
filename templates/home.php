@@ -59,24 +59,30 @@
     $resultado = sqlsrv_query($conexion, $sql);
 
     if ($resultado) {
-
     ?>
                 <div id="product-carrusel" class="row text-center d-flex justify-content-center">
                     <div class="col-10">
                         <div class="car">
                             
                             <?php 
-            while( $row = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC) ) {
+            while( $producto = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC) ) {
                 
                 ?>
+                        
                             <div class="item-carrusel">
-                                <img class="imagen-carrusel" src="<?php echo $root ?><?php echo $row['imagen']?>"> 
+                                <a href="<?php echo $root?>productos?id=<?php echo $producto['id'] ?>">
+                                <img class="imagen-carrusel" src="<?php echo $root ?><?php echo $producto['imagen']?>"> 
+
                                 <br>
-                                <span><?php echo $row['nombre'] ?></span>
+                                <span><?php echo $producto['nombre'] ?></span>
                                 <br>
-                                <span class="precio-producto"><?php echo $row['precio_iva'] ?> €<br></span>
-                                <button class="btn btn-success my-2 my-sm-0">Añadir</button>
+                                <span class="precio-producto" data-producto-precio="<?php echo $producto['precio_iva'] ?>"><?php echo $producto['precio_iva']?></span>€<br>
+                                </a>
+                                <button id="" 
+                                        data-producto-id="<?php echo $producto['id']?>" 
+                                        data-producto-precio="<?php echo $producto['precio_iva']?>" class="btn btn-dark my-2 my-sm-0">Añadir</button>
                             </div>
+                            
                 <?php } ?>
                         </div>
                     </div>
@@ -100,7 +106,11 @@
         
 </div>
 <script>
-    $(document).ready(function(){
+let cantidad = 0;
+let precio = 0;
+let id = 0;
+let total = 0;
+$(document).ready(function(){
       $('.car').slick({
           infinite: true,
           slidesToShow: 5,
@@ -108,5 +118,33 @@
           autoplay: true,
           autoplaySpeed: 1000,
 });
+    $('.btn').on('click', function() {
+        cantidad ++;
+        precio = $(this).attr('data-producto-precio');
+        total = total + parseInt(precio);
+        id = $(this).attr('data-producto-id');
+        $("#cantidad").html(cantidad + " Productos: ");
+        $("#precio").html(total + " € ");
+        $.ajax({
+            type: "POST",
+            url: "../libs/insertar_producto_carrito.php",
+            data: { "id" :  "id" },
+            success: function(data){
+                alert(data);
+            }
+        });
+});
+    $("#carrito").mouseenter(function(){
+        $("#carritod").css("visibility", "visible");
     });
+    $("#carrito").mouseleave(function(){
+        $("#carritod").css("visibility", "hidden");
+    });
+    $("#carritod").mouseenter(function(){
+        $("#carritod").css("visibility", "visible");
+    });
+    $("#carritod").mouseleave(function(){
+        $("#carritod").css("visibility", "hidden");
+    });
+});
 </script>

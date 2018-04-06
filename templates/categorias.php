@@ -14,7 +14,46 @@
     </div>
     <div class="row d-flex justify-content-around categorias-head">
         <h1><?php echo $categoria['nombre']?> </h1>
-    </div>    
+    </div>
+    <div class="row d-flex justify-content-around categorias-head">
+        <h5><?php echo $categoria['descripcion']?> </h5>
+    </div>
+    
+    <div class="filtro">
+        <div class="titulo-filtro">FILTRAR POR:</div>
+        <div>
+            <select class="custom-select custom-select-md">
+              <option selected>Marca: </option>
+            <?php 
+                $sql = "SELECT * FROM fabricantes ";
+
+                $resultado = sqlsrv_query($conexion, $sql);
+
+                if ($resultado) {
+                    while( $categoria = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC) ) {       
+            ?>
+              <option value="<?php echo $categoria['id'] ?>"><?php echo $categoria['nombre'] ?></option>
+            <?php   } 
+                }
+            ?>
+            </select>
+        </div>
+        <div>
+            <select class="custom-select custom-select-md">
+              <option selected>Tipo de producto: </option>
+              <option value="1">Juego de cuerdas</option>
+              <option value="2">Cuerdas Sueltas</option>
+              <option value="3">Sets Customizados</option>
+            </select>
+        </div>
+        <div>
+            <select class="custom-select custom-select-md">
+              <option selected>Precio: </option>
+              <option value="1">Mas Baratos Primero</option>
+              <option value="2">Mas Caro Primero</option>
+            </select>
+        </div>
+    </div>
     <div class="compare-basket">
 	<!-- comparison item miniatures come here -->
 	<button class="action action--button action--compare"><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
@@ -38,6 +77,7 @@
                 
         ?>
 		<div class="product">
+            <a href="<?php echo $root?>productos?id=<?php echo $producto['id'] ?>">
 			<div class="product__info">
 				<img class="product__image" src="<?php echo $root ?><?php echo $producto['imagen'] ?>" alt="Product 1" />
 				<h3 class="product__title"><?php echo $producto['nombre'] ?></h3>
@@ -47,12 +87,9 @@
 					<span class="action__text">Añadir al carrito</span>
 				</button>
 			</div>
-			<label class="action action--compare-add">
-				<input class="check-hidden" type="checkbox" />
-				<i class="fa fa-plus"></i>
-				<i class="fa fa-check"></i>
 				<span class="action__text action__text--invisible">Add to compare</span>
 			</label>
+            </a>
 		</div>
 
    <?php  
@@ -69,4 +106,3 @@
         <!-- comparison items come here -->
         <button class="action action--close"><i class="fa fa-remove"></i><span class="action__text action__text--invisible">Close comparison overlay</span></button>
     </section>
-    </div>

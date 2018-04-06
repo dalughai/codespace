@@ -53,7 +53,7 @@
 	min-width: 16em;
 	margin: 0 1em 2.5em;
 	padding: 1.5em 1.5em 2em;
-	background: #24252A;
+	background: #e9ecef;
 	border-radius: 5px;
 }
 
@@ -139,8 +139,7 @@
 
 .product__title {
 	font-size: 150%;
-	margin: 1em 0 0;
-	min-height: 3em;
+	margin-top: 1em 0 0;
 }
 
 .product__price {

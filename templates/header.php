@@ -61,10 +61,16 @@
             </a>
         <?php } ?>
     </div>
-        <div id="carrito-div" class="col-4 text-right">
-        <div id="carrito">
-            <img src="<?php echo $carpeta_fotos?>/carrito.png">
-        </div>
+        <div id="carrito-div" class="col-4 d-flex justify-content-end">
+            <div id="carrito" class="row">
+                <i class="fas fa-shopping-cart fa-2x"></i> 
+                    <span id="cantidad" class="cantidad">0 Productos: </span>
+                    <span id="precio" class="precio">0 €</span>
+            </div>
+            <div id="carritod" class="row d-flex justify-content-end" data-id-producto="">
+                Hola que tal
+            </div>
+
         </div>
     </div>
 
