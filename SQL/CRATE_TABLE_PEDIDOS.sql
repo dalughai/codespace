@@ -32,7 +32,7 @@ CREATE TABLE pedidos(
 	total INT,
 	total_IVA INT,
 	referencia VARCHAR,
-	CONSTRAINT PK_pedidos PRIMARY KEY(id),
+	CONSTRAINT PK_pedidos PRIMARY KEY(id,id_cliente,id_carrito),
 	constraint FK_PEDIDOS_USUARIOS foreign key(id_cliente) references usuarios (id) on delete no action on update cascade,
 	constraint FK_PEDIDOS_CARRITO foreign key(id_carrito) references carrito (id) on delete no action on update cascade,
 	constraint FK_PEDIDOS_TIPO_PAGO foreign key(id_tipo_pago) references tipo_pago (id) on delete no action on update cascade,

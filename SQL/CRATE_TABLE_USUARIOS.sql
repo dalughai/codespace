@@ -24,16 +24,18 @@ CREATE TABLE usuarios(
 	nombre VARCHAR(50) NOT NULL,
 	apellido_1 VARCHAR(50) NOT NULL,
 	apellido_2 VARCHAR(50),
+	dni varchar(9),
 	sexo TINYINT,
 	active tinyint,
 	email VARCHAR(100),
 	passwd VARCHAR(30),
+	telefono int,
 	fecha_nacimiento VARCHAR(30),
 	direccion bigint,
 	date_add datetime,
 	date_update datetime,
 	last_connection datetime,
-	newsletter bit,
+	newsletter TINYINT,
 	newsletter_date_add datetime,
 
 	CONSTRAINT PK_USUARIOS PRIMARY KEY(id),
@@ -45,8 +47,8 @@ CREATE TABLE usuarios(
 	--	INSERTO VALORES--
 --------------------------------------------------------------------------------------------
 
-INSERT INTO dbo.usuarios(nombre,apellido_1,apellido_2,,sexo,active,email,passwd,fecha_nacimiento,direccion,date_add)
-	VALUES  ('Sergio', 'Álvarez','García','1','1','sergioalvarez@tostringshop.com','123456','10-09-1991','1',GETDATE());
+INSERT INTO dbo.usuarios(nombre,apellido_1,apellido_2,dni,sexo,active,email,passwd,telefono,fecha_nacimiento,direccion,date_add)
+	VALUES  ('Sergio', 'Álvarez','García','09057066B','1','1','sergioalvarez@tostringshop.com','123456',635946097,'10-09-1991','1',GETDATE());
 			
 
 SELECT*

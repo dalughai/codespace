@@ -7,9 +7,11 @@ create PROCEDURE tss_insertar_nuevo_usuario
 (           @nombre VARCHAR(50),
             @apellido1 VARCHAR(50),
             @apellido2 VARCHAR(50),
+			@dni VARCHAR(9),
 			@sexo tinyint,
 			@email varchar(100),
 			@passwd varchar(30),
+			@telefono int,
 			@direccion varchar(200),
 			@codigo_postal smallint,
 			@ciudad varchar(30),
@@ -30,12 +32,12 @@ BEGIN
 			SET @fecha_add = GETDATE();
                 INSERT INTO usuarios
                     (   
-                        nombre, apellido_1, apellido_2, sexo, active, email, passwd, date_add	
+                        nombre, apellido_1, apellido_2,dni, sexo, active, email, passwd,telefono, date_add	
                     )
                 
                  VALUES
                     (   
-						@nombre, @apellido1, @apellido2, @sexo, @active, @email, @passwd, @fecha_add
+						@nombre, @apellido1, @apellido2, @dni, @sexo, @active, @email, @passwd,@telefono, @fecha_add
                     );
 				--Una vez insertado el usuario, nos hacemos con su id 
 			SET @idUsuario = (select top(1) id from usuarios order by id desc);

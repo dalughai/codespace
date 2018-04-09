@@ -8,8 +8,11 @@
                 <div class="form_content clearfix">
                     <p>Escriba su correo electrónico para crear su cuenta</p>
                     <div class="alert alert-danger" id="create_account_error" style="display:none"></div>
-                    <div class="form-group"> <label for="email_create">Correo electrónico</label> <input type="email" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value=""></div>
-                    <div class="submit"> <input type="hidden" class="hidden" name="back" value="my-account"> <button class="btn btn-default button button-medium exclusive" type="submit" id="SubmitCreate" name="SubmitCreate"> <span> <i class="icon-user left"></i> Crear una cuenta </span> </button> <input type="hidden" class="hidden" name="SubmitCreate" value="Crear una cuenta"></div>
+                    <div class="form-group"> <label for="email_create">Correo electrónico</label> 
+                        <input type="email" class="form-control" id="email_create" name="email_create" value="" required></div>
+                    <div class="submit"> 
+                       <button class="btn btn-default button button-medium exclusive" type="submit" id="SubmitCreate" name="SubmitCreate"> 
+                           <span> <i class="icon-user left"></i> Crear una cuenta </span> </button></div>
                 </div>
             </form>
         </div>

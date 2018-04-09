@@ -4,16 +4,16 @@
         <div id="enlaces-izquierda" class="col-4 enlaces-header">
             <ul class="header-list">
                 <li>
-                    <a href="">Envios</a>
+                    <a href="">ENVIOS</a>
                 </li>
                 <li>
-                    <a href="">Contacto</a>
+                    <a href="">CONTACTO</a>
                 </li>
                 <li>
-                    <a href="">Ayuda</a>
+                    <a href="">AYUDA</a>
                 </li>
                 <li>
-                    <a href="">Sugerencias</a>
+                    <a href="">SUGERENCIAS</a>
                 </li>
             </ul>
         </div>
@@ -24,16 +24,16 @@
         <div id="enlaces-derecha" class="col-4 enlaces-header">
             <ul class="header-list">
                 <li>
-                    <a href="">Noticias</a>
+                    <a href="">NOTICIAS</a>
                 </li>
                 <li>
-                    <a href="">Marcas</a>
+                    <a href="">MARCAS</a>
                 </li>
                 <li>
-                    <a href="">Novedades</a>
+                    <a href="">NOVEDADES</a>
                 </li>
                 <li>
-                    <a href="<?php echo $root ?>micuenta">Mi Cuenta</a>
+                    <a href="<?php echo $root ?>micuenta">USUARIO</a>
                 </li>
             </ul>
             
@@ -62,15 +62,48 @@
         <?php } ?>
     </div>
         <div id="carrito-div" class="col-4 d-flex justify-content-end">
+            
+            <?php 
+                    if((isset($_SESSION['carrito']))){                                 
+                ?>
+            <div id="carrito" class="row" data-carrito-id="<?php echo $_SESSION['carrito']['id']?>">
+                <?php    } else {  ?>
             <div id="carrito" class="row">
+                <?php } ?>
                 <i class="fas fa-shopping-cart fa-2x"></i> 
                     <span id="cantidad" class="cantidad">0 Productos: </span>
                     <span id="precio" class="precio">0 €</span>
             </div>
-            <div id="carritod" class="row d-flex justify-content-end" data-id-producto="">
-                Hola que tal
-            </div>
+            <div id="carritod" class="row d-flex justify-content-end text-center" data-id-producto="">
+                <div class="col-12 p-2">
+                    <p>Productos para añadir al carrito</p>
+                </div>
+            
+                <div class="items-carrito row d-flex justify-content-start text-center">
+                    
+                </div>
+                <div class="pie-carrito row">
+                        <div class="col-12">
+                        <p>Precio total: <span class="total"></span></p>
 
+                            <form action="<?php echo $root?>pedidos/" method="POST">
+                                <input type="hidden" id="id_carrito_pedido" name="id_carrito_pedido" 
+                                       value="
+                                              <?php 
+                                                    if((isset($_SESSION['carrito']))){     
+                                                    echo $_SESSION['carrito']['id']; 
+                                                    }
+                                              ?>">
+                                <input type="hidden" id="id_usuario_pedido" name="id_usuario_pedido" 
+                                       value="<?php 
+                                                    if((isset($_SESSION['usuario']))){     
+                                                    echo $_SESSION['usuario']['id']; 
+                                                    }
+                                              ?>">
+                            <button type="submit" class="btn btn-success my-2 my-sm-0" >Ir a mi Pedido</button>
+                            </form>
+                        </div>
+            </div>
         </div>
     </div>
 
@@ -168,7 +201,7 @@
                           </div>
                      </li>
 
-
+                    </ul>
           </div>
             </nav>
         </div>
@@ -238,9 +271,6 @@
     </div>
   </div>
     </div>
-</nav>
-    </div>
-
-
-</header>
+    
+    </header>
 </div>

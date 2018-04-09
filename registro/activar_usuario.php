@@ -12,7 +12,7 @@ if ($id_usuario == '') {
     $sql = "UPDATE usuarios SET active = 1 WHERE id = '$id_usuario'";
     $resultado = sqlsrv_query($conexion, $sql);
     if ($resultado) {
-         $template_seccion = "../templates/micuenta.php";
+         $template_seccion = "../templates/home.php";
     } else {
         die();
         $error = "Error en la activación";

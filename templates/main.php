@@ -4,7 +4,7 @@
     <body>
         <?php include("header.php");?>
             <main>
-                <?php include ($template_seccion); ?>
+                <?php include($template_seccion); ?>
             </main>
         <?php include("footer.php");?>
     </body>

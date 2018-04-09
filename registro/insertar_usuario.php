@@ -1,5 +1,6 @@
 <?php
 require '../startApp.php';
+
 $dni = (isset($_POST["dni"])) ? $_POST["dni"] : "";
 $nombre = (isset($_POST["nombre"])) ? $_POST["nombre"] : "";
 $apellido1 = (isset($_POST["apellido1"])) ? $_POST["apellido1"] : "";
@@ -26,8 +27,8 @@ if( $nombre == '' && $apellido1 == '' && $apellido2 == '' && $email == '' && $pa
 } else {
     
     $sql = "EXEC tss_insertar_nuevo_usuario"
-       . " @nombre = '$nombre', @apellido1 = '$apellido1', @apellido2 = '$apellido2', @sexo='$sexo', @email = '$email', @passwd = '$password', "
-       . " @direccion = '$direccion', @codigo_postal = '$codigopostal',@ciudad = '$ciudad', @provincia = '$provincia', @comunidad_autonoma = '$comunidad' ";
+       . " @nombre = '$nombre', @apellido1 = '$apellido1', @apellido2 = '$apellido2', @dni='$dni',@sexo='$sexo', @email = '$email', @passwd = '$password', "
+       . " @telefono = '$telefono' ,@direccion = '$direccion', @codigo_postal = '$codigopostal',@ciudad = '$ciudad', @provincia = '$provincia', @comunidad_autonoma = '$comunidad' ";
     
     $resultado = sqlsrv_query($conexion, $sql);    
     
@@ -58,7 +59,7 @@ if( $nombre == '' && $apellido1 == '' && $apellido2 == '' && $email == '' && $pa
     
         
     } else {
-        $error = $resultado;
+        $error = $email;
         $template_seccion = "../templates/registro.php";
     }
 

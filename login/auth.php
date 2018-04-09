@@ -26,11 +26,35 @@ if ($resultado) {
 
         $_SESSION["usuario"] = $usuario;
         
+        
         if($usuario["active"] == 0){
             $error = "El usuario aun no esta activado, revise su correo porvafor.";
             $template_seccion = "../templates/login.php";
         } else {
-            $template_seccion = "home.php";
+            
+            
+        if(isset($_SESSION["carrito"])) {
+    
+        } else {
+                $id_usuario = $_SESSION['usuario']['id'];
+
+                $sql = "insert into carrito (id_cliente,date_add) VALUES ($id_usuario,GETDATE())";
+                $resultado = sqlsrv_query($conexion, $sql);
+
+                if ($resultado) {
+
+                    $sql = "select top(1) id from carrito order by id desc";
+
+                    $resultado_carrito = sqlsrv_query($conexion, $sql);
+
+                    if($resultado_carrito){
+                        $id_carrito = sqlsrv_fetch_array( $resultado_carrito, SQLSRV_FETCH_ASSOC);
+                        
+                        $_SESSION['carrito'] = $id_carrito;
+                    }
+              }
+        }
+            header('Location: ../index.php');
         }
         
     } else {

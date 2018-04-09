@@ -1,3 +1,7 @@
+<?php 
+    $usuario_email = (isset($_POST["email_create"])) ? $_POST["email_create"] : "";
+?>
+
 <div id="body-container" class="container">  
     <div class="row d-flex justify-content-around login-head"><h1>REGISTRO DE USUARIO</h1></div>
     <div class="row d-flex justify-content-around">
@@ -7,7 +11,7 @@
     <div class="form-row">
     <div class="col-md-3 mb-3">
       <label for="validationServer14">Email</label>
-      <input type="text" class="form-control"  name="email" value="<?php echo $_POST['email_create']?>">
+      <input type="text" class="form-control" id="email" name="email" value="<?php echo $usuario_email?>" required>
     </div>
     </div>
     <div class="form-row">
@@ -33,12 +37,12 @@
 <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationServer011">Contraseña</label>
-      <input type="text" class="form-control" id="validationServer011" placeholder="Contraseña" name="password" value="" required>
+      <input type="password" class="form-control" id="validationServer011" placeholder="Contraseña" name="password" value="" required>
     </div>
     
     <div class="col-md-6 mb-3">
       <label for="validationServer022">Repita Contraseña</label>
-      <input type="text" class="form-control" id="validationServer022" placeholder="Repita la Contraseña" name="repassword" value="" required>
+      <input type="password" class="form-control" id="validationServer022" placeholder="Repita la Contraseña" name="repassword" value="" required>
     </div>
 </div>
   <div class="form-row">

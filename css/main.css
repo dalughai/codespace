@@ -1,14 +1,18 @@
 
-@import url('https://fonts.googleapis.com/css?family=Cutive Mono|Lustria|Palanquin Dark|Slabo+13px|Candal');
+@import url('https://fonts.googleapis.com/css?family=Cutive Mono|Lustria|Palanquin Dark|Slabo+13px|Playfair Display');
 /*GENERAL-----------------------------------------------------------------------*/
 h3{
     text-align: center;
+}
+h1{
+    color: black;
 }
 
 a {
     text-decoration: none;
     font-family: 'Lustria';
 }
+
 
 body {
     background-color: #3B3B3B;
@@ -44,7 +48,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     color: #FFC300;
     text-decoration: none;
     font-family: 'Lustria';
-    font-size: 14px;
+    font-size: 12px;
 
 }
 
@@ -88,6 +92,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     border: solid white 1px;
 }
 
+#presentacion img{
+    
+    margin-top: 35px;
+    width: 70px;
+}
+#presentacion span{
+    position: relative;
+    top: 20px;
+}
 #header-categorias{
     margin-top: 20px;
     border-top: solid #FFC300 1px;
@@ -200,11 +213,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     visibility: hidden;
     position: absolute;
     top: 45px;
-    right: 40px;
-    width: 300px;
-    height: 400px;
+    right: 32px;
+    width: 460px;
     background-color: #DCDCDC; 
+    border: black double 3px;
 }
+.pie-carrito{
+    margin: 15px;
+}
+.carrito-imagen{
+    width: 100px;
+    height: 100px;
+    margin-left: 15px;
+}
+
+.item-carrito p{
+    margin-top: 5px;
+}
+
  @media screen and (max-width: 1300px) {
             .botonc {
                 width: 200px;
@@ -336,7 +362,6 @@ header ul{
 /*INDEX---------------------------------------------------------------------------*/
 
 main {
-    padding-top: 5px;
 }
 
 #banners img{
@@ -497,6 +522,20 @@ item-carrusel{
     margin-top: 25px;
 }
 
+
+/*////////////PEDIDO/////////////////*/
+
+.imagen-pedido{
+    width: 50px;
+}
+.texto-pedido{
+    
+    position: relative;
+    top: 60px;   
+}
+th .fas{
+    color: red;
+}
 /*QUIENES SOMOS--------------------------------------------------------------------*/
 #cuerpo_who{
     margin-top: 10px;

@@ -82,13 +82,18 @@
 				<img class="product__image" src="<?php echo $root ?><?php echo $producto['imagen'] ?>" alt="Product 1" />
 				<h3 class="product__title"><?php echo $producto['nombre'] ?></h3>
 				<span class="product__price"><?php echo $producto['precio'] ?></span>
-				<button class="action action--button action--buy">
-					<i class="fa fa-shopping-cart"></i>
-					<span class="action__text">Añadir al carrito</span>
-				</button>
+				<button class="añadir btn btn-dark my-2 my-sm-0">Ver Producto </button>
+		
+                   <!--             <button id="" 
+                                        data-producto-id="<?php echo $producto['id']?>" 
+                                        data-carrito-id="<?php echo $_SESSION['carrito']['id']?>"
+                                        data-producto-nombre="<?php echo $producto['nombre']?>" 
+                                        data-ruta="<?php echo $root?>"
+                                        data-imagen-producto="<?php echo $root ?><?php echo $producto['imagen']?>.png";
+                                        data-producto-precio="<?php echo $producto['precio_iva']?>" 
+                                        class="añadir btn btn-dark my-2 my-sm-0">Añadir</button>
+-->
 			</div>
-				<span class="action__text action__text--invisible">Add to compare</span>
-			</label>
             </a>
 		</div>
 
@@ -106,3 +111,4 @@
         <!-- comparison items come here -->
         <button class="action action--close"><i class="fa fa-remove"></i><span class="action__text action__text--invisible">Close comparison overlay</span></button>
     </section>
+</div>

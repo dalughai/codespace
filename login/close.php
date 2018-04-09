@@ -6,7 +6,6 @@ session_unset();
 session_destroy();
 $titulo = "Home";
 //redirigir a la página que corresponda
-header("Location: ../index.php");
 require '../endApp.php';
 die();
 /*

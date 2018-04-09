@@ -13,7 +13,7 @@
                               <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner.jpg" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                              <img class="d-block w-100" src="<?php echo $root ?>images/calibre2.jpg" alt="Second slide">
+                              <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner9.png" alt="Second slide">
                             </div>
                             <div class="carousel-item">
                               <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner4.jpg" alt="Third slide">
@@ -31,15 +31,25 @@
                     </div>    
                 </div>
                 
-                <div id="presentacion" class="row">
-                    <h3><p>Aqui comienza la Musica!</h3><br/>
-                    <p>Tienda de intrumentos Online con las ultimas novedades del mercado
-                    a cargo de grandes profesionales del sector que no dudaran en ofrecerte el mejor asesoramiento</p>
+                <div id="presentacion" class="row d-flex justify-content-center text-center">
+                    <div class="col-sm-12 col-lg-4 p-2">
+                        <img src="<?php echo $root ?>images/fotos_tienda/repair.svg">
+                        <span>Maxima calidad para tu instrumento</span>
+                    </div>    
+                    <div class="col-sm-12 col-lg-4 p-2">
+                        <img src="<?php echo $root ?>images/fotos_tienda/security.svg">
+                        <span>Mayor seguridad en los pagos</span>
+                    </div> 
+                    <div class="col-sm-12 col-lg-4 p-2">
+                        <img src="<?php echo $root ?>images/fotos_tienda/almacen.svg">
+                        <span>El mayor almacen de cuerdas de Europa</span>
+                    </div> 
                 </div>
                 
                 <div id="boxs" class="row text-center d-flex justify-content-center">
                     <div class="col-sm-12 col-lg-4 col-xl-4 box">
                         <img class="" src="<?php echo $root ?>images/calibre.jpg">
+                        
                     </div>
                     
                     <div class="col-sm-12 col-lg-4 col-xl-4 box">
@@ -78,9 +88,24 @@
                                 <br>
                                 <span class="precio-producto" data-producto-precio="<?php echo $producto['precio_iva'] ?>"><?php echo $producto['precio_iva']?></span>€<br>
                                 </a>
+                                
+                                <?php 
+                                    if((isset($_SESSION['carrito']))){                                 
+                                ?>
+                                <!--
+                                <a href="<?php echo $root?>libs/insertar_producto_carrito.php?id=<?php echo $producto['id']?>&carrito=<?php echo $_SESSION['carrito']['id']?>&cantidad=1">
+-->
                                 <button id="" 
                                         data-producto-id="<?php echo $producto['id']?>" 
-                                        data-producto-precio="<?php echo $producto['precio_iva']?>" class="btn btn-dark my-2 my-sm-0">Añadir</button>
+                                        data-carrito-id="<?php echo $_SESSION['carrito']['id']?>"
+                                        data-producto-nombre="<?php echo $producto['nombre']?>" 
+                                        data-ruta="<?php echo $root?>"
+                                        data-imagen-producto="<?php echo $root ?><?php echo $producto['imagen']?>.png";
+                                        data-producto-precio="<?php echo $producto['precio_iva']?>" 
+                                        class="añadir btn btn-dark my-2 my-sm-0"><i class="fa fa-shopping-cart"></i> Añadir</button>
+                                <!--</a>-->
+                                <?php    }  ?>
+
                             </div>
                             
                 <?php } ?>
@@ -105,46 +130,3 @@
  
         
 </div>
-<script>
-let cantidad = 0;
-let precio = 0;
-let id = 0;
-let total = 0;
-$(document).ready(function(){
-      $('.car').slick({
-          infinite: true,
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 1000,
-});
-    $('.btn').on('click', function() {
-        cantidad ++;
-        precio = $(this).attr('data-producto-precio');
-        total = total + parseInt(precio);
-        id = $(this).attr('data-producto-id');
-        $("#cantidad").html(cantidad + " Productos: ");
-        $("#precio").html(total + " € ");
-        $.ajax({
-            type: "POST",
-            url: "../libs/insertar_producto_carrito.php",
-            data: { "id" :  "id" },
-            success: function(data){
-                alert(data);
-            }
-        });
-});
-    $("#carrito").mouseenter(function(){
-        $("#carritod").css("visibility", "visible");
-    });
-    $("#carrito").mouseleave(function(){
-        $("#carritod").css("visibility", "hidden");
-    });
-    $("#carritod").mouseenter(function(){
-        $("#carritod").css("visibility", "visible");
-    });
-    $("#carritod").mouseleave(function(){
-        $("#carritod").css("visibility", "hidden");
-    });
-});
-</script>

@@ -50,10 +50,16 @@
                 <tr>
                   <th scope="row"></th>
                   <td colspan="2">
-                      <button class="action action--button action--buy">
-                        <i class="fa fa-shopping-cart"></i>
-                        <span class="action__text">Añadir al carrito</span>
-				</button></td>
+                                <button id="" 
+                                        data-producto-id="<?php echo $producto['id']?>" 
+                                        data-carrito-id="<?php echo $_SESSION['carrito']['id']?>"
+                                        data-producto-nombre="<?php echo $producto['nombre']?>" 
+                                        data-ruta="<?php echo $root?>"
+                                        data-imagen-producto="<?php echo $root ?><?php echo $producto['imagen']?>.png";
+                                        data-producto-precio="<?php echo $producto['precio_iva']?>" 
+                                        class="añadir btn btn-dark my-2 my-sm-0"><i class="fa fa-shopping-cart"></i> Añadir</button>
+
+                    </td>
                 </tr>
               </tbody>
             </table>
