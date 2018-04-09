@@ -21,6 +21,44 @@ $(document).ready(function(){
           autoplay: true,
           autoplaySpeed: 1000,
 });
+    function obtener_registros(valorBusqueda){
+        var datos;
+        $.ajax({
+            url: './libs/datos_busqueda.php',
+            type: 'POST',
+            data: {valor : valorBusqueda},
+            success: function(data){
+            $("#buscadord").css("visibility", "visible");
+            datos = data.split("}");
+            for(producto in datos){
+                $('.tx').text(datos[producto]);
+            }
+            //console.log(datos[0].length);
+            $('.tx').text(datos[0]);
+            }
+        })
+    }
+    
+    $('#buscar').on('keyup',function(){
+        var valorBusqueda = $(this).val();
+        console.log(valorBusqueda);
+        if(valorBusqueda != ""){
+            obtener_registros(valorBusqueda);    
+        } else {
+            
+            $("#buscadord").css("visibility", "hidden");
+        }
+        
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
     $('.añadir').on('click', function() {
         cantidad ++;
         precio = $(this).attr('data-producto-precio');

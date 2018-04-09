@@ -207,6 +207,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 #carrito-div:hover{
     
 }
+#buscadord{
+    z-index: 2;
+    visibility: hidden;
+    position: absolute;
+    top: 45px;
+    left: 40px;
+    width: 360px;
+    background-color: #DCDCDC; 
+    border: black double 3px;
+}
 #carritod{
     z-index: 2;
     visibility: hidden;

@@ -42,9 +42,17 @@
     <div class="row m-0">
         <div id="buscador" class="col-4">
             <form id="form-buscador" class="form-inline my-2 my-lg-0">
-              <input id="buscador" class="form-control ml-3 mr-2 col-8   " type="search" placeholder="Introduzca un producto" aria-label="Search">
-              <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
-            </form>
+              <input id="buscar" name="buscador" class="form-control ml-3 mr-2 col-8"  type="text" placeholder="Introduzca un producto" value="">
+              <button class="btn btn-outline-warning my-2 my-sm-0 " type="submit">Search</button>
+            </form>                            
+            <div id="buscadord" class="row d-flex justify-content-end text-center" data-id-producto="">
+                <div class="col-12 p-2">
+                    <ul>
+                        <li><span class="tx"></span></li>
+                    </ul>
+                </div>                
+            </div>
+
         </div>
         <div id="sesion" class="col-4 text-center">
         
