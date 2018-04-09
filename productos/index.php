@@ -20,7 +20,7 @@ $sql = "SELECT * FROM productos WHERE id = $id_producto";
         
         $categoria = sqlsrv_fetch_array($resultado, SQLSRV_FETCH_ASSOC);
         
-        $sql = "select fabricantes.nombre from productos join fabricantes on fabricantes.id = productos.id_categoria where productos.id = '$id_producto'";
+        $sql = "select fabricantes.nombre from productos join fabricantes on fabricantes.id = productos.id_fabricante where productos.id = '$id_producto'";
         
         $resultado = sqlsrv_query($conexion, $sql);
         

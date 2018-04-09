@@ -1,6 +1,6 @@
 <div class="container">
 <header>
-    <div class="row ">
+    <div class="row m-0">
         <div id="enlaces-izquierda" class="col-4 enlaces-header">
             <ul class="header-list">
                 <li>
@@ -39,7 +39,7 @@
             
         </div>
     </div>
-    <div class="row">
+    <div class="row m-0">
         <div id="buscador" class="col-4">
             <form id="form-buscador" class="form-inline my-2 my-lg-0">
               <input id="buscador" class="form-control ml-3 mr-2 col-8   " type="search" placeholder="Introduzca un producto" aria-label="Search">
@@ -67,10 +67,12 @@
                     if((isset($_SESSION['carrito']))){                                 
                 ?>
             <div id="carrito" class="row" data-carrito-id="<?php echo $_SESSION['carrito']['id']?>">
+                <i class="fas fa-shopping-cart fa-2x"></i> 
                 <?php    } else {  ?>
             <div id="carrito" class="row">
+                <i class="fas fa-shopping-cart fa-1x"></i> 
                 <?php } ?>
-                <i class="fas fa-shopping-cart fa-2x"></i> 
+                    
                     <span id="cantidad" class="cantidad">0 Productos: </span>
                     <span id="precio" class="precio">0 €</span>
             </div>
@@ -244,7 +246,8 @@
             </nav>
         </div>
     </div>
-    <div id="header-categorias"  class="row">
+    <div class="container">        
+    <div id="header-categorias"  class="row mx-0">
         <div class="col-12 m-0">
 
     <ul class="categorias-menu">
@@ -270,6 +273,7 @@
       </div>
     </div>
   </div>
+        </div>
     </div>
     
     </header>

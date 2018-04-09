@@ -1,5 +1,5 @@
 <div id="body-container" class="container">  
-    <div class="row d-flex justify-content-around login-head"><h1>ADMINISTRACION DE USUARIO </h1></div>
+    <div class="row mx-0 d-flex justify-content-around login-head"><h1>ADMINISTRACION DE USUARIO </h1></div>
     <div class="row d-flex justify-content-around">
         
         <div class="login-sesion col-6">

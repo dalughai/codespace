@@ -1,7 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <title>To String Tu tienda especializada en cuerdas Online</title>
-    
+    <title><?php echo (isset($titulo)) ? $titulo : "To String Shop" ?></title>
     <link href="<?php echo $root?>css/fpdf.css" rel="stylesheet" type="text/css"> 
     <script src="<?php echo $root?>js/PC/classie.js"></script>
     <script src="<?php echo $root?>js/PC/main.js"></script>
@@ -16,7 +15,8 @@
     <script src="<?php echo $root?>js/jquery.validate.min.js"></script>
     <script src="<?php echo $root?>js/slick.min.js"></script>
     <link href="<?php echo $root?>css/slick.css" rel="stylesheet" type="text/css"> 
-    <link href="<?php echo $root?>css/slick-theme.css" rel="stylesheet" type="text/css"> 
+    <link href="<?php echo $root?>css/slick-theme.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <link href="<?php echo $root?>css/animate.css" rel="stylesheet" type="text/css"> 
     <script src="<?php echo $root?>js/main.js"></script>
-
 </head>

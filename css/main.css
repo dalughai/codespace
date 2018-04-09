@@ -23,8 +23,6 @@ body {
 #body-container{
     background-color: gainsboro;
 }
-div {
-}
 
 video{
     width: 100%;
@@ -191,6 +189,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     border: solid black 1px;
     background-color: #DCDCDC;
     margin-right: 5px;
+    transition: 0.5s;
 }
 
 #carrito .fas {

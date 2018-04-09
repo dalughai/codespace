@@ -57,7 +57,7 @@
                                         data-ruta="<?php echo $root?>"
                                         data-imagen-producto="<?php echo $root ?><?php echo $producto['imagen']?>.png";
                                         data-producto-precio="<?php echo $producto['precio_iva']?>" 
-                                        class="añadir btn btn-dark my-2 my-sm-0"><i class="fa fa-shopping-cart"></i> Añadir</button>
+                                        class="añadir2 btn btn-dark my-2 my-sm-0"><i class="fa fa-shopping-cart"></i> Añadir</button>
 
                     </td>
                 </tr>

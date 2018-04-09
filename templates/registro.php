@@ -3,7 +3,7 @@
 ?>
 
 <div id="body-container" class="container">  
-    <div class="row d-flex justify-content-around login-head"><h1>REGISTRO DE USUARIO</h1></div>
+    <div class="row mx-0 d-flex justify-content-around login-head"><h1>REGISTRO DE USUARIO</h1></div>
     <div class="row d-flex justify-content-around">
         
         <div class="login-sesion col-12">
@@ -63,14 +63,14 @@
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationServer05">Provincia</label>
-      <input type="text" class="form-control" id="validationServer05" name="provincia" placeholder="Zip" required>
+      <input type="text" class="form-control" id="validationServer05" name="provincia" placeholder="Provincia" required>
       <div class="invalid-feedback">
         Please provide a valid zip.
       </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationServer06">Comunidad Autonoma</label>
-      <input type="text" class="form-control" id="validationServer06" name="comunidad" placeholder="City" required>
+      <input type="text" class="form-control" id="validationServer06" name="comunidad" placeholder="Comunidad Autonoma" required>
       <div class="invalid-feedback">
         Please provide a valid city.
       </div>
