@@ -7,11 +7,14 @@ var total = 0;
 var imagen = "";
 var nombre = "";
 var ruta = "";
-let elemento_imagen;
-let elemento_div_open;
-let elemento_div_close;
-let elemento_precio;
-let elemento_nombre;
+var contenedor_buscador = "";
+var cierre_contenedor = "";
+var elemento_div_close = $('</div>');
+//let elemento_imagen;
+//let elemento_div_open;
+//let elemento_div_close;
+//let elemento_precio;
+//let elemento_nombre;
     
 $(document).ready(function(){
       $('.car').slick({
@@ -21,24 +24,47 @@ $(document).ready(function(){
           autoplay: true,
           autoplaySpeed: 1000,
 });
+    
+    
     function obtener_registros(valorBusqueda){
-        var datos;
+        var datos = new Array();
         $.ajax({
             url: './libs/datos_busqueda.php',
             type: 'POST',
             data: {valor : valorBusqueda},
             success: function(data){
-            $("#buscadord").css("visibility", "visible");
-            datos = data.split("}");
-            for(producto in datos){
-                $('.tx').text(datos[producto]);
-            }
-            //console.log(datos[0].length);
-            $('.tx').text(datos[0]);
+                $("div").remove('.items-buscador');
+                $("#buscadord").css("visibility", "visible");
+                //datos = JSON.parse(data);
+                contenedor_buscador = $('<div class="items-buscador row d-flex justify-content-start">');
+                $('#buscadord').append(contenedor_buscador);
+                for(var producto in data){
+                    var elemento_div_open = $('<div class="col-12 item-buscador p-2"> ');
+                    var elemento_imagen = $('<img class="buscador-imagen" src="">').attr("src",data[producto]['imagen']);
+                    var elemento_nombre = $('<p class="nombre-producto"> </p>').text(data[producto]['nombre'] + " ");
+                    //var elemento_precio = $('<p> </p>').text(". " + precio + " € ");
+                    elemento_div_close = $('</a></div>');
+                    
+                    $('.items-buscador').append(elemento_div_open);
+                    $('.items-buscador').append(elemento_div_open);
+                    $('.items-buscador').append(elemento_imagen);
+                    $('.items-buscador').append(elemento_nombre);
+                    //$('.items-carrito').append(elemento_precio);
+                    $('.items-buscador').append(elemento_div_close);
+                }
+                $('#buscadord').append(elemento_div_close);
+                //console.log(datos['nombre']);
+                //$('.tx').text(datos[0]);
             }
         })
     }
     
+    var eventDelegation = function(evento){
+        console.log($(this).text());
+        $("#buscar").val($(this).text());
+};
+    $('#buscadord').on('click','.nombre-producto', eventDelegation);
+       
     $('#buscar').on('keyup',function(){
         var valorBusqueda = $(this).val();
         console.log(valorBusqueda);
@@ -50,15 +76,7 @@ $(document).ready(function(){
         }
         
     });
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        
     $('.añadir').on('click', function() {
         cantidad ++;
         precio = $(this).attr('data-producto-precio');
@@ -81,17 +99,17 @@ $(document).ready(function(){
             url: "../codespace/libs/insertar_producto_carrito.php",
             data: parametros,
             success: function(data){
-                var elemento_div_open = $('<div class="col-12 item-carrito p-2">');
-                var elemento_imagen = $('<img class="carrito-imagen" src="">').attr("src",imagen);
-                var elemento_nombre = $('<p> </p> <br/>').text(nombre + " ");
-                var elemento_precio = $('<p> </p>').text(". " + precio + " € ");
-                var elemento_div_close = $('</div>');
-                $('.total').text(total);
-                $('.items-carrito').append(elemento_div_open);
-                $('.items-carrito').append(elemento_imagen);
-                $('.items-carrito').append(elemento_nombre);
-                $('.items-carrito').append(elemento_precio);
-                $('.items-carrito').append(elemento_div_close);
+//                var elemento_div_open = $('<div class="col-12 item-carrito p-2">');
+//                var elemento_imagen = $('<img class="carrito-imagen" src="">').attr("src",imagen);
+//                var elemento_nombre = $('<p> </p> <br/>').text(nombre + " ");
+//                var elemento_precio = $('<p> </p>').text(". " + precio + " € ");
+//                var elemento_div_close = $('</div>');
+//                $('.total').text(total);
+//                $('.items-carrito').append(elemento_div_open);
+//                $('.items-carrito').append(elemento_imagen);
+//                $('.items-carrito').append(elemento_nombre);
+//                $('.items-carrito').append(elemento_precio);
+//                $('.items-carrito').append(elemento_div_close);
             }
         });
         
@@ -118,17 +136,17 @@ $(document).ready(function(){
             url: "../libs/insertar_producto_carrito.php",
             data: parametros,
             success: function(data){
-                var elemento_div_open = $('<div class="col-12 item-carrito p-2">');
-                var elemento_imagen = $('<img class="carrito-imagen" src="">').attr("src",imagen);
-                var elemento_nombre = $('<p> </p> <br/>').text(nombre + " ");
-                var elemento_precio = $('<p> </p>').text(". " + precio + " € ");
-                var elemento_div_close = $('</div>');
-                $('.total').text(total);
-                $('.items-carrito').append(elemento_div_open);
-                $('.items-carrito').append(elemento_imagen);
-                $('.items-carrito').append(elemento_nombre);
-                $('.items-carrito').append(elemento_precio);
-                $('.items-carrito').append(elemento_div_close);
+//                var elemento_div_open = $('<div class="col-12 item-carrito p-2">');
+//                var elemento_imagen = $('<img class="carrito-imagen" src="">').attr("src",imagen);
+//                var elemento_nombre = $('<p> </p> <br/>').text(nombre + " ");
+//                var elemento_precio = $('<p> </p>').text(". " + precio + " € ");
+//                var elemento_div_close = $('</div>');
+//                $('.total').text(total);
+//                $('.items-carrito').append(elemento_div_open);
+//                $('.items-carrito').append(elemento_imagen);
+//                $('.items-carrito').append(elemento_nombre);
+//                $('.items-carrito').append(elemento_precio);
+//                $('.items-carrito').append(elemento_div_close);
             }
         });
         
@@ -151,8 +169,34 @@ $(document).ready(function(){
                         //alert("Funciona");
                 },
             success: function(data){
-                datos = JSON.parse(data);
-                console.log(datos['nombre']);
+                total = 0;
+                    $("div").remove('.items-carrito');
+                    var contenedor_carrito = $('<div class="items-carrito row d-flex justify-content-start">');
+                    $('#carritod').append(contenedor_carrito);
+                    for(var producto in data){
+                    console.log(data[producto]['imagen']);
+                    var elemento_div_open = $('<div class="col-12 item-carrito p-2">');
+                    var elemento_imagen = $('<img class="carrito-imagen" src="">').attr("src",data[producto]['imagen']);
+                    var elemento_nombre = $('<p> </p> <br/>').text(data[producto]['nombre'] + " ");
+                    var elemento_precio = $('<p> </p>').text(". " + (data[producto]['precio_iva'] + " € "));
+                    var elemento_cantidad = $('</br><p> </p>').text("- Cantidad: " + (data[producto]['cantidad']));
+                    var elemento_div_close = $('</div>');
+                    $('.total').text("precio final");
+                    $('.items-carrito').append(elemento_div_open);
+                    $('.items-carrito').append(elemento_imagen);
+                    $('.items-carrito').append(elemento_nombre);
+                    $('.items-carrito').append(elemento_precio);
+                    $('.items-carrito').append(elemento_cantidad);                        
+                    $('.items-carrito').append(elemento_div_close);
+                    $('.items-carrito').append(elemento_div_close); 
+                    total = total + parseInt(data[producto]['precio_iva']);
+                    cantidad = cantidad + data[producto]['cantidad'];
+                    }
+                    $(".total").text(total + '€');
+                    $("#precio").text(total + '€');
+                    $(".cantidad").text(canitdad);
+
+
 //                var producto;
 //                for(producto in data){
 //                    console.log(data[producto]);
@@ -165,17 +209,7 @@ $(document).ready(function(){
 ////                data.forEach(function(producto){
 ////                    alert(producto['nombre']);
 ////                });
-//                    var elemento_div_open = $('<div class="col-12 item-carrito p-2">');
-//                    var elemento_imagen = $('<img class="carrito-imagen" src="">').attr("src",datos['imagen']);
-//                    var elemento_nombre = $('<p> </p> <br/>').text(datos['nombre'] + " ");
-//                    var elemento_precio = $('<p> </p>').text(". " + (datos['cantidad'] * datos['precio_iva']) + " € ");
-//                    var elemento_div_close = $('</div>');
-//                    //$('.total').text("precio final");
-//                    $('.items-carrito').append(elemento_div_open);
-//                    $('.items-carrito').append(elemento_imagen);
-//                    $('.items-carrito').append(elemento_nombre);
-//                    $('.items-carrito').append(elemento_precio);
-//                    $('.items-carrito').append(elemento_div_close);  
+
             }
         });
     });

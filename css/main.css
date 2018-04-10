@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Cutive Mono|Lustria|Palanquin Dark|Slabo+13px|Playfair Display');
+@import url('https://fonts.googleapis.com/css?family=Cutive Mono|Lustria|Montserrat|Palanquin Dark|Slabo+13px|Playfair Display');
 /*GENERAL-----------------------------------------------------------------------*/
 h3{
     text-align: center;
@@ -45,7 +45,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 .enlaces-header a{
     color: #FFC300;
     text-decoration: none;
-    font-family: 'Lustria';
+    font-family: 'Montserrat';
     font-size: 12px;
 
 }
@@ -217,6 +217,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     background-color: #DCDCDC; 
     border: black double 3px;
 }
+.nombre-producto{
+    z-index: 3;
+}
 #carritod{
     z-index: 2;
     visibility: hidden;
@@ -235,7 +238,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     height: 100px;
     margin-left: 15px;
 }
-
+.buscador-imagen{
+    width: 75px;
+    height: 75px;
+    margin-left: 15px;
+}
+.items-buscador{
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+}
 .item-carrito p{
     margin-top: 5px;
 }

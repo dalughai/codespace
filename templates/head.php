@@ -3,7 +3,7 @@
     <title><?php echo (isset($titulo)) ? $titulo : "To String Shop" ?></title>
     <link href="<?php echo $root?>css/fpdf.css" rel="stylesheet" type="text/css"> 
     <script src="<?php echo $root?>js/PC/classie.js"></script>
-    <script src="<?php echo $root?>js/PC/main.js"></script>
+    
     <script src="<?php echo $root?>js/PC/modernizr.custom.js"></script>
     <link href="<?php echo $root?>css/component.css" rel="stylesheet" type="text/css"> 
     <script src="<?php echo $root?>js/jquery-3.2.1.js"></script>

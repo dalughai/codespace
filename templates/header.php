@@ -46,11 +46,11 @@
               <button class="btn btn-outline-warning my-2 my-sm-0 " type="submit">Search</button>
             </form>                            
             <div id="buscadord" class="row d-flex justify-content-end text-center" data-id-producto="">
-                <div class="col-12 p-2">
-                    <ul>
-                        <li><span class="tx"></span></li>
-                    </ul>
-                </div>                
+
+                    <div class="items-buscador row d-flex justify-content-start text-center">
+
+                    </div>
+                             
             </div>
 
         </div>
@@ -86,12 +86,17 @@
             </div>
             <div id="carritod" class="row d-flex justify-content-end text-center" data-id-producto="">
                 <div class="col-12 p-2">
-                    <p>Productos para añadir al carrito</p>
+                    <span>Productos del carrito &nbsp &nbsp &nbsp      </span>
+                    <p>Precio total: &nbsp  &nbsp  <span class="total"></span></p>
+                    <button type="submit" class="btn btn-success my-2 my-sm-0" >Ir a mi Pedido</button>
+
+                    
                 </div>
             
                 <div class="items-carrito row d-flex justify-content-start text-center">
                     
                 </div>
+<!--
                 <div class="pie-carrito row">
                         <div class="col-12">
                         <p>Precio total: <span class="total"></span></p>
@@ -114,9 +119,10 @@
                             </form>
                         </div>
             </div>
+-->
         </div>
     </div>
-
+        </div>
     <div id="responsive-menu" class="row text-center">
 
     
