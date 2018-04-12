@@ -41,7 +41,7 @@
     </div>
     <div class="row m-0">
         <div id="buscador" class="col-4">
-            <form id="form-buscador" class="form-inline my-2 my-lg-0">
+            <form action="<?php echo $root ?>productos/buscador.php"id="form-buscador" method="GET" class="form-inline my-2 my-lg-0">
               <input id="buscar" name="buscador" class="form-control ml-3 mr-2 col-8"  type="text" placeholder="Introduzca un producto" value="">
               <button class="btn btn-outline-warning my-2 my-sm-0 " type="submit">Search</button>
             </form>                            
@@ -81,14 +81,30 @@
                 <i class="fas fa-shopping-cart fa-1x"></i> 
                 <?php } ?>
                     
-                    <span id="cantidad" class="cantidad">0 Productos: </span>
-                    <span id="precio" class="precio">0 €</span>
+                    <span id="cantidad" class="cantidad"></span>
+                <span id="precio" class="precio">0 €</span>
             </div>
             <div id="carritod" class="row d-flex justify-content-end text-center" data-id-producto="">
                 <div class="col-12 p-2">
                     <span>Productos del carrito &nbsp &nbsp &nbsp      </span>
                     <p>Precio total: &nbsp  &nbsp  <span class="total"></span></p>
-                    <button type="submit" class="btn btn-success my-2 my-sm-0" >Ir a mi Pedido</button>
+                    <form action="<?php echo $root?>pedidos/" method="POST">
+                                <input type="hidden" id="id_carrito_pedido" name="id_carrito_pedido" 
+                                       value="
+                                              <?php 
+                                                    if((isset($_SESSION['carrito']))){     
+                                                    echo $_SESSION['carrito']['id']; 
+                                                    }
+                                              ?>">
+                                <input type="hidden" id="id_usuario_pedido" name="id_usuario_pedido" 
+                                       value="<?php 
+                                                    if((isset($_SESSION['usuario']))){     
+                                                    echo $_SESSION['usuario']['id']; 
+                                                    }
+                                              ?>">
+                            <button type="submit" class="btn btn-success my-2 my-sm-0" >Ir a mi Pedido</button>
+                    </form>
+                    
 
                     
                 </div>
@@ -262,7 +278,7 @@
     </div>
     <div class="container">        
     <div id="header-categorias"  class="row mx-0">
-        <div class="col-12 m-0">
+        <div class="mc col-12 m-0">
 
     <ul class="categorias-menu">
       <li class="nav-item botonc">
@@ -287,8 +303,5 @@
       </div>
     </div>
   </div>
-        </div>
+    </div></header>
     </div>
-    
-    </header>
-</div>

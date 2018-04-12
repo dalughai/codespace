@@ -7,7 +7,7 @@
     </div>
     <div id="footer-datos" class="row">
         <div class="col-3">
-            <ul class="">
+            <ul class="footer-enlaces">
                         <li><strong>MI CUENTA</strong></li>
                         <li><a href="">Mis pedidos</a></li>
                         <li><a href="">Mis vales descuento</a></li>
@@ -17,7 +17,7 @@
             </ul>            
         </div>
         <div class="col-3">
-            <ul class="">
+            <ul class="footer-enlaces">
                         <li><strong>SIGANOS</strong></li>
                         <li><a href="">Facebook</a></li>
                         <li><a href="">Twitter</a></li>
@@ -25,7 +25,7 @@
             </ul>            
         </div>
         <div class="col-3">
-            <ul class="">
+            <ul class="footer-enlaces">
                         <li><strong>INFORMACIÓN</strong></li>
                         <li><a href="">Politica de privacidad</a></li>
                         <li><a href="">Condiciones Generales</a></li>
@@ -38,7 +38,7 @@
             </ul>            
         </div>    
         <div class="col-3">
-            <ul class="">
+            <ul class="footer-enlaces">
                         <li><strong>CONTACTE CON NOSOTROS</strong></li>
                         <li><a href="">ToStringShop.com</a></li>
                         <li><a href="">C/Alextebuna Nº35</a></li>

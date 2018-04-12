@@ -3,7 +3,7 @@
     <div class="row d-flex justify-content-around">
         
         <div class="login-sesion col-6">
-            <form action="<?php echo $root?>login/reg.php" method="post" id="" class="formulario">
+            <form action="<?php echo $root?>login/reg.php" method="post" id="login_create" class="formulario">
                 <h3 class="login-titulo">Crear una cuenta</h3>
                 <div class="form_content clearfix">
                     <p>Escriba su correo electrónico para crear su cuenta</p>
@@ -59,7 +59,7 @@
 
 $(document).ready(function(){
    
-   $("#login").validate({
+   $("#login_form").validate({
          rules: {
             email:
                 {
@@ -74,10 +74,7 @@ $(document).ready(function(){
              password: "Debes introducir una contraseña"
          }
          
-    }
-    );
-   
-    
+    });
 });
 
 </script>

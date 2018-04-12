@@ -84,9 +84,9 @@
                                 <img class="imagen-carrusel" src="<?php echo $root ?><?php echo $producto['imagen']?>"> 
 
                                 <br>
-                                <span><?php echo $producto['nombre'] ?></span>
+                                <span class="precio-producto"><?php echo $producto['nombre'] ?></span>
                                 <br>
-                                <span class="precio-producto" data-producto-precio="<?php echo $producto['precio_iva'] ?>"><?php echo $producto['precio_iva']?></span>€<br>
+                                    <span class="precio-producto" data-producto-precio="<?php echo $producto['precio_iva'] ?>"><?php echo $producto['precio_iva']?></span><span class="precio-producto">€ </span><br>
                                 </a>
                                 
                                 <?php 

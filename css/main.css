@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Cutive Mono|Lustria|Montserrat|Palanquin Dark|Slabo+13px|Playfair Display');
+@import url('https://fonts.googleapis.com/css?family=Cutive Mono|Roboto|Montserrat|Palanquin Dark|Slabo+13px|Nunito');
 /*GENERAL-----------------------------------------------------------------------*/
 h3{
     text-align: center;
@@ -10,18 +10,28 @@ h1{
 
 a {
     text-decoration: none;
-    font-family: 'Lustria';
+    font-family: 'Montserrat';
 }
 
-
 body {
-    background-color: #3B3B3B;
+    /*background-color: #3B3B3B;*/
+background: rgba(0,0,0,1);
+background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(59,59,59,1) 22%, rgba(59,59,59,1) 50%, rgba(59,59,59,1) 79%, rgba(0,0,0,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(22%, rgba(59,59,59,1)), color-stop(50%, rgba(59,59,59,1)), color-stop(79%, rgba(59,59,59,1)), color-stop(100%, rgba(0,0,0,1)));
+background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(59,59,59,1) 22%, rgba(59,59,59,1) 50%, rgba(59,59,59,1) 79%, rgba(0,0,0,1) 100%);
+background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(59,59,59,1) 22%, rgba(59,59,59,1) 50%, rgba(59,59,59,1) 79%, rgba(0,0,0,1) 100%);
+background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(59,59,59,1) 22%, rgba(59,59,59,1) 50%, rgba(59,59,59,1) 79%, rgba(0,0,0,1) 100%);
+background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(59,59,59,1) 22%, rgba(59,59,59,1) 50%, rgba(59,59,59,1) 79%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+Copy text
     color: #171717;
     margin: 0;
 }
 
 #body-container{
     background-color: gainsboro;
+    position:relative;
+    
 }
 
 video{
@@ -46,10 +56,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     color: #FFC300;
     text-decoration: none;
     font-family: 'Montserrat';
-    font-size: 12px;
+    font-size: 13px;
 
 }
-
+#enlaces-derecha{
+    position: relative;
+    right: 50px;
+}
 .dropdown-menu{
     background-color: transparent;
 }
@@ -149,6 +162,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     height: 35px;
     width: 100%;
 }
+
+.mc{
+    height: 35px;
+}
 #navbarTogglerDemo01{
     width: 100%;
 }
@@ -159,7 +176,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 .categorias-menu a{
     text-decoration: none;
     color: #FFC300;
-    font-family: 'Lustria';
+    font-family: 'Montserrat';
 }
 .categorias-menu li{
     margin-left: 0;  
@@ -171,6 +188,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 .botonc {
     width: 220px;
     text-align: center;
+    margin-top: 5px;
 }
 #sesion{
     width: 200px;   
@@ -210,6 +228,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 #buscadord{
     z-index: 2;
     visibility: hidden;
+    /*display: none;*/
     position: absolute;
     top: 45px;
     left: 40px;
@@ -217,6 +236,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     background-color: #DCDCDC; 
     border: black double 3px;
 }
+
+.animacion{
+    animation-name: example;
+    animation-duration: 4s;
+}
+@keyframes example {
+    from {visibility: hidden;}
+    to {visibility: visible}
+}
+
 .nombre-producto{
     z-index: 3;
 }
@@ -234,8 +263,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     margin: 15px;
 }
 .carrito-imagen{
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     margin-left: 15px;
 }
 .buscador-imagen{
@@ -543,7 +572,13 @@ item-carrusel{
     margin-top: 25px;
 }
 
-
+.marca-logo{
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    width: 150px;
+    height: 100px;
+}
 /*////////////PEDIDO/////////////////*/
 
 .imagen-pedido{
@@ -662,10 +697,12 @@ footer li{
     font-family:'Roboto';
     list-style: none;
 }
-footer a{
-    font-size: 13px;
+.footer-enlaces a{
+    font-size: 12  px;
     color: #E0E0E0;
+    font-family: 'Ubuntu';
     text-decoration: none;
+    
 }
 #footer-hidden{
         position: absolute;

@@ -81,7 +81,7 @@
 			<div class="product__info">
 				<img class="product__image" src="<?php echo $root ?><?php echo $producto['imagen'] ?>" alt="Product 1" />
 				<h3 class="product__title"><?php echo $producto['nombre'] ?></h3>
-				<span class="product__price"><?php echo $producto['precio'] ?></span>
+				<span class="product__price"><?php echo $producto['precio_iva'] ?></span>
 				<button class="añadir btn btn-dark my-2 my-sm-0">Ver Producto </button>
 		
                    <!--             <button id="" 

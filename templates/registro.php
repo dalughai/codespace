@@ -125,32 +125,7 @@
     </div>
     
 </div>
-<script>
 
-$(document).ready(function(){
-   
-   $("#registro").validate({
-         rules: {
-            email:
-                {
-                    required: true,
-                    minlength: 10
-                }
-            ,
-            password:"required"
-         },
-         messages: {
-             email: "Debes introducir un email",
-             password: "Debes introducir una contraseña"
-         }
-         
-    }
-    );
-   
-    
-});
-
-</script>
     
 
 

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../startApp.php';
 $titulo = "Categorias";
 

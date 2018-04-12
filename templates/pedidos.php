@@ -3,6 +3,7 @@
         <div class="col-12 login-head text-center p-2">
             <h1> MI PEDIDO</h1>
         </div>
+
         <?php
             $sql="select u.id as id_usuario, c.id as id_carrito,p.id as id_producto,p.imagen,p.descripcion_corta, p.nombre, p.precio_iva, cp.cantidad
             from carrito as c
@@ -24,8 +25,11 @@
         ?>
             <div class="col-12">
               <tbody>
-                <tr>
-                  <th scope="row"><i class="fas fa-times fa-1x"></i></th>
+                <tr class="pr<?php echo $producto['id_producto']?>">
+                  <th scope="row"><i class="eliminar fas fa-times fa-1x" 
+                                     data-id="<?php echo $producto['id_producto']?>"
+                                     data-carrito="<?php echo $producto['id_carrito']?>">
+                </i></th>
                   <td class="imagen-pedido"><img src="<?php echo $root,$producto['imagen']?>"></td>
                   <td class="texto-pedido"><?php echo $producto['nombre']?><br/><?php echo $producto['precio_iva']?> €
                     <br/><?php if($producto['cantidad'] > 1) { ?> 
@@ -33,7 +37,7 @@
                     <?php } else { ?>
                     <?php echo $producto['cantidad'] ?> Unidad </td>
                     <?php } ?>
-                    
+
                 </tr>
                 <tr>
                     <td><td colspan="2"><?php echo $producto['descripcion_corta']?></td>

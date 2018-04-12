@@ -5,7 +5,7 @@ require '../startApp.php';
 
 $id_carrito = (isset($_POST["id_carrito"])) ? $_POST["id_carrito"] : "";
 
-$sql = "select c.id as id_carrito,p.id as id_producto,p.imagen, p.nombre, p.precio_iva, cp.cantidad
+$sql = "select c.id as id_carrito,p.id as id_producto,p.imagen, p.nombre, p.precio_iva, cp.cantidad, (cp.cantidad * p.precio_iva) as precio_total
 from carrito as c
 join carrito_producto as cp on cp.id_carrito = c.id
 join productos as p on cp.id_producto = p.id

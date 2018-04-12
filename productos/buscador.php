@@ -3,9 +3,9 @@ session_start();
 
 require '../startApp.php';
 $titulo = "Productos";
-$id_producto = (isset($_GET["id"])) ? $_GET["id"] : "";
+$nombre = (isset($_GET["buscador"])) ? $_GET["buscador"] : "";
 
-$sql = "SELECT * FROM productos WHERE id = $id_producto";
+$sql = "SELECT * FROM productos WHERE nombre = '$nombre'";
 
     $resultado = sqlsrv_query($conexion, $sql);
 
@@ -13,6 +13,7 @@ $sql = "SELECT * FROM productos WHERE id = $id_producto";
         
         $producto = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC);
         
+        $id_producto = $producto['id'];
         
         $sql = "select categorias.nombre from productos join categorias on categorias.id = productos.id_categoria where productos.id = '$id_producto'";
         
@@ -20,7 +21,7 @@ $sql = "SELECT * FROM productos WHERE id = $id_producto";
         
         $categoria = sqlsrv_fetch_array($resultado, SQLSRV_FETCH_ASSOC);
         
-        $sql = "select fabricantes.nombre, fabricantes.imagen from productos join fabricantes on fabricantes.id = productos.id_fabricante where productos.id = '$id_producto'";
+        $sql = "select fabricantes.nombre from productos join fabricantes on fabricantes.id = productos.id_fabricante where productos.id = '$id_producto'";
         
         $resultado = sqlsrv_query($conexion, $sql);
         
