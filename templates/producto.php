@@ -11,7 +11,7 @@
         <h6>Referencia: <?php echo $producto['referencia']?></h6>
     </div>
     <div class=" d-flex justify-content-end logomarca">
-        <img class="marca-logo" src="<?php echo $carpeta_fotos . $marca['imagen']?>">
+        <img class="marca-logo" src="<?php echo $carpeta_fotos . $marca['imagen'] ?>">
     </div>
     <div class="row">
         <div class="producto-imagen col-sm-12 col-lg-4">

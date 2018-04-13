@@ -210,6 +210,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     transition: 0.5s;
 }
 
+#carritod{
+    z-index: 2;
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 32px;
+    width: 460px;
+    background-color: #DCDCDC; 
+    border: black double 3px;
+}
+.ir-pedido{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    }
 #carrito .fas {
     margin: 5px;
     margin-right: 15px;
@@ -222,13 +237,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     margin: 5px;
     color: firebrick;
 }
-#carrito-div:hover{
-    
-}
+
 #buscadord{
     z-index: 2;
     visibility: hidden;
-    /*display: none;*/
     position: absolute;
     top: 45px;
     left: 40px;
@@ -239,26 +251,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 
 .animacion{
     animation-name: example;
+    transition: 0.4s;
     animation-duration: 4s;
 }
 @keyframes example {
-    from {visibility: hidden;}
+    from {display: none;}
     to {visibility: visible}
 }
 
 .nombre-producto{
     z-index: 3;
 }
-#carritod{
-    z-index: 2;
-    visibility: hidden;
-    position: absolute;
-    top: 45px;
-    right: 32px;
-    width: 460px;
-    background-color: #DCDCDC; 
-    border: black double 3px;
-}
+
 .pie-carrito{
     margin: 15px;
 }

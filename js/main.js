@@ -62,6 +62,7 @@ $(document).ready(function(){
             success: function(data){
                 $("div").remove('.items-buscador');
                 $("#buscadord").css("visibility", "visible");
+                
                 //datos = JSON.parse(data);
                 contenedor_buscador = $('<div class="items-buscador row d-flex justify-content-start">');
                 $('#buscadord').append(contenedor_buscador);
@@ -95,7 +96,7 @@ $(document).ready(function(){
        
     $('#buscar').on('keyup',function(){
         var valorBusqueda = $(this).val();
-        console.log(valorBusqueda);
+        //console.log(valorBusqueda);
         if(valorBusqueda != ""){
             obtener_registros(valorBusqueda);    
         } else {
@@ -128,10 +129,14 @@ $(document).ready(function(){
         });
         
 });
+    $('#desc-carrito').click(function(){
+        $("#carritod").toggle("slow");
+    });
     
     $("#carrito").mouseenter(function(){
-        $("#carritod").addClass("animacion");
-        $("#carritod").css("visibility", "visible");
+        //$("#carritod").addClass("animacion");
+        //$("#carritod").css("visibility", "visible");
+        
         var datos = new Array();
         id_carrito = $(this).attr('data-carrito-id');
         var parametros = {
@@ -146,6 +151,7 @@ $(document).ready(function(){
                         //alert("Funciona");
                 },
             success: function(data){
+                
                 total = 0;
                 var cantidad = 0;
                     $("div").remove('.items-carrito');
@@ -179,13 +185,13 @@ $(document).ready(function(){
             }
         });
     });
-    $("#carrito").mouseleave(function(){
-        $("#carritod").css("visibility", "hidden");
-    });
-    $("#carritod").mouseenter(function(){
-        $("#carritod").css("visibility", "visible");
-    });
-    $("#carritod").mouseleave(function(){
-        $("#carritod").css("visibility", "hidden");
-    });
+//    $("#carrito").mouseleave(function(){
+//        $("#carritod").css("visibility", "hidden");
+//    });
+//    $("#carritod").mouseenter(function(){
+//        $("#carritod").css("visibility", "visible");
+//    });
+//    $("#carritod").mouseleave(function(){
+//        $("#carritod").css("visibility", "hidden");
+//    });
 }); 

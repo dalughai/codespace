@@ -41,11 +41,11 @@
     </div>
     <div class="row m-0">
         <div id="buscador" class="col-4">
-            <form action="<?php echo $root ?>productos/buscador.php"id="form-buscador" method="GET" class="form-inline my-2 my-lg-0">
+            <form action="<?php echo $root ?>productos/buscador.php"id="form-buscador" method="GET" autocomplete="off" class="form-inline my-2 my-lg-0">
               <input id="buscar" name="buscador" class="form-control ml-3 mr-2 col-8"  type="text" placeholder="Introduzca un producto" value="">
               <button class="btn btn-outline-warning my-2 my-sm-0 " type="submit">Search</button>
             </form>                            
-            <div id="buscadord" class="row d-flex justify-content-end text-center" data-id-producto="">
+            <div id="buscadord" class="row" data-id-producto="">
 
                     <div class="items-buscador row d-flex justify-content-start text-center">
 
@@ -76,6 +76,7 @@
                 ?>
             <div id="carrito" class="row" data-carrito-id="<?php echo $_SESSION['carrito']['id']?>">
                 <i class="fas fa-shopping-cart fa-2x"></i> 
+                
                 <?php    } else {  ?>
             <div id="carrito" class="row">
                 <i class="fas fa-shopping-cart fa-1x"></i> 
@@ -83,8 +84,9 @@
                     
                     <span id="cantidad" class="cantidad"></span>
                 <span id="precio" class="precio">0 €</span>
+                <a href="#" id="desc-carrito"><i class="fas fa-arrow-down"></i></a>
             </div>
-            <div id="carritod" class="row d-flex justify-content-end text-center" data-id-producto="">
+            <div id="carritod" class="row" data-id-producto="">
                 <div class="col-12 p-2">
                     <span>Productos del carrito &nbsp &nbsp &nbsp      </span>
                     <p>Precio total: &nbsp  &nbsp  <span class="total"></span></p>
@@ -102,11 +104,9 @@
                                                     echo $_SESSION['usuario']['id']; 
                                                     }
                                               ?>">
-                            <button type="submit" class="btn btn-success my-2 my-sm-0" >Ir a mi Pedido</button>
+                            <button type="submit" class="ir-pedido btn btn-success my-2 my-sm-0" >Ir a mi Pedido</button>
                     </form>
-                    
-
-                    
+                
                 </div>
             
                 <div class="items-carrito row d-flex justify-content-start text-center">
