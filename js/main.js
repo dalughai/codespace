@@ -24,7 +24,6 @@ $(document).ready(function(){
                 $('#precio').text(data[cantidad]['precio_total'] + '€');
             }
         });
-
 });
 
 $(document).ready(function(){
@@ -36,7 +35,7 @@ $(document).ready(function(){
           autoplaySpeed: 1000
 });
     
-
+    
     $('.eliminar').on('click',function(){
         var id_producto = $(this).attr('data-id');
         var id_carrito = $(this).attr('data-carrito');
