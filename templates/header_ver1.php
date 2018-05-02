@@ -1,25 +1,43 @@
-<div class="container-fluid">
-<div class="row m-0 fila_1">
-        <div class="col-12">
-            <span>Contacto: 635 94 60 97 | info@tostringshop.com</span>
-        </div>
-    </div>
-</div>
-
-
 <div class="container">
 <header>
-    <div class="row m-0 fila_1">
-        <div class="col-12">
-            <span>Contacto: 635 94 60 97 | info@tostringshop.com</span>
-        </div>
-    </div>
     <div class="row m-0">
+        <div id="enlaces-izquierda" class="col-4 enlaces-header">
+            <ul class="header-list">
+                <li>
+                    <a href="">ENVIOS</a>
+                </li>
+                <li>
+                    <a href="">CONTACTO</a>
+                </li>
+                <li>
+                    <a href="">AYUDA</a>
+                </li>
+                <li>
+                    <a href="">SUGERENCIAS</a>
+                </li>
+            </ul>
+        </div>
+
         <div id="logo" class="col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
             <a href="<?php echo $root ?>index.php"><img src="<?php echo $carpeta_fotos?>/logo4.png"></a>
         </div>
-                    
-    
+        <div id="enlaces-derecha" class="col-4 enlaces-header">
+            <ul class="header-list">
+                <li>
+                    <a href="">NOTICIAS</a>
+                </li>
+                <li>
+                    <a href="">MARCAS</a>
+                </li>
+                <li>
+                    <a href="">NOVEDADES</a>
+                </li>
+                <li>
+                    <a href="<?php echo $root ?>micuenta">USUARIO</a>
+                </li>
+            </ul>
+            
+        </div>
     </div>
     <div class="row m-0">
         <div id="buscador" class="col-6 ">
