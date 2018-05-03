@@ -1,6 +1,6 @@
 <div class="container">
 <header>
-    <div class="row m-0">
+    <div class="row fila1">
         <div id="enlaces-izquierda" class="col-4 enlaces-header">
             <ul class="header-list">
                 <li>
@@ -39,10 +39,10 @@
             
         </div>
     </div>
-    <div class="row m-0">
+    <div class="row ">
         <div id="buscador" class="col-6 ">
             <form action="<?php echo $root ?>productos/buscador.php"id="form-buscador" method="GET" autocomplete="off" class="form-inline my-2 my-lg-0">
-            <i class="logo-bus fas fa-search"></i>  
+            <i class="lupa fas fa-search"></i>  
             <input id="buscar" name="buscador" class="form-control ml-3 mr-2 col-6"  type="text" placeholder="Introduzca un producto" value="">
             
             </form>                            
@@ -102,30 +102,6 @@
                 <div class="items-carrito row d-flex justify-content-start text-center">
                     
                 </div>
-<!--
-                <div class="pie-carrito row">
-                        <div class="col-12">
-                        <p>Precio total: <span class="total"></span></p>
-
-                            <form action="<?php echo $root?>pedidos/" method="POST">
-                                <input type="hidden" id="id_carrito_pedido" name="id_carrito_pedido" 
-                                       value="
-                                              <?php 
-                                                    if((isset($_SESSION['carrito']))){     
-                                                    echo $_SESSION['carrito']['id']; 
-                                                    }
-                                              ?>">
-                                <input type="hidden" id="id_usuario_pedido" name="id_usuario_pedido" 
-                                       value="<?php 
-                                                    if((isset($_SESSION['usuario']))){     
-                                                    echo $_SESSION['usuario']['id']; 
-                                                    }
-                                              ?>">
-                            <button type="submit" class="btn btn-success my-2 my-sm-0" >Ir a mi Pedido</button>
-                            </form>
-                        </div>
-            </div>
--->
         </div>
     </div>
         </div>
@@ -271,7 +247,7 @@
         <div class="mc col-12 m-0">
 
     <ul class="categorias-menu">
-      <li class="nav-item botonc">
+      <li class="nav-item botonc botonizq">
         <a href="<?php echo $root ?>categorias?id=1">Guitarra Electrica</a>
       </li>
       <li class="nav-item botonc">
@@ -286,7 +262,7 @@
       <li class="nav-item botonc">
         <a href="<?php echo $root ?>categorias?id=5">Bajo Acustico</a>
       </li>
-      <li class="nav-item botonc">
+      <li class="nav-item botonc botonder">
         <a href="<?php echo $root ?>categorias?id=6">Accesorios</a>
       </li>
     </ul>
