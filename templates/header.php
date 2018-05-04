@@ -42,9 +42,10 @@
     <div class="row ">
         <div id="buscador" class="col-6 ">
             <form action="<?php echo $root ?>productos/buscador.php"id="form-buscador" method="GET" autocomplete="off" class="form-inline my-2 my-lg-0">
-            <i class="lupa fas fa-search"></i>  
-            <input id="buscar" name="buscador" class="form-control ml-3 mr-2 col-6"  type="text" placeholder="Introduzca un producto" value="">
-            
+            <div class="divlupa">
+                <i class="lupa fas fa-search"></i>  
+                <input id="buscar" name="buscador" class="form-control ml-3 mr-2 col-8"  type="text" placeholder="Introduzca un producto" value="">
+            </div>
             </form>                            
             <div id="buscadord" class="row" data-id-producto="">
 
@@ -58,22 +59,38 @@
 
         <div id="carrito-div" class="col-6 d-flex justify-content-end">
         <div id="sesion" class="col-6 text-center">
-            <a href="<?php echo $root ?>login"  >Iniciar Sesion / Registrarse </a>
+            <?php 
+                if((isset($_SESSION['usuario']))){                                 
+            ?>
+                <a href="<?php echo $root ?>micuenta"  >Bienvenido <?php echo $_SESSION['usuario']['nombre'] ?></a>
+                
+            <?php
+                } else {
+            ?>
+                <a href="<?php echo $root ?>login"  >Iniciar Sesion / Registrarse </a>
+            <?php
+                }
+            ?>
         </div>
             <?php 
                     if((isset($_SESSION['carrito']))){                                 
                 ?>
             <div id="carrito" class="row" data-carrito-id="<?php echo $_SESSION['carrito']['id']?>">
-                <i class="fas fa-shopping-cart fa-2x"></i> 
+            <div class="logo-carrito">
+                <i class="fas fa-shopping-cart fa-1x"></i> 
                 
                 <?php    } else {  ?>
             <div id="carrito" class="row">
+            <div class="logo-carrito">
                 <i class="fas fa-shopping-cart fa-1x"></i> 
                 <?php } ?>
-                    
-                    <span id="cantidad" class="cantidad"></span>
+                </div>
+                    <span class="cantidad-texto">Cantidad: </span>
+                    <span id="cantidad" class="cantidad">0</span>
                 <span id="precio" class="precio">0 €</span>
-                <a href="#" id="desc-carrito"><i class="fas fa-arrow-down"></i></a>
+                <div class="div-des-carrito">
+                    <a href="#" id="desc-carrito"><i class="fas fa-angle-down fa-1x"></i></a>
+                </div>
             </div>
             <div id="carritod" class="row" data-id-producto="">
                 
@@ -248,19 +265,19 @@
 
     <ul class="categorias-menu">
       <li class="nav-item botonc botonizq">
-        <a href="<?php echo $root ?>categorias?id=1">Guitarra Electrica</a>
+        <a href="<?php echo $root ?>categorias?id=1">Cuerdas G.Electrica</a>
       </li>
-      <li class="nav-item botonc">
-        <a href="<?php echo $root ?>categorias?id=2">Guitarra Acustica</a>
+      <li class="nav-item botonc b2">
+        <a href="<?php echo $root ?>categorias?id=2">Cuerdas G.Acustica</a>
       </li>
-      <li class="nav-item botonc">
-        <a href="<?php echo $root ?>categorias?id=3">Guitarra Clasica</a>
+      <li class="nav-item botonc b3">
+        <a href="<?php echo $root ?>categorias?id=3">Cuerdas G.Clasica</a>
       </li>
-      <li class="nav-item botonc">
-        <a href="<?php echo $root ?>categorias?id=4">Bajo Electrico</a>
+      <li class="nav-item botonc b4">
+        <a href="<?php echo $root ?>categorias?id=4">Cuerdas B.Electrico</a>
       </li>
-      <li class="nav-item botonc">
-        <a href="<?php echo $root ?>categorias?id=5">Bajo Acustico</a>
+      <li class="nav-item botonc b5">
+        <a href="<?php echo $root ?>categorias?id=5">Cuerdas B.Acustico</a>
       </li>
       <li class="nav-item botonc botonder">
         <a href="<?php echo $root ?>categorias?id=6">Accesorios</a>
