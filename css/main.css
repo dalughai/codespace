@@ -311,7 +311,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 #carrito .precio{
     margin: 5px;
-    color: firebrick;
+    color: #0998C2;
 }
 .logo-carrito{
     background-color: dimgray;
