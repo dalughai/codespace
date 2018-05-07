@@ -194,12 +194,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 .mc{
     height: 43px;
     padding-top: 3px;
+    z-index: 0;
+    background: url(../images/blackfondo4352345432.png);
+    background-repeat: repeat;
+    background-size: 400px; 
+    transition: 0.5s;
 }
 .mc:hover{
-    background: url("../images/fverde.png");
+    /* background: url("../images/fverde.png");
     background-repeat: repeat;
-    background-size: 100px;
-    position:relative;
+    background-size: 100px; */
 }
 #navbarTogglerDemo01{
     width: 100%;

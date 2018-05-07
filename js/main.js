@@ -39,8 +39,147 @@ $(document).ready(function(){
           autoplay: true,
           autoplaySpeed: 1000
 });
-    
-    
+    $('.botonizq').on('mouseenter',function(){
+        console.log("hola");
+        $(".mc").css("background-image", "url(" + root + "images/famarillo.png)");
+        $(".mc").css("background-repeat", "repeat");
+        $(".mc").css("background-size", "100px");
+        $("#header-categorias").css("transition", "3s");
+        $("#header-categorias").css("border-color", "#ccff00");
+        
+    })
+    $('.botonizq').on('mouseleave',function(){
+        console.log("dios");
+        $(".mc").css("background", "");
+        $("#header-categorias").css("border-color", "#C8E2E2");
+    })
+    $('.b2').on('mouseenter',function(){
+        console.log("hola");
+        $(".mc").css("background-image", "url(" + root + "images/fverde.png)");
+        $(".mc").css("background-repeat", "repeat");
+        $(".mc").css("background-size", "100px");
+        $("#header-categorias").css("transition", "3s");
+        $("#header-categorias").css("border-color", "#39ff14");
+        
+    })
+    $('.b2').on('mouseleave',function(){
+        console.log("dios");
+        $(".mc").css("background", "");
+        $("#header-categorias").css("border-color", "#C8E2E2");
+    })
+    $('.b3').on('mouseenter',function(){
+        console.log("hola");
+        $(".mc").css("background-image", "url(" + root + "images/frojo.png)");
+        $(".mc").css("background-repeat", "repeat");
+        $(".mc").css("background-size", "100px");
+        $("#header-categorias").css("transition", "3s");
+        $("#header-categorias").css("border-color", "#FE0000");
+        
+    })
+    $('.b3').on('mouseleave',function(){
+        console.log("dios");
+        $(".mc").css("background", "");
+        $("#header-categorias").css("border-color", "#C8E2E2");
+    })  
+    $('.b4').on('mouseenter',function(){
+        console.log("hola");
+        $(".mc").css("background-image", "url(" + root + "images/frosa.png)");
+        $(".mc").css("background-repeat", "repeat");
+        $(".mc").css("background-size", "100px");
+        $("#header-categorias").css("transition", "3s");
+        $("#header-categorias").css("border-color", "#FF1493");
+        
+    })
+    $('.b4').on('mouseleave',function(){
+        console.log("dios");
+        $(".mc").css("background", "");
+        $("#header-categorias").css("border-color", "#C8E2E2");
+    })
+    $('.b5').on('mouseenter',function(){
+        console.log("hola");
+        $(".mc").css("background-image", "url(" + root + "images/fnaranja.png)");
+        $(".mc").css("background-repeat", "repeat");
+        $(".mc").css("background-size", "100px");
+        $("#header-categorias").css("transition", "3s");
+        $("#header-categorias").css("border-color", "#FF5601");
+        
+    })
+    $('.b5').on('mouseleave',function(){
+        console.log("dios");
+        $(".mc").css("background", "");
+        $("#header-categorias").css("border-color", "#C8E2E2");
+    })
+    $('.botonder').on('mouseenter',function(){
+        console.log("hola");
+        $(".mc").css("background-image", "url(" + root + "images/fazul.png)");
+        $(".mc").css("background-repeat", "repeat");
+        $(".mc").css("background-size", "100px");
+        $("#header-categorias").css("transition", "3s");
+        $("#header-categorias").css("border-color", "#0098FD");
+        
+    })
+    $('.botonder').on('mouseleave',function(){
+        console.log("dios");
+        $(".mc").css("background", "");
+        $("#header-categorias").css("border-color", "#C8E2E2");
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     $('.eliminar').on('click',function(){
         var id_producto = $(this).attr('data-id');
         var id_carrito = $(this).attr('data-carrito');
@@ -57,6 +196,7 @@ $(document).ready(function(){
             }
         });
     });
+
     function obtener_registros(valorBusqueda){
         var datos = new Array();
         $.ajax({
