@@ -14,24 +14,12 @@ a {
 }
 
 body {
-    background: url("../images/fondo.png");
-    background-repeat: repeat;
-    background-size: 50px;
-    /* background: rgba(245,245,245,1);
-    background: -moz-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 66%, rgba(235,232,235,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(245,245,245,1)), color-stop(35%, rgba(255,255,255,1)), color-stop(66%, rgba(255,255,255,1)), color-stop(100%, rgba(235,232,235,1)));
-    background: -webkit-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 66%, rgba(235,232,235,1) 100%);
-    background: -o-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 66%, rgba(235,232,235,1) 100%);
-    background: -ms-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 66%, rgba(235,232,235,1) 100%);
-    background: linear-gradient(to right, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 66%, rgba(235,232,235,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ebe8eb', GradientType=1 ); */
-    overflow-x:hidden;
+    background-color: #3B3B3B;
+    color: #171717;
 }
 
 #body-container{
-    background: url("../images/fondo.png");
-    background-repeat: repeat;
-    background-size: 10px;
+    background-color: gainsboro;
     position:relative;
     
 }
@@ -39,48 +27,36 @@ body {
 video{
     width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*/////////////////////////////////HEADER--------------------------------------------------------------------------*/
+/*HEADER--------------------------------------------------------------------------*/
 header{
-    background: rgba(226,226,226,1); 
-background: rgba(0,0,0,1); 
-background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%); 
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(64%, rgba(23,23,23,1)), color-stop(100%, rgba(23,23,23,1))); 
-background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%); 
-background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%); 
-background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%); 
-background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%); 
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#171717', GradientType=0 ); 
+    background: #FFFFFF;
 }
-.fila1{
-    margin-top: -10px;
-    margin-bottom: -20px;
-    
+.fila_1{
+    background-color: #272727;
+    height: 50px;
+    padding-top: 13px;
 }
-.fila_1 span{
-    color: #f4f4f4;
-    margin-top: 25px; 
+.fila_2{
+    background-color: #ffffff;
+    height: 100px;
+    padding: 0%;
+    margin: 0;
+    position: relative;
+}
+.fila_3{
+    background-color: #2E5BA9;
+    height: 40px;
+    padding: 0%;
+    margin: 0;
+    position: relative;
+}
+.hcontacto{
+    color: #C8E2E2;
+    padding: 20px;
+    bottom: -15px;
 }
 .enlaces-header a{
-    color: #f4f4f4;
+    color: #C8E2E2;
     text-decoration: none;
     font-family: 'Montserrat';
     font-size: 13px;
@@ -115,7 +91,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     visibility: hidden;
 }
 .header-list li {
-    color: f4f4f4;
+    color: lightgrey;
     margin: 15px;
     margin-top: 25px;
 }
@@ -140,6 +116,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     margin-left: 10px;
 }
 #header-categorias{
+    position: relative;
     margin-top: 20px;
     border-top: solid #C8E2E2 1px;
 }
@@ -149,10 +126,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 
 #logo {
-    width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  top:30px;
+ width: 50%;
+  margin: auto;
 }
 
 #logo img{
@@ -187,19 +162,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 
 #menu-categorias{
-    height: 55px;
+    height: 35px;
     width: 100%;
 }
 
 .mc{
-    height: 43px;
-    padding-top: 3px;
-}
-.mc:hover{
-    background: url("../images/fverde.png");
-    background-repeat: repeat;
-    background-size: 100px;
-    position:relative;
+    height: 35px;
 }
 #navbarTogglerDemo01{
     width: 100%;
@@ -210,7 +178,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 .categorias-menu a{
     text-decoration: none;
-    color: #f4f4f4;
+    color: #C8E2E2;
     font-family: 'Montserrat';
 }
 .categorias-menu li{
@@ -221,90 +189,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     height: 100px;
 }
 .botonc {
-    width: 420px;
+    width: 220px;
     text-align: center;
     margin-top: 5px;
 }
-.botonizq{
-    position: relative;
-    left: -25px;
-}
-.botonizq a:hover{
-    color: #ccff00;
-}
-.b2{
-    position: relative;
-    left: 5px;
-}
-.b2 :hover{
-    color: #39ff14;
-}
-.b3{
-    position: relative;
-    left: 25px;
-}
-.b3 :hover{
-    color: #FE0000;
-}
-.b4{
-    position: relative;
-    left: 35px;
-}
-.b4 :hover{
-    color: #FF1493;
-}
-.b5{
-    position: relative;
-    left: 50px;
-}
-.b5 :hover{
-    color: #FF5601;
-}
-.botonder{
-    position: relative;
-    left: 30px;
-}
-.botonder a:hover{
-    color: #0098FD;
-}
 #sesion{
-    position: absolute;
-    right: -12px;
-    top: -40px;
     width: 100%;   
     margin-left: 0px;
 }
 #sesion a{
-    color: #929292;
+    color: whitesmoke;
     text-decoration: none;
     font-size: 14px;
-    width: 800px;   
+
 }
-#sesion a:hover{
-    color:#0998C2;
-}
+
 #sesion-hidden{
     margin-right: 15px;
 }
 #carrito-div{
     position: relative; 
+    padding: 0%;
+    margin: 0%;
 }
 #carrito{
-    border-radius: 4px;
-    display: inline-flex;
+    left: 100px;
+    position: relative;
+    right: 2px;
     width: 250px;
-    height: 37px;
+    height: 100%;
     border: solid black 1px;
     background-color: #FFFFFF;
-    margin-right: 5px;
     transition: 0.5s;
-    margin-right: 43px;
-    position: relative;
-}
-
-.div-des-carrito{
-    position: absolute;
-    right: 5px;
 }
 
 #carritod{
@@ -323,49 +239,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     right: 5px;
     }
 #carrito .fas {
-    position:  relative;
-    margin: 10px;
+    margin: 5px;
     margin-right: 15px;
     color: #131313;
 }
 #carrito .cantidad{
     margin: 5px;
 }
-#carrito .cantidad-texto{
-    margin: 5px;
-}
 #carrito .precio{
     margin: 5px;
-    color: #0998C2;
-}
-.logo-carrito{
-    background-color: dimgray;
-    
-}
-#buscar{
-    padding-left: 35px;
-    background-color: #5C5C5C;
-    color: #ffffff;
-    border: rgb(58, 56, 56);
-    width: 40%;
-    transition: 0.8s;
-
-}
-#buscar::placeholder{
-    color: #ffffff;
-}
-#buscar:focus::placeholder{
-    color: #5C5C5C;
-}
-#buscar:focus{
-    background-color: #FFFFFF;
-    width: 60%;
-    border:blue;
-    color: #5C5C5C;
-}
-#buscador{
-    position: relative;
-    padding-left: 53px;
+    color: firebrick;
 }
 
 #buscadord{
@@ -378,18 +261,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     background-color: #FFFFFF; 
     border: black double 3px;
 }
-.divlupa{
-    position: relative;
-    width: 100%;
-    
-}
-.lupa .fas{
-    color: #ffffff;
-}
-.lupa{
+.logo-bus{
     position: absolute;
-    left: 25px;
-    top: 10px;
+    right: 320px;
     z-index: 2;
 }
 .animacion{
@@ -406,9 +280,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     z-index: 3;
 }
 
-.pie-carrito{
-    margin: 15px;
-}
+
 .carrito-imagen{
     width: 85px;
     height: 85px;
@@ -474,12 +346,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
         visibility: hidden;
      }
 }
-/* .botonc a:hover{
+.botonc a:hover{
     color: #000000;
 }
 .botonc:hover{
     background-color: #C8E2E2;
-} */
+}
 
 header ul{
     list-style: none;
@@ -556,24 +428,11 @@ header ul{
 .form-control:focus{
     border-color: #C8E2E2;
     box-shadow: 0 0 10px 0rem #C8E2E2;}
+/*INDEX---------------------------------------------------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-/*/////////////////////////// HOME////---------------------------------------------------------------------------*/
-
-#banners {
-    margin-top: 1px;       
-    margin-left: -30px;
-    margin-right: -30px;
+main {
 }
+
 #banners img{
     width: 100%;
     height: 350px;
@@ -656,22 +515,6 @@ item-carrusel{
     margin-left: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*LOGIN /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .login-head{
@@ -713,17 +556,6 @@ item-carrusel{
     margin-bottom: 50px;
 }
 
-
-
-/*/////////////////////////// CUSTOM ////////////////////////////////////////////////////////////*/
-
-
-
-
-
-
-
-
 /*////////////////////// CATEGORIAS   ////////////////////////////////////////////////////////////////////////////////////*/
 .categoria-show img{
     margin-top: 30px;
@@ -744,19 +576,6 @@ item-carrusel{
 .filtro div{
     display: inline-flex;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*/////////////PRODUCTO///////////////////////////////////////*/
@@ -780,18 +599,6 @@ item-carrusel{
     width: 150px;
     height: 100px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 /*////////////PEDIDO/////////////////*/
 
 .imagen-pedido{
@@ -805,13 +612,6 @@ item-carrusel{
 th .fas{
     color: red;
 }
-
-
-
-
-
-
-
 /*QUIENES SOMOS--------------------------------------------------------------------*/
 #cuerpo_who{
     margin-top: 10px;
@@ -833,24 +633,6 @@ th .fas{
     width: 250px;
     height: 250px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*CATALOGO----------------------------------------------------------------*/
 
@@ -876,27 +658,6 @@ th .fas{
 }
 
 /*DETALLE PRODUCTO-------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*PIE DE PAGINA----------------------------------------------------------*/

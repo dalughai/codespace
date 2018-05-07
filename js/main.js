@@ -20,8 +20,13 @@ $(document).ready(function(){
             type: 'POST',
             data: {id_carrito : id_carrito},
             success: function(data){
-                $('#cantidad').text(data[cantidad]['cantidad']);
-                $('#precio').text(data[cantidad]['precio_total'] + '€');
+                if(data[cantidad]['cantidad'] == null){
+                    $('#cantidad').text( 0 );
+                    $('#precio').text('0€');
+                } else {    
+                    $('#cantidad').text(data[cantidad]['cantidad']);
+                    $('#precio').text(data[cantidad]['precio_total'] + '€');
+                }
             }
         });
 });

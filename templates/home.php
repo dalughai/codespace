@@ -2,7 +2,7 @@
 <div class="container-fluid">
                 <div id="banners" class="row">
                     <div  class="col-12 m-0">
-                        <div id="carouselExampleIndicators" class="carousel slide m-0" data-ride="carousel">
+                        <div id="carouselExampleIndicators" class="carousel slide mx-0" data-ride="carousel">
                           <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -10,6 +10,10 @@
                             <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
                           </ol>
                           <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -22,7 +26,19 @@
                               <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner4.jpg" alt="Third slide">
                             </div>
                             <div class="carousel-item">
-                              <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner-tension.jpg" alt="Third slide">
+                              <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner5.jpg" alt="Fourth slide">
+                            </div>
+                            <div class="carousel-item">
+                              <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner6.jpg" alt="5 slide">
+                            </div>
+                            <div class="carousel-item">
+                              <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner7.png" alt="6 slide">
+                            </div>
+                            <div class="carousel-item">
+                              <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner8.jpg" alt="7 slide">
+                            </div>
+                            <div class="carousel-item">
+                              <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner-tension.jpg" alt="8 slide">
                             </div>
                             <div class="carousel-item">
                               <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/DAddario.jpg" alt="Third slide">
@@ -60,17 +76,17 @@
                 
                 <div id="boxs" class="row text-center d-flex justify-content-center">
                     <div class="col-sm-12 col-lg-4 col-xl-4 box">
-                        <img class="" src="<?php echo $root ?>images/calibre.jpg">
+                       <a href="<?php echo $root ?>custom"> <img class="" src="<?php echo $root ?>images/calibre.jpg"></a>
                         
                     </div>
                     
                     <div class="col-sm-12 col-lg-4 col-xl-4 box">
-                        <img class="" src="<?php echo $root ?>images/mensual.jpeg">
+                        <a href="<?php echo $root ?>suscripcion">  <img class="" src="<?php echo $root ?>images/mensual.jpeg"></a>
 
                     </div>
                     
                     <div class="col-sm-12 col-lg-4 col-xl-4 box">
-                        <img class="" src="<?php echo $root ?>images/envios.jpg">
+                        <a href="<?php echo $root ?>envios"> <img class="" src="<?php echo $root ?>images/envios.jpg"></a>
 
                     </div>
                 </div>
