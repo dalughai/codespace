@@ -1,6 +1,6 @@
 <div class="container">
 <header>
-    <div class="row m-0">
+    <div class="row fila1">
         <div id="enlaces-izquierda" class="col-4 enlaces-header">
             <ul class="header-list">
                 <li>
@@ -39,11 +39,13 @@
             
         </div>
     </div>
-    <div class="row m-0">
-        <div id="buscador" class="col-4">
+    <div class="row ">
+        <div id="buscador" class="col-6 ">
             <form action="<?php echo $root ?>productos/buscador.php"id="form-buscador" method="GET" autocomplete="off" class="form-inline my-2 my-lg-0">
-              <input id="buscar" name="buscador" class="form-control ml-3 mr-2 col-8"  type="text" placeholder="Introduzca un producto" value="">
-              <button class="btn btn-outline-warning my-2 my-sm-0 " type="submit">Search</button>
+            <div class="divlupa">
+                <i class="lupa fas fa-search"></i>  
+                <input id="buscar" name="buscador" class="form-control ml-3 mr-2 col-8"  type="text" placeholder="Introduzca un producto" value="">
+            </div>
             </form>                            
             <div id="buscadord" class="row" data-id-producto="">
 
@@ -54,39 +56,44 @@
             </div>
 
         </div>
-        <div id="sesion" class="col-4 text-center">
-        
-        
-        <?php if(isset($_SESSION["usuario"])) { ?>
-            <div class="d-flex justify-content-around"> 
-                <a href="<?php echo $root ?>micuenta">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Bienvenido <?php echo $_SESSION['usuario']['nombre']?></button>
-                </a>
-            </div>
-        <?php } else { ?>
-            <a href="<?php echo $root ?>login">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Iniciar Sesion / Registrarse</button>
-            </a>
-        <?php } ?>
-    </div>
-        <div id="carrito-div" class="col-4 d-flex justify-content-end">
-            
+
+        <div id="carrito-div" class="col-6 d-flex justify-content-end">
+        <div id="sesion" class="col-6 text-center">
+            <?php 
+                if((isset($_SESSION['usuario']))){                                 
+            ?>
+                <a href="<?php echo $root ?>micuenta"  >Bienvenido <?php echo $_SESSION['usuario']['nombre'] ?></a>
+                
+            <?php
+                } else {
+            ?>
+                <a href="<?php echo $root ?>login"  >Iniciar Sesion / Registrarse </a>
+            <?php
+                }
+            ?>
+        </div>
             <?php 
                     if((isset($_SESSION['carrito']))){                                 
                 ?>
             <div id="carrito" class="row" data-carrito-id="<?php echo $_SESSION['carrito']['id']?>">
-                <i class="fas fa-shopping-cart fa-2x"></i> 
+            <div class="logo-carrito">
+                <i class="fas fa-shopping-cart fa-1x"></i> 
                 
                 <?php    } else {  ?>
             <div id="carrito" class="row">
+            <div class="logo-carrito">
                 <i class="fas fa-shopping-cart fa-1x"></i> 
                 <?php } ?>
-                    
-                    <span id="cantidad" class="cantidad"></span>
+                </div>
+                    <span class="cantidad-texto">Cantidad: </span>
+                    <span id="cantidad" class="cantidad">0</span>
                 <span id="precio" class="precio">0 €</span>
-                <a href="#" id="desc-carrito"><i class="fas fa-arrow-down"></i></a>
+                <div class="div-des-carrito">
+                    <a href="#" id="desc-carrito"><i class="fas fa-angle-down fa-1x"></i></a>
+                </div>
             </div>
             <div id="carritod" class="row" data-id-producto="">
+                
                 <div class="col-12 p-2">
                     <span>Productos del carrito &nbsp &nbsp &nbsp      </span>
                     <p>Precio total: &nbsp  &nbsp  <span class="total"></span></p>
@@ -112,30 +119,6 @@
                 <div class="items-carrito row d-flex justify-content-start text-center">
                     
                 </div>
-<!--
-                <div class="pie-carrito row">
-                        <div class="col-12">
-                        <p>Precio total: <span class="total"></span></p>
-
-                            <form action="<?php echo $root?>pedidos/" method="POST">
-                                <input type="hidden" id="id_carrito_pedido" name="id_carrito_pedido" 
-                                       value="
-                                              <?php 
-                                                    if((isset($_SESSION['carrito']))){     
-                                                    echo $_SESSION['carrito']['id']; 
-                                                    }
-                                              ?>">
-                                <input type="hidden" id="id_usuario_pedido" name="id_usuario_pedido" 
-                                       value="<?php 
-                                                    if((isset($_SESSION['usuario']))){     
-                                                    echo $_SESSION['usuario']['id']; 
-                                                    }
-                                              ?>">
-                            <button type="submit" class="btn btn-success my-2 my-sm-0" >Ir a mi Pedido</button>
-                            </form>
-                        </div>
-            </div>
--->
         </div>
     </div>
         </div>
@@ -281,22 +264,22 @@
         <div class="mc col-12 m-0">
 
     <ul class="categorias-menu">
-      <li class="nav-item botonc">
-        <a href="<?php echo $root ?>categorias?id=1">Guitarra Electrica</a>
+      <li class="nav-item botonc botonizq">
+        <a href="<?php echo $root ?>categorias?id=1">Cuerdas G.Electrica</a>
       </li>
-      <li class="nav-item botonc">
-        <a href="<?php echo $root ?>categorias?id=2">Guitarra Acustica</a>
+      <li class="nav-item botonc b2">
+        <a href="<?php echo $root ?>categorias?id=2">Cuerdas G.Acustica</a>
       </li>
-      <li class="nav-item botonc">
-        <a href="<?php echo $root ?>categorias?id=3">Guitarra Clasica</a>
+      <li class="nav-item botonc b3">
+        <a href="<?php echo $root ?>categorias?id=3">Cuerdas G.Clasica</a>
       </li>
-      <li class="nav-item botonc">
-        <a href="<?php echo $root ?>categorias?id=4">Bajo Electrico</a>
+      <li class="nav-item botonc b4">
+        <a href="<?php echo $root ?>categorias?id=4">Cuerdas B.Electrico</a>
       </li>
-      <li class="nav-item botonc">
-        <a href="<?php echo $root ?>categorias?id=5">Bajo Acustico</a>
+      <li class="nav-item botonc b5">
+        <a href="<?php echo $root ?>categorias?id=5">Cuerdas B.Acustico</a>
       </li>
-      <li class="nav-item botonc">
+      <li class="nav-item botonc botonder">
         <a href="<?php echo $root ?>categorias?id=6">Accesorios</a>
       </li>
     </ul>
