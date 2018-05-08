@@ -720,10 +720,26 @@ item-carrusel{
 
 
 /*/////////////////////////// CUSTOM ////////////////////////////////////////////////////////////*/
-
-
-
-
+.custom{
+    padding-top: 35px;
+    padding-bottom: 35px;  
+}
+.head-imagen{
+    display:block;
+    margin:auto;
+}
+.left-strings{
+    margin-top: 100px;
+}
+.right-strings{
+    margin-top: 100px;
+}
+.cuerdas-izq{
+    margin: 35px;
+}
+.cuerdas-der{
+    margin: 35px;
+}
 
 
 
