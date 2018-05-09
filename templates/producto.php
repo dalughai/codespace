@@ -15,7 +15,7 @@
     </div>
     <div class="row">
         <div class="producto-imagen col-sm-12 col-lg-4">
-        <img class="product__image" src="<?php echo $root ?><?php echo $producto['imagen'] ?>" alt="Product 1" />
+        <img class="product__image" src="<?php echo $producto['imagen'] ?>" alt="Product 1" />
         </div>
         <div class="col-6">
             
@@ -59,7 +59,7 @@
                                         data-carrito-id="<?php echo $_SESSION['carrito']['id']?>"
                                         data-producto-nombre="<?php echo $producto['nombre']?>" 
                                         data-ruta="<?php echo $root?>"
-                                        data-imagen-producto="<?php echo $root ?><?php echo $producto['imagen']?>.png";
+                                        data-imagen-producto="<?php echo $producto['imagen']?>.png";
                                         data-producto-precio="<?php echo $producto['precio_iva']?>" 
                                         class="añadir btn btn-dark my-2 my-sm-0"><i class="fa fa-shopping-cart"></i> Añadir</button>
                                                         <?php } ?>
@@ -105,7 +105,7 @@
                         
                             <div class="item-carrusel">
                                 <a href="<?php echo $root?>productos?id=<?php echo $producto['id'] ?>">
-                                <img class="imagen-carrusel" src="<?php echo $root ?><?php echo $producto['imagen']?>"> 
+                                <img class="imagen-carrusel" src="<?php echo $producto['imagen']?>"> 
 
                                 <br>
                                 <span class="precio-producto"><?php echo $producto['nombre'] ?></span>
@@ -124,7 +124,7 @@
                                         data-carrito-id="<?php echo $_SESSION['carrito']['id']?>"
                                         data-producto-nombre="<?php echo $producto['nombre']?>" 
                                         data-ruta="<?php echo $root?>"
-                                        data-imagen-producto="<?php echo $root ?><?php echo $producto['imagen']?>.png";
+                                        data-imagen-producto="<?php echo $producto['imagen']?>.png";
                                         data-producto-precio="<?php echo $producto['precio_iva']?>" 
                                         class="añadir btn btn-dark my-2 my-sm-0"><i class="fa fa-shopping-cart"></i> Añadir</button>
                                 <!--</a>-->

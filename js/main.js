@@ -212,7 +212,7 @@ $(document).ready(function(){
                 $('#buscadord').append(contenedor_buscador);
                 for(var producto in data){
                     var elemento_div_open = $('<div class="col-12 item-buscador p-2"> ');
-                    var elemento_imagen = $('<img class="buscador-imagen" src="">').attr("src",root + data[producto]['imagen']);
+                    var elemento_imagen = $('<img class="buscador-imagen" src="">').attr("src",data[producto]['imagen']);
                     var elemento_nombre = $('<p class="nombre-producto"> </p>').text(data[producto]['nombre'] + " ");
                     
                     //var elemento_precio = $('<p> </p>').text(". " + precio + " € ");
@@ -303,7 +303,7 @@ $(document).ready(function(){
                     $('#carritod').append(contenedor_carrito);
                     for(var producto in data){
                         var elemento_div_open = $('<div class="col-12 item-carrito p-2">');
-                        var elemento_imagen = $('<img class="carrito-imagen" src="">').attr("src",root + data[producto]['imagen']);
+                        var elemento_imagen = $('<img class="carrito-imagen" src="">').attr("src",data[producto]['imagen']);
                         var elemento_nombre = $('<p> </p> <br/>').text(data[producto]['nombre'] + " ");
                         var elemento_precio = $('<p> </p>').text(". " + (data[producto]['precio_iva'] + " € "));
                         var elemento_cantidad = $('</br><p> </p>').text("- Cantidad: " + (data[producto]['cantidad']));

@@ -109,7 +109,7 @@
                         
                             <div class="item-carrusel">
                                 <a href="<?php echo $root?>productos?id=<?php echo $producto['id'] ?>">
-                                <img class="imagen-carrusel" src="<?php echo $root ?><?php echo $producto['imagen']?>"> 
+                                <img class="imagen-carrusel" src="<?php echo $producto['imagen']?>" alt="<?php echo $producto['imagen']?>"> 
 
                                 <br>
                                 <span class="precio-producto"><?php echo $producto['nombre'] ?></span>
