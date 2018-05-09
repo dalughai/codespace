@@ -800,7 +800,13 @@ item-carrusel{
     width: 150px;
     height: 100px;
 }
-
+.product__title{
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+.product__price{
+    margin-top: -5px;
+}
 
 
 
