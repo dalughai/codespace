@@ -30,7 +30,7 @@
                                      data-id="<?php echo $producto['id_producto']?>"
                                      data-carrito="<?php echo $producto['id_carrito']?>">
                 </i></th>
-                  <td class="imagen-pedido"><img src="<?php echo $root,$producto['imagen']?>"></td>
+                  <td class="imagen-pedido"><img src="<?php echo $producto['imagen']?>"></td>
                   <td class="texto-pedido"><?php echo $producto['nombre']?><br/><?php echo $producto['precio_iva']?> €
                     <br/><?php if($producto['cantidad'] > 1) { ?> 
                       <?php echo $producto['cantidad'] ?> Unidades</td>

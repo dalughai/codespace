@@ -25,7 +25,7 @@ CREATE TABLE categorias(
 	descripcion VARCHAR(500),
 	logo VARCHAR(300),
 	activo BIT,
-	padre INT,
+	categoria_padre INT,
 	date_add DATETIME,
 	date_update DATETIME,
 	CONSTRAINT PK_categorias PRIMARY KEY(id)
