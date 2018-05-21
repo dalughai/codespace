@@ -13,11 +13,11 @@ join usuarios as u on c.id_cliente = u.id
 where c.id = '$id_carrito'";
 
 $array_datos = array();
-$resultado = sqlsrv_query($conexion, $sql);
+$resultado = mysqli_query($conexion, $sql);
 
 if ($resultado) {
     
-    while($datos = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC)){
+    while($datos = mysqli_fetch_assoc( $resultado )){
         array_push($array_datos,$datos);
     }
     echo json_encode($array_datos);

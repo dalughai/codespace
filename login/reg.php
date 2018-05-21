@@ -12,11 +12,11 @@ if ($usuario_email == '') {
 /*Comprobamos que el email no este resgistrado en la BD*/
 $sql = "SELECT * FROM usuarios WHERE email='$usuario_email'";
 
-$resultado = sqlsrv_query($conexion, $sql);
+$resultado = mysqli_query($conexion, $sql);
 
 if ($resultado) {
     
-    $usuario = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC);
+    $usuario = mysqli_fetch_assoc( $resultado );
     
     if($usuario) {
         

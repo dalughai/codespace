@@ -321,11 +321,11 @@ $(document).ready(function(){
                         $('.items-carrito').append(elemento_div_close); 
 
                         total = total + parseInt(data[producto]['precio_total']);
-                        cantidad = cantidad + data[producto]['cantidad'];
+                        //cantidad = cantidad + data[producto]['cantidad'];
                     }
                     $(".total").text(total + '€');
                     $("#precio").text(total + '€');
-                    $(".cantidad").text(cantidad);
+                    //*$(".cantidad").text(cantidad);
 
 
             }

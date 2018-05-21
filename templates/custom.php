@@ -86,23 +86,40 @@
     <div class="row d-flex justify-content-around categorias-head">
         <div class="col-12">
             <form action="#" method="post" id="login_form" class="custom-datos">
-                <label for="email">Nombre del Set</label> 
-                <input type="text" class=" form-control" placeholder=""></br>
-                <label for="email">Referencia del Set</label> 
-                <input type="text" class=" form-control" placeholder=""></br>
-                <label for="email">Tipo de Set (Sueve, Medio o Fuerte)</label> 
-                <input type="text" class=" form-control" placeholder=""></br>
-                <label for="email">Precio del Set</label> 
-                <input type="text" class=" form-control" placeholder=""></br>
-                <label for="email">Disponibilidad </label> 
-                <input type="text" class=" form-control" placeholder=""></br>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="email">Nombre del Set</label> 
+                        <input type="text" class=" form-control" placeholder=""></br>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email">Referencia del Set</label> 
+                        <input type="text" class=" form-control" placeholder=""></br>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="email">Precio del Set</label> 
+                        <input type="text" class=" form-control" placeholder=""></br>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email">Disponibilidad </label> 
+                        <input type="text" class=" form-control" placeholder=""></br>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">    
+                        <button type="submit" id="SubmitLogin" name="SubmitLogin" class="button btn btn-default button-medium"> 
+                            <span>Crear Set</span> 
+                        </button>     
+                    </div>
+                    <div class="col-md-12 mb-3">        
+                        <button type="submit" id="dd" name="SubmitLogin" class="button btn btn-default button-medi  um"> 
+                            <span>Añadir al Carrito</span> 
+                        </button>            
+                    </div>
+                </div>
+                
 
-                <button type="submit" id="SubmitLogin" name="SubmitLogin" class="button btn btn-default button-medium"> 
-                    <span>Crear Set</span> 
-                </button>     
-                <button type="submit" id="dd" name="SubmitLogin" class="button btn btn-default button-medium"> 
-                    <span>Añadir al Carrito</span> 
-                </button>            
                 </form>
 
     </div>

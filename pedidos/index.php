@@ -15,16 +15,16 @@ $id_carrito = $carrito['id'];
 $id_usuario = $usuario['id'];
 
 $sql = "select * from pedidos where id_cliente = $id_usuario and id_carrito = $id_carrito";
-$resultado = sqlsrv_query($conexion, $sql);
+$resultado = mysqli_query($conexion, $sql);
 
-$consulta = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC);
+$consulta = mysqli_fetch_assoc( $resultado );
 
 if(sizeof($consulta) > 0){
 } else {
     
-    $sql = "insert into pedidos (id_cliente, id_carrito, date_add) VALUES ($id_usuario, $id_carrito, GETDATE())";
+    $sql = "insert into pedidos (id_cliente, id_carrito, date_add) VALUES ($id_usuario, $id_carrito, NOW())";
 
-    $resultado = sqlsrv_query($conexion, $sql);
+    $resultado = mysqli_query($conexion, $sql);
 
     if ($resultado) {
 

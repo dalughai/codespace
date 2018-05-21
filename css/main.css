@@ -754,9 +754,12 @@ item-carrusel{
 .custom-ncuerdas{
     display: none;
 }
+
 .custom-datos{
-    display: none;
+    /* display: none; */
     transition: 1s;
+    margin-top: 40px;
+    
 }
 .custom-div-ncuerdas{
     transition: 1s;
@@ -850,12 +853,35 @@ item-carrusel{
     width: 50px;
 }
 .texto-pedido{
-    
+    padding-top: 75px;
     position: relative;
-    top: 60px;   
+    /* top: 60px;    */
 }
-th .fas{
-    color: red;
+.cabecera-pedido{
+    background-color: rgb(86, 153, 240);  
+}
+.producto-pedido{
+    display: flex;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.pedido-box{
+    border: grey 1px solid;
+}
+.eliminar{
+    color: #9E0707;
+    position: absolute;
+    left: 35px;
+    top:70px;
+}
+.pedido-show{
+    display: block;
+}
+.pedido-show img{
+    margin: 15px;
+    width: 150px;
+    height: 150px;
 }
 
 

@@ -14,18 +14,18 @@ $sql = "select cantidad from carrito_producto where id_producto = '$id_producto'
 //echo $id_producto;
 //echo $id_carrito;
 //echo $cantidad_get;
-$resultado = sqlsrv_query($conexion, $sql);
-$cantidad_producto = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC);
+$resultado = mysqli_query($conexion, $sql);
+$cantidad_producto = mysqli_fetch_assoc( $resultado );
 $cantidad = $cantidad_producto['cantidad'];
 
 if($cantidad){
     //echo "Se ha actualizado la cantidad de un registro / /";
     $sql = "update carrito_producto set cantidad = ($cantidad + 1) where id_producto = '$id_producto' and id_carrito = $id_carrito";
-    $resultado = sqlsrv_query($conexion, $sql);
+    $resultado = mysqli_query($conexion, $sql);
 } else {
     //echo "Se ha insertado un nuevo registro de producto / /";
     $sql = "INSERT INTO carrito_producto (id_carrito,id_producto,cantidad) VALUES ($id_carrito,$id_producto,$cantidad_get)";
-    $resultado = sqlsrv_query($conexion, $sql);
+    $resultado = mysqli_query($conexion, $sql);
 }
 
 if ($resultado) {
@@ -35,11 +35,11 @@ if ($resultado) {
         join productos
             on productos.id = carrito_producto.id_producto
                 where id_carrito = $id_carrito";
-        $resultado = sqlsrv_query($conexion, $sql);
+        $resultado = mysqli_query($conexion, $sql);
         $array_datos = array();
         if($resultado){
 
-            while($datos = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC)){
+            while($datos = mysqli_fetch_assoc( $resultado )){
                 array_push($array_datos,$datos);
             }
             echo json_encode($array_datos);

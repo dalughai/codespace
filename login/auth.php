@@ -15,12 +15,12 @@ if ($usuario_email == '' && $usuario_password == '') {
 
 $sql = "SELECT * FROM usuarios WHERE email='$usuario_email' AND passwd='$usuario_password'";
 
-$resultado = sqlsrv_query($conexion, $sql);
+$resultado = mysqli_query($conexion, $sql);
 
 
 if ($resultado) {
     
-    $usuario = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC);
+    $usuario = mysqli_fetch_assoc( $resultado );
     
     if($usuario) {
 
@@ -38,17 +38,17 @@ if ($resultado) {
         } else {
                 $id_usuario = $_SESSION['usuario']['id'];
 
-                $sql = "insert into carrito (id_cliente,date_add) VALUES ($id_usuario,GETDATE())";
-                $resultado = sqlsrv_query($conexion, $sql);
+                $sql = "insert into carrito (id_cliente,date_add) VALUES ($id_usuario,NOW())";
+                $resultado = mysqli_query($conexion, $sql);
 
                 if ($resultado) {
 
-                    $sql = "select top(1) id from carrito order by id desc";
+                    $sql = "select id from carrito order by id desc limit 1";
 
-                    $resultado_carrito = sqlsrv_query($conexion, $sql);
+                    $resultado_carrito = mysqli_query($conexion, $sql);
 
                     if($resultado_carrito){
-                        $id_carrito = sqlsrv_fetch_array( $resultado_carrito, SQLSRV_FETCH_ASSOC);
+                        $id_carrito = mysqli_fetch_assoc( $resultado_carrito );
                         
                         $_SESSION['carrito'] = $id_carrito;
                     }

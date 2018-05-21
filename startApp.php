@@ -13,28 +13,28 @@ require 'libs/funciones.php';
 
 
 /** CONECTAR A BASE DE DATOS */
-/*
+
 define("HOST_BBDD","localhost");
 define("USER_BBDD","root");
 define("PASS_BBDD","");
-define("NAME_BBDD","tostring");
+define("NAME_BBDD","tostringshop");
 
 $conexion = mysqli_connect(HOST_BBDD, USER_BBDD, PASS_BBDD, NAME_BBDD);
 // Comprobar conexión
 if($conexion === false){
     die("ERROR: Error de conexión " . mysqli_connect_error());
 }
-*/
+
 
 //conexion A SQL_SERVER
 
-$serverName = "localhost"; 
-$connectionInfo = array( "Database"=>"tostringshop", "UID"=>"tostringshop", "PWD"=>"123456");
-$conexion = sqlsrv_connect( $serverName, $connectionInfo);
-if( $conexion === false )
-{  
-     echo "Connection could not be established.\n";  
-     die( print_r( sqlsrv_errors(), true));  
-}
+// $serverName = "localhost"; 
+// $connectionInfo = array( "Database"=>"tostringshop", "UID"=>"tostringshop", "PWD"=>"123456");
+// $conexion = sqlsrv_connect( $serverName, $connectionInfo);
+// if( $conexion === false )
+// {  
+//      echo "Connection could not be established.\n";  
+//      die( print_r( sqlsrv_errors(), true));  
+// }
 
 ?>

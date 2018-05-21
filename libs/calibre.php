@@ -48,11 +48,11 @@ else if($cuerda = 5 && $id_categoria = 13 || $cuerda = 5 && $id_categoria = 14){
     $sql = "select * from productos where (id_categoria = $id_categoria) and (calibre = 125 or calibre = 130 or calibre = 135) order by calibre";
 }
 //$sql = "select * from productos where (id_categoria = $id_categoria) and calibre is not null order by calibre";
-$resultado = sqlsrv_query($conexion, $sql);
+$resultado = mysqli_query($conexion, $sql);
 $array_datos = array();
 if($resultado){
     
-    while($datos = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC)){
+    while($datos = mysqli_fetch_assoc( $resultado )){
         array_push($array_datos,$datos);
     }
     echo json_encode($array_datos);
