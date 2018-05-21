@@ -1,4 +1,5 @@
 
+
 var cantidad = 0;
 var cantidad_post = 1;
 var precio = 0;
@@ -46,6 +47,7 @@ $(document).ready(function(){
         $(".mc").css("background-size", "100px");
         $("#header-categorias").css("transition", "3s");
         $("#header-categorias").css("border-color", "#ccff00");
+        
         
     })
     $('.botonizq').on('mouseleave',function(){

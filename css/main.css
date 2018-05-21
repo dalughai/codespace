@@ -724,15 +724,22 @@ item-carrusel{
     padding-top: 35px;
     padding-bottom: 35px;  
 }
+.custom-head{
+    display: none;
+    align-content: center;
+    
+}
 .head-imagen{
-    display:block;
-    margin:auto;
+    display: flex;
+    margin: auto;
 }
 .left-strings{
     margin-top: 100px;
+    display: none;
 }
 .right-strings{
     margin-top: 100px;
+    display: none;
 }
 .cuerdas-izq{
     margin: 35px;
@@ -740,6 +747,25 @@ item-carrusel{
 .cuerdas-der{
     margin: 35px;
 }
+
+.custom-instru{
+
+}
+.custom-ncuerdas{
+    display: none;
+}
+.custom-datos{
+    display: none;
+    transition: 1s;
+}
+.custom-div-ncuerdas{
+    transition: 1s;
+}
+
+
+
+
+
 
 
 

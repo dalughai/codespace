@@ -15,4 +15,5 @@ INSERT INTO dbo.categorias(nombre, descripcion,activo,date_add,padre)
 			('Set Cuerda B.Acustico','<p>Set de Cuerdas para Bajo Acustico y ElectroAcustio</p>','1',GETDATE(),5);
 
 select * from categorias
+
 			

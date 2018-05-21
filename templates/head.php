@@ -19,4 +19,5 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
     <link href="<?php echo $root?>css/animate.css" rel="stylesheet" type="text/css"> 
     <script src="<?php echo $root?>js/main.js"></script>
+    <script src="<?php echo $root?>js/custom.js"></script>
 </head>

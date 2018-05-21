@@ -67,7 +67,7 @@
 		<!-- Products -->
         
     <?php
-    $sql = "SELECT * FROM productos where id_categoria = '$idcategoria'";
+        $sql = "SELECT productos.* FROM productos JOIN categorias ON productos.id_categoria = categorias.id WHERE categoria_padre = '$idcategoria'";
 
     $resultado = sqlsrv_query($conexion, $sql);
 

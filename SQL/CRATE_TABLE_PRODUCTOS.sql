@@ -28,6 +28,7 @@ CREATE TABLE productos(
 	nombre varchar(100),
 	descripcion varchar(1000),
 	descripcion_corta varchar(500),
+	calibre int,
 	activo bit,
 	ean13 smallint,
 	precio decimal,

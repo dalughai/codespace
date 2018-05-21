@@ -8,21 +8,19 @@
     <div class="row d-flex justify-content-around categorias-head">
         <div class="filtro">
             <div>
-                <select class="custom-select custom-select-md">
+                <select class="custom-select custom-select-md custom-instru">
                 <option selected>Instrumento: </option>
-                <option value="1">Guitarra Electrica</option>
-                <option value="2">Guitarra Acustica</option>
-                <option value="3">Guitarra Clasica</option>
-                <option value="4">Bajo Electrico</option>
-                <option value="5">Bajo Acustico</option>
+                <option class="custom-instru" value="1">Guitarra Electrica</option>
+                <option class="custom-instru" value="2">Guitarra Acustica</option>
+                <option class="custom-instru" value="3">Guitarra Clasica</option>
+                <option class="custom-instru" value="4">Bajo Electrico</option>
+                <option class="custom-instru" value="5">Bajo Acustico</option>
                 </select>
             </div>
-            <div>
-                <select class="custom-select custom-select-md">
+            <div class="custom-div-ncuerdas">
+                <select class="custom-select custom-select-md custom-ncuerdas">
                 <option selected>Nº de Cuerdas: </option>
-                <option value="1">6</option>
-                <option value="2">7</option>
-                <option value="8">8</option>
+
                 </select>
             </div>
         </div>
@@ -55,8 +53,8 @@
                 </select>
             </div>
         </div>
-        <div class="col-4">
-            <img class="head-imagen" src="../images/fotos_tienda/head.png">
+        <div class="col-4 custom-head">
+
         </div>
         <div class="col-4 right-strings">
         <div class="cuerdas-der">
@@ -87,7 +85,7 @@
     </div>
     <div class="row d-flex justify-content-around categorias-head">
         <div class="col-12">
-            <form action="#" method="post" id="login_form" class="formulario-custom">
+            <form action="#" method="post" id="login_form" class="custom-datos">
                 <label for="email">Nombre del Set</label> 
                 <input type="text" class=" form-control" placeholder=""></br>
                 <label for="email">Referencia del Set</label> 
