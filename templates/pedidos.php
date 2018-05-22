@@ -1,6 +1,6 @@
 <div id="body-container" class="container">  
-    <div class="row pedido-show">
-        <div class="col-12">
+    <div class="rowe pedido-show">
+        <div class="col-12 texto-cabecera">
             <h1> PRODUCTOS DE SU CARRITO</h1>
             <h6>Su carrito contiene X productos</h6>
         </div>
@@ -80,7 +80,7 @@
         ?>
 
     <div class="row">
-                <div class="col-6">
+                <div class="col-6 pedido-boton">
                     <form action="<?php echo $root?>pedidos/generar_pedido.php" method="POST">
                         <input type="hidden" name="id_carrito" value="<?php echo $id_carrito?>">
                         <input type="hidden" name="id_usuario" value="<?php echo $id_usuario?>">

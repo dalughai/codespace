@@ -28,11 +28,18 @@ $(document).ready(function(){
             var selects = $('<option class="ncuerdas" value="13" data-cat="14">4</option><option class="ncuerdas" value="14" data-cat="14">5</option>')
             
             $('.custom-ncuerdas').append(selects);
-        }
+        }        
+    });
 
-
-
-        
+    var eventDelegation = function(evento){
+        $("#id_producto").val($(this).attr('id'));
+        $("#buscar").val($(this).text());
+};
+    $('#buscadord').on('click','.nombre-producto', eventDelegation);
+    
+    $('.custom-cal').on('click',function(){
+        let valor = $(this).val();
+        console.log(valor);
     });
 
     $('.custom-ncuerdas').on('click',function(){
@@ -76,6 +83,7 @@ $(document).ready(function(){
         $("div").remove('.cuerdas-izq');
         $("img").remove('.head-imagen');
         $("div").remove('.cuerdas-der');
+        $("div").remove('.info-string');
 
         // RENDER DE LA IMAMGEN DEL CABECERO DE LA GUITARRA
         if(id_head == 6){
@@ -281,7 +289,7 @@ function mostrarCalibres(data,cuerda,id_head){
 }
 function renderLeftString8(data, cuerda){
     let strIni = $('<div  class="cuerdas-izq">'+
-    '<select class="custom-select custom-select-md custom-cal8" id="custom-cal8">'+
+    '<select class="custom-select custom-select-md custom-cal" id="custom-cal8">'+
         '<option selected id="strName8"> Cuerda </option>'
     );
     $('.left-strings').append(strIni);
@@ -292,14 +300,16 @@ function renderLeftString8(data, cuerda){
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
     var string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
-    $('.custom-cal8').append(string);
+    $('#custom-cal8').append(string);
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
+    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    $('.left-strings').append(infoString);
 }
 function renderLeftString7(data, cuerda){
     let strIni = $('<div  class="cuerdas-izq">'+
-    '<select class="custom-select custom-select-md custom-cal7" id="custom-cal7">'+
+    '<select class="custom-select custom-select-md custom-cal" id="custom-cal7">'+
         '<option selected id="strName7"> Cuerda </option>'
     );
     $('.left-strings').append(strIni);
@@ -310,14 +320,16 @@ function renderLeftString7(data, cuerda){
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
     var string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
-    $('.custom-cal7').append(string);
+    $('#custom-cal7').append(string);
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
+    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    $('.left-strings').append(infoString);
 }
 function renderLeftString6(data, cuerda){
     let strIni = $('<div  class="cuerdas-izq">'+
-    '<select class="custom-select custom-select-md custom-cal6" id="custom-cal6">'+
+    '<select class="custom-select custom-select-md custom-cal" id="custom-cal6">'+
         '<option selected id="strName6"> Cuerda </option>'
     );
     $('.left-strings').append(strIni);
@@ -328,14 +340,16 @@ function renderLeftString6(data, cuerda){
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
     var string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
-    $('.custom-cal6').append(string);
+    $('#custom-cal6').append(string);
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
+    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    $('.left-strings').append(infoString);
 }
 function renderLeftString5(data, cuerda){
     let strIni = $('<div  class="cuerdas-izq">'+
-    '<select class="custom-select custom-select-md custom-cal5" id="custom-cal5">'+
+    '<select class="custom-select custom-select-md custom-cal" id="custom-cal5">'+
         '<option selected id="strName5"> Cuerda </option>'
     );
     $('.left-strings').append(strIni);
@@ -350,10 +364,12 @@ function renderLeftString5(data, cuerda){
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
+    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    $('.left-strings').append(infoString);
 }
 function renderLeftString4(data, cuerda){
     let strIni = $('<div  class="cuerdas-izq">'+
-    '<select class="custom-select custom-select-md custom-cal4" id="custom-cal4">'+
+    '<select class="custom-select custom-select-md custom-cal" id="custom-cal4">'+
         '<option selected id="strName4"> Cuerda </option>'
     );
     $('.left-strings').append(strIni);
@@ -368,10 +384,12 @@ function renderLeftString4(data, cuerda){
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
+    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    $('.left-strings').append(infoString);
 }
 function renderRightString4(data, cuerda){
     let strIni = $('<div  class="cuerdas-der">'+
-    '<select class="custom-select custom-select-md custom-cal4" id="custom-cal4">'+
+    '<select class="custom-select custom-select-md custom-cal" id="custom-cal4">'+
         '<option selected id="strName4"> Cuerda </option>'
     );
     $('.right-strings').append(strIni);
@@ -386,10 +404,12 @@ function renderRightString4(data, cuerda){
     }
     let strFin = $('</select></div>');
     $('.right-strings').append(strFin);
+    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    $('.right-strings').append(infoString);
 }
 function renderRightString3(data, cuerda){
     let strIni = $('<div  class="cuerdas-der">'+
-    '<select class="custom-select custom-select-md custom-cal3" id="custom-cal3">'+
+    '<select class="custom-select custom-select-md custom-cal" id="custom-cal3">'+
         '<option selected id="strName3"> Cuerda </option>'
     );
     $('.right-strings').append(strIni);
@@ -400,14 +420,16 @@ function renderRightString3(data, cuerda){
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
     var string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
-    $('.custom-cal3').append(string);
+    $('#custom-cal3').append(string);
     }
     let strFin = $('</select></div>');
     $('.right-strings').append(strFin);
+    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    $('.right-strings').append(infoString);
 }
 function renderRightString2(data, cuerda){
     let strIni = $('<div  class="cuerdas-der">'+
-    '<select class="custom-select custom-select-md custom-cal2" id="custom-cal2">'+
+    '<select class="custom-select custom-select-md custom-cal" id="custom-cal2">'+
         '<option selected id="strName2"> Cuerda </option>'
     );
     $('.right-strings').append(strIni);
@@ -422,10 +444,12 @@ function renderRightString2(data, cuerda){
     }
     let strFin = $('</select></div>');
     $('.right-strings').append(strFin);
+    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    $('.right-strings').append(infoString);
 }
 function renderRightString1(data, cuerda){
     let strIni = $('<div  class="cuerdas-der">'+
-    '<select class="custom-select custom-select-md custom-cal1" id="custom-cal1">'+
+    '<select class="custom-select custom-select-md custom-cal" id="custom-cal1">'+
         '<option selected id="strName1"> Cuerda </option>'
     );
     $('.right-strings').append(strIni);
@@ -435,9 +459,11 @@ function renderRightString1(data, cuerda){
 
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
-    var string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
+    var string = $('<option class="infots" value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
     $('#custom-cal1').append(string);
     }
     let strFin = $('</select></div>');
     $('.right-strings').append(strFin);
+    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    $('.right-strings').append(infoString);
 }
