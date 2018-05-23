@@ -1,26 +1,28 @@
 /*TRA
 What: Script para crear la tabla sets
 Why: Proyecto 1 To String Shop
-Who: Sergio ¡lvarez GarcÌa
+Who: Sergio √Ålvarez Garc√≠a
 */
 
 USE [tostringshop];
 GO
 
---Compruebo si la tabla existe, si existe la borro para crearla m·s tarde
+--Compruebo si la tabla existe, si existe la borro para crearla m√°s tarde
 IF EXISTS(SELECT 1 FROM sys.tables WHERE [name]='sets')
 BEGIN
 	DROP TABLE sets;
-	PRINT 'La tabla existÌa,por tanto la hemos borrado';
+	PRINT 'La tabla exist√≠a,por tanto la hemos borrado';
 END
 ELSE
 BEGIN 
 	PRINT 'No existe,no hace falta borrar';
 END
 
---CreaciÛn de la tabla
+--Creaci√≥n de la tabla
 CREATE TABLE sets(
 	id BIGINT IDENTITY(1,1),
+    nombre varchar(100),
+    referencia varchar(100),
 	num_cuerda smalliNT,
 	items BIGINT,
 	categoria INT,

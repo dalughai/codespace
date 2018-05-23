@@ -32,15 +32,26 @@ $(document).ready(function(){
     });
 
     var eventDelegation = function(evento){
-        $("#id_producto").val($(this).attr('id'));
-        $("#buscar").val($(this).text());
-};
-    $('#buscadord').on('click','.nombre-producto', eventDelegation);
+        //$("#id_producto").val($(this).val());
+        let miCuerda = $(this).val().split(",");
+        if(miCuerda[5] != undefined){
+            var clase = "info-span"+miCuerda[5];
+            $("span").remove("."+clase);
+            console.log(miCuerda[2]);
+            var dat = $('<span class="' + clase +'">'+ miCuerda[1] +'</span><span class="' + clase +'">'+ miCuerda[2] +'</span><span class="' + clase +'">Calibre '+ miCuerda[4] +'</span><span class="' + clase +'">'+ miCuerda[3] +'€</span>');
+            $("#info-string-"+miCuerda[5]).css("display", "block");
+            $('#info-string-'+miCuerda[5]).append(dat);
+
+        }
+    };
+    $('.right-strings').on('click','.custom-cal', eventDelegation);
+    $('.left-strings').on('click','.custom-cal', eventDelegation);
     
-    $('.custom-cal').on('click',function(){
-        let valor = $(this).val();
-        console.log(valor);
-    });
+    // $('.infots').on('click',function(){
+    //     let valor = $(this).val();
+    //     let ar = valor.split(",");
+    //     console.log("sdfsad");
+    // });
 
     $('.custom-ncuerdas').on('click',function(){
         
@@ -105,6 +116,37 @@ $(document).ready(function(){
     });
 });
 
+function bass4String(categoria,id_head){
+    setTimeout(function(){
+        getStrings(3,categoria,id_head);
+    }, 10);
+    setTimeout(function(){
+        getStrings(2,categoria,id_head);
+    }, 50);
+    setTimeout(function(){
+        getStrings(1,categoria,id_head);
+    }, 96);
+    setTimeout(function(){
+        getStrings(4,categoria,id_head);
+    }, 10);
+}
+function bass5String(categoria,id_head){
+    setTimeout(function(){
+        getStrings(3,categoria,id_head);
+    }, 10);
+    setTimeout(function(){
+        getStrings(2,categoria,id_head);
+    }, 50);
+    setTimeout(function(){
+        getStrings(1,categoria,id_head);
+    }, 96);
+    setTimeout(function(){
+        getStrings(4,categoria,id_head);
+    }, 10);
+    setTimeout(function(){
+        getStrings(5,categoria,id_head);
+    }, 50);
+}
 function guitar6String(categoria,id_head){
     setTimeout(function(){
         getStrings(3,categoria,id_head);
@@ -296,15 +338,15 @@ function renderLeftString8(data, cuerda){
     $('#strName8').text(cuerda + " Cuerda");
 
     for(var producto in data){
-
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],8);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
-    var string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
+    var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
     $('#custom-cal8').append(string);
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
-    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    let infoString = $('<div class="info-string" id="info-string-8"><span class="info-span8"></span><span class="info-span8"></span><span class="info-span8"></span><span class="info-span8"></span></div>');
     $('.left-strings').append(infoString);
 }
 function renderLeftString7(data, cuerda){
@@ -316,15 +358,15 @@ function renderLeftString7(data, cuerda){
     $('#strName7').text(cuerda + " Cuerda");
 
     for(var producto in data){
-
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],7);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
-    var string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
+    var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
     $('#custom-cal7').append(string);
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
-    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    let infoString = $('<div class="info-string" id="info-string-7"><span class="info-span7"></span><span class="info-span7"></span><span class="info-span7"></span><span class="info-span7"></span></div>');
     $('.left-strings').append(infoString);
 }
 function renderLeftString6(data, cuerda){
@@ -336,15 +378,15 @@ function renderLeftString6(data, cuerda){
     $('#strName6').text(cuerda + " Cuerda");
 
     for(var producto in data){
-
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],6);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
-    var string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
+    var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
     $('#custom-cal6').append(string);
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
-    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    let infoString = $('<div class="info-string" id="info-string-6"><span class="info-span6"></span><span class="info-span6"></span><span class="info-span6"></span><span class="info-span6"></span></div>');
     $('.left-strings').append(infoString);
 }
 function renderLeftString5(data, cuerda){
@@ -356,15 +398,15 @@ function renderLeftString5(data, cuerda){
     $('#strName5').text(cuerda + " Cuerda");
 
     for(var producto in data){
-
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],5);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
-    var string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
+    var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
     $('#custom-cal5').append(string);
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
-    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    let infoString = $('<div class="info-string" id="info-string-5"><span class="info-span5"></span><span class="info-span5"></span><span class="info-span5"></span><span class="info-span5"></span></div>');
     $('.left-strings').append(infoString);
 }
 function renderLeftString4(data, cuerda){
@@ -376,15 +418,15 @@ function renderLeftString4(data, cuerda){
     $('#strName4').text(cuerda + " Cuerda");
 
     for(var producto in data){
-
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],4);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
-    var string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
+    var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
     $('#custom-cal4').append(string);
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
-    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    let infoString = $('<div class="info-string" id="info-string-4"><span class="info-span4"></span><span class="info-span4"></span><span class="info-span4"></span><span class="info-span4"></span></div>');
     $('.left-strings').append(infoString);
 }
 function renderRightString4(data, cuerda){
@@ -396,15 +438,16 @@ function renderRightString4(data, cuerda){
     $('#strName4').text(cuerda + " Cuerda");
 
     for(var producto in data){
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],4);
 
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
-    var string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
+    var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
     $('#custom-cal4').append(string);
     }
     let strFin = $('</select></div>');
     $('.right-strings').append(strFin);
-    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    let infoString = $('<div class="info-string" id="info-string-4"><span class="info-span4"></span><span class="info-span4"></span><span class="info-span4"></span><span class="info-span4"></span></div>');
     $('.right-strings').append(infoString);
 }
 function renderRightString3(data, cuerda){
@@ -416,15 +459,15 @@ function renderRightString3(data, cuerda){
     $('#strName3').text(cuerda + " Cuerda");
 
     for(var producto in data){
-
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],3);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
-    var string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
+    var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
     $('#custom-cal3').append(string);
     }
     let strFin = $('</select></div>');
     $('.right-strings').append(strFin);
-    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    let infoString = $('<div class="info-string" id="info-string-3"><span class="info-span3"></span><span class="info-span3"></span><span class="info-span3"></span><span class="info-span3"></span></div>');
     $('.right-strings').append(infoString);
 }
 function renderRightString2(data, cuerda){
@@ -437,16 +480,18 @@ function renderRightString2(data, cuerda){
 
     for(var producto in data){
 
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],2);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
-    var string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
+    var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
     $('#custom-cal2').append(string);
     }
     let strFin = $('</select></div>');
     $('.right-strings').append(strFin);
-    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    let infoString = $('<div class="info-string" id="info-string-2"><span class="info-span2"></span><span class="info-span2"></span><span class="info-span2"></span><span class="info-span2"></span></div>');
     $('.right-strings').append(infoString);
 }
+
 function renderRightString1(data, cuerda){
     let strIni = $('<div  class="cuerdas-der">'+
     '<select class="custom-select custom-select-md custom-cal" id="custom-cal1">'+
@@ -456,14 +501,15 @@ function renderRightString1(data, cuerda){
     $('#strName1').text(cuerda + " Cuerda");
 
     for(var producto in data){
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],1);
 
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
-    var string = $('<option class="infots" value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
+    var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
     $('#custom-cal1').append(string);
     }
     let strFin = $('</select></div>');
     $('.right-strings').append(strFin);
-    let infoString = $('<div class="info-string"><span>Ernie Ball</span><span>EB2221</span><span>Calibre 09</span><span>2€</span></div>');
+    let infoString = $('<div class="info-string" id="info-string-1"><span class="info-span1"></span><span class="info-span1"></span><span class="info-span1"></span><span class="info-span1"></span></div>');
     $('.right-strings').append(infoString);
 }

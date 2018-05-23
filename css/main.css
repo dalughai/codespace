@@ -758,8 +758,9 @@ item-carrusel{
     margin: 15px;
 
 }
-.custom-instru{
 
+#info-string-1{
+    display: none;
 }
 .custom-ncuerdas{
     display: none;
