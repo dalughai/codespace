@@ -18,6 +18,9 @@
 --
 -- Table structure for table `carrito`
 --
+create database tostringshop;
+
+use tostringshop;
 
 DROP TABLE IF EXISTS `carrito`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
