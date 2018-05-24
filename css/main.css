@@ -761,13 +761,35 @@ item-carrusel{
 
 #info-string-1{
     display: none;
+    transition: 1s;
+}
+#info-string-2{
+    display: none;
+}
+#info-string-3{
+    display: none;
+}
+#info-string-4{
+    display: none;
+}
+#info-string-5{
+    display: none;
+}
+#info-string-6{
+    display: none;
+}
+#info-string-7{
+    display: none;
+}
+#info-string-8{
+    display: none;
 }
 .custom-ncuerdas{
     display: none;
 }
 
 .custom-datos{
-    /* display: none; */
+    /*display: none;*/
     transition: 1s;
     margin-top: 40px;
     margin-left: 35px;
@@ -777,7 +799,16 @@ item-carrusel{
     transition: 1s;
 }
 
+.add-set-carrito{
+    display: none;
+}
 
+.boton a{
+  color: black;
+  background: #929292;
+  padding: 10px;
+  border-radius: 5px;
+}
 
 
 

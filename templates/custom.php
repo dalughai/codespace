@@ -39,7 +39,7 @@
     </div>
     <div class="row d-flex justify-content-around categorias-head">
         <div class="col-12">
-            <form action="#" method="post" id="login_form" class="custom-datos">
+            <form id="login_form" class="custom-datos">
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="email">Nombre del Set</label> 
@@ -61,13 +61,10 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="col-md-12 mb-3">    
-                        <button type="submit" id="SubmitLogin" name="SubmitLogin" class="button btn btn-default button-medium"> 
-                            <span>Crear Set</span> 
-                        </button> 
-                        <button type="submit" id="dd" name="SubmitLogin" class="button btn btn-default button-medium"> 
-                            <span>Añadir al Carrito</span> 
-                        </button>     
+                    <div class="col-md-12 mb-3 boton">    
+                        <a class="crear-set" href="#">Crear Set</a>
+                        <a class="add-set-carrito" href="#">Añdair al carrito</a>
+                        
                     </div>
                 </div>
                 </form>
