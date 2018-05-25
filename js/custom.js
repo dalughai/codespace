@@ -1,6 +1,6 @@
 
+let id_usuario = 0;
 let mySet = new Object();
-
 mySet.cuerda1 = 0;
 mySet.cuerda2 = 0;
 mySet.cuerda3 = 0;
@@ -24,7 +24,8 @@ let paseCuerda8 = false;
 $(document).ready(function(){
     $('.custom-instru').on('click',function(){
         instr = $(this).val();
-        console.log('-');
+        id_usuario = $('.id_usuario').val();
+        console.log(id_usuario);
         $("option").remove('.ncuerdas');
         if(instr == 1){
             $(".custom-ncuerdas").css("display", "block");
@@ -58,6 +59,7 @@ $(document).ready(function(){
         if(id_ghead == 6){
             var parametros = {
                 "id_head": id_ghead,
+                "id_usuario": id_usuario,
                 "cuerda_1" : mySet.cuerda1,
                 "cuerda_2" : mySet.cuerda2,
                 "cuerda_3" : mySet.cuerda3,
@@ -70,6 +72,7 @@ $(document).ready(function(){
         if(id_ghead == 7){
             var parametros = {
                 "id_head": id_ghead,
+                "id_usuario": id_usuario,
                 "cuerda_1" : mySet.cuerda1,
                 "cuerda_2" : mySet.cuerda2,
                 "cuerda_3" : mySet.cuerda3,
@@ -83,6 +86,7 @@ $(document).ready(function(){
         if(id_ghead == 8){
             var parametros = {
                 "id_head": id_ghead,
+                "id_usuario": id_usuario,
                 "cuerda_1" : mySet.cuerda1,
                 "cuerda_2" : mySet.cuerda2,
                 "cuerda_3" : mySet.cuerda3,
@@ -125,8 +129,8 @@ $(document).ready(function(){
             if(miCuerda[5] == 7) {paseCuerda7 = true; mySet.cuerda7 = miCuerda[0];}
             if(miCuerda[5] == 8) {paseCuerda8 = true; mySet.cuerda8 = miCuerda[0];}
         } 
-        console.log(mySet);
-        console.log("--------------------------");
+        // console.log(mySet);
+        // console.log("--------------------------");
         // console.log("Pase 1 - " + paseCuerda1);
         // console.log("Pase 2 - " + paseCuerda2);
         // console.log("Pase 3 - " + paseCuerda3);
@@ -139,21 +143,21 @@ $(document).ready(function(){
         if(miCuerda[6] == 6){
             if(paseCuerda1 == true && paseCuerda2 == true && paseCuerda3 == true && paseCuerda4 == true && paseCuerda5 == true && paseCuerda6 == true  ){
                 //crearSet(miCuerda[6]);
-                $(".custom-datos").css("display", "block");
+                $(".boton").css("display", "block");
                 id_ghead = miCuerda[6];
             }
         }
         if(miCuerda[6] == 7){
             if(paseCuerda1 == true && paseCuerda2 == true && paseCuerda3 == true && paseCuerda4 == true && paseCuerda5 == true && paseCuerda6 == true && paseCuerda7 == true ){
                 //crearSet(miCuerda[6]);
-                $(".custom-datos").css("display", "block");
+                $(".boton").css("display", "block");
                 id_ghead = miCuerda[6];
             }
         }
         if(miCuerda[6] == 8){
             if(paseCuerda1 == true && paseCuerda2 == true && paseCuerda3 == true && paseCuerda4 == true && paseCuerda5 == true && paseCuerda6 == true && paseCuerda7 == true && paseCuerda8 == true  ){
                 //crearSet(miCuerda[6]);
-                $(".custom-datos").css("display", "block");
+                $(".boton").css("display", "block");
                 id_ghead = miCuerda[6];
             }
         }
@@ -207,7 +211,7 @@ $(document).ready(function(){
             id_categoria = 14;
         }
 
-        console.log(id_categoria);
+        // console.log(id_categoria);
         
         $("div").remove('.cuerdas-izq');
         $("img").remove('.head-imagen');
@@ -307,13 +311,13 @@ function getStrings(string,categoria, id_head){
         "id_categoria" : categoria,
         "cuerda": string
     };
-    console.log("Categoria: " + categoria + " Cuerda: " + string);
+    // console.log("Categoria: " + categoria + " Cuerda: " + string);
     $.ajax({
         type: "POST",
         url: root + "/libs/calibre.php",
         data: parametros,
         success: function(data){
-            console.log(data);
+            // console.log(data);
             mostrarCalibres(data,string,id_head);
         }
     });
@@ -638,13 +642,24 @@ function renderRightString1(data,cuerda,id_head){
 }
 
 function crearSet(parametros){
-    console.log("ajaxxx");
     $.ajax({
         type: "POST",
         url: root + "/libs/insertar_set.php",
         data: parametros,
         success: function(data){
-            alert("Set creado");
+            $(".custom-datos").css("display", "block");
+            $(".info-nombre").val(data[0].nombre);
+            $(".info-ref").val(data[0].referencia);
+            $(".info-pvp").val(data[0].precio_iva + "€");
+            if(data[0].stock == -1){
+                $(".info-disponible").val("4-5 Dias");
+            } else {
+                $(".info-disponible").val("Envio Inmediato");
+            }
+            
+
+
+
         }
     });
 

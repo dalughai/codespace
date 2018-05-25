@@ -789,7 +789,7 @@ item-carrusel{
 }
 
 .custom-datos{
-    /*display: none;*/
+    display: none;
     transition: 1s;
     margin-top: 40px;
     margin-left: 35px;
@@ -803,6 +803,9 @@ item-carrusel{
     display: none;
 }
 
+.boton{
+    display: none;
+}
 .boton a{
   color: black;
   background: #929292;

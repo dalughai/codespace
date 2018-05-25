@@ -1,7 +1,7 @@
 <div id="body-container" class="container">  
     <div>
         <div class="col-12 texto-cabecera">
-                <h1> Mi Cuenta </h1>
+                <h1> MI CUENTA </h1>
                 <h6><a href="cerrar_sesion.php"> Salir <i class="fas fa-sign-out-alt"></i></a></h6>
         </div>
     </div>

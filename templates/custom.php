@@ -39,35 +39,35 @@
     </div>
     <div class="row d-flex justify-content-around categorias-head">
         <div class="col-12">
-            <form id="login_form" class="custom-datos">
+            <!-- <form id="login_form" class="custom-datos"> -->
+            <div class="custom-datos">
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="email">Nombre del Set</label> 
-                        <input type="text" class=" form-control" readonly="readonly" placeholder="TSS CUSTOM SET TSS0601 09-052"></br>
+                        <input type="text" class=" form-control info-nombre" readonly="readonly"  value=""></br>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="email">Referencia del Set</label> 
-                        <input type="text" class=" form-control" readonly="readonly" placeholder="TSS0601"></br>
+                        <input type="text" class=" form-control info-ref" readonly="readonly"  value=""></br>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="email">Precio del Set</label> 
-                        <input type="text" class=" form-control" readonly="readonly" placeholder="12 €"></br>
+                        <input type="text" class=" form-control info-pvp" readonly="readonly"  value=""></br>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="email">Disponibilidad </label> 
-                        <input type="text" class=" form-control" readonly="readonly" placeholder="ENTREGA INMEDIATA "></br>
+                        <input type="text" class=" form-control info-disponible" readonly="readonly" value=""></br>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="col-md-12 mb-3 boton">    
-                        <a class="crear-set" href="#">Crear Set</a>
-                        <a class="add-set-carrito" href="#">Añdair al carrito</a>
-                        
-                    </div>
+            </div>
+                <!-- </form> -->
+                <div class="col-md-12 mb-3 boton">    
+                        <a class="crear-set">Crear Set</a>
+                        <a class="add-set-carrito">Añdair al carrito</a>
                 </div>
-                </form>
-
     </div>
 </div>
+
+<input type="hidden" class="id_usuario" name="id_usuario" value="<?php echo $_SESSION['usuario']['id'] ?>"> 
