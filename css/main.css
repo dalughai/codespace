@@ -811,8 +811,13 @@ item-carrusel{
   background: #929292;
   padding: 10px;
   border-radius: 5px;
+  text-align: center;
 }
 
+.boton a:hover{
+    box-shadow: 2px 2px 5px rgb(53, 52, 52);
+
+}
 
 
 

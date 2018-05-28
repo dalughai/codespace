@@ -54,7 +54,6 @@ $(document).ready(function(){
             $('.custom-ncuerdas').append(selects);
         }        
     });
-
     $('.crear-set').on('click',function(){
         if(id_ghead == 6){
             var parametros = {
@@ -162,11 +161,8 @@ $(document).ready(function(){
             }
         }
     };
-
     $('.right-strings').on('click','.custom-cal', eventDelegation);
     $('.left-strings').on('click','.custom-cal', eventDelegation);
-
-
     $('.custom-ncuerdas').on('click',function(){
         
         let id_head = $(this).val();
@@ -237,6 +233,9 @@ $(document).ready(function(){
         
 
     });
+    $('.add-set-carrito').on('click',function(){
+
+    })
 });
 
 function renderInfo(){
@@ -293,7 +292,7 @@ function guitar6String(categoria,id_head){
     setTimeout(function(){
         getStrings(6,categoria,id_head);
     }, 135);
-}
+}4
 function guitar7String(categoria,id_head){
     guitar6String(categoria,id_head);
     setTimeout(function(){
@@ -324,6 +323,7 @@ function getStrings(string,categoria, id_head){
 }
 function mostrarCalibres(data,cuerda,id_head){
     
+    //$(".left-strings").addclass("bounceInLeft animated")
     $(".left-strings").css("display", "block");
     $(".custom-head").css("display", "block");
     $(".right-strings").css("display", "block");
@@ -473,7 +473,7 @@ function renderLeftString8(data,cuerda,id_head){
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
-    let infoString = $('<div class="info-string" id="info-string-8"><span class="info-span8"></span><span class="info-span8"></span><span class="info-span8"></span><span class="info-span8"></span></div>');
+    let infoString = $('<div class="info-string fadeInLeft animated"" id="info-string-8"><span class="info-span8"></span><span class="info-span8"></span><span class="info-span8"></span><span class="info-span8"></span></div>');
     $('.left-strings').append(infoString);
 }
 function renderLeftString7(data,cuerda,id_head){
@@ -493,7 +493,7 @@ function renderLeftString7(data,cuerda,id_head){
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
-    let infoString = $('<div class="info-string" id="info-string-7"><span class="info-span7"></span><span class="info-span7"></span><span class="info-span7"></span><span class="info-span7"></span></div>');
+    let infoString = $('<div class="info-string fadeInLeft animated"" id="info-string-7"><span class="info-span7"></span><span class="info-span7"></span><span class="info-span7"></span><span class="info-span7"></span></div>');
     $('.left-strings').append(infoString);
 }
 function renderLeftString6(data,cuerda,id_head){
@@ -513,7 +513,7 @@ function renderLeftString6(data,cuerda,id_head){
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
-    let infoString = $('<div class="info-string" id="info-string-6"><span class="info-span6"></span><span class="info-span6"></span><span class="info-span6"></span><span class="info-span6"></span></div>');
+    let infoString = $('<div class="info-string fadeInLeft animated"" id="info-string-6"><span class="info-span6"></span><span class="info-span6"></span><span class="info-span6"></span><span class="info-span6"></span></div>');
     $('.left-strings').append(infoString);
 }
 function renderLeftString5(data,cuerda,id_head){
@@ -533,7 +533,7 @@ function renderLeftString5(data,cuerda,id_head){
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
-    let infoString = $('<div class="info-string" id="info-string-5"><span class="info-span5"></span><span class="info-span5"></span><span class="info-span5"></span><span class="info-span5"></span></div>');
+    let infoString = $('<div class="info-string fadeInLeft animated"" id="info-string-5"><span class="info-span5"></span><span class="info-span5"></span><span class="info-span5"></span><span class="info-span5"></span></div>');
     $('.left-strings').append(infoString);
 }
 function renderLeftString4(data,cuerda,id_head){
@@ -553,7 +553,7 @@ function renderLeftString4(data,cuerda,id_head){
     }
     let strFin = $('</select></div>');
     $('.left-strings').append(strFin);
-    let infoString = $('<div class="info-string" id="info-string-4"><span class="info-span4"></span><span class="info-span4"></span><span class="info-span4"></span><span class="info-span4"></span></div>');
+    let infoString = $('<div class="info-string fadeInLeft animated"" id="info-string-4"><span class="info-span4"></span><span class="info-span4"></span><span class="info-span4"></span><span class="info-span4"></span></div>');
     $('.left-strings').append(infoString);
 }
 function renderRightString4(data,cuerda,id_head){
@@ -574,7 +574,7 @@ function renderRightString4(data,cuerda,id_head){
     }
     let strFin = $('</select></div>');
     $('.right-strings').append(strFin);
-    let infoString = $('<div class="info-string" id="info-string-4"><span class="info-span4"></span><span class="info-span4"></span><span class="info-span4"></span><span class="info-span4"></span></div>');
+    let infoString = $('<div class="info-string fadeInRight animated"" id="info-string-4"><span class="info-span4"></span><span class="info-span4"></span><span class="info-span4"></span><span class="info-span4"></span></div>');
     $('.right-strings').append(infoString);
 }
 function renderRightString3(data,cuerda,id_head){
@@ -594,7 +594,7 @@ function renderRightString3(data,cuerda,id_head){
     }
     let strFin = $('</select></div>');
     $('.right-strings').append(strFin);
-    let infoString = $('<div class="info-string" id="info-string-3"><span class="info-span3"></span><span class="info-span3"></span><span class="info-span3"></span><span class="info-span3"></span></div>');
+    let infoString = $('<div class="info-string fadeInRight animated"" id="info-string-3"><span class="info-span3"></span><span class="info-span3"></span><span class="info-span3"></span><span class="info-span3"></span></div>');
     $('.right-strings').append(infoString);
 }
 function renderRightString2(data,cuerda,id_head){
@@ -615,7 +615,7 @@ function renderRightString2(data,cuerda,id_head){
     }
     let strFin = $('</select></div>');
     $('.right-strings').append(strFin);
-    let infoString = $('<div class="info-string" id="info-string-2"><span class="info-span2"></span><span class="info-span2"></span><span class="info-span2"></span><span class="info-span2"></span></div>');
+    let infoString = $('<div class="info-string fadeInRight animated"" id="info-string-2"><span class="info-span2"></span><span class="info-span2"></span><span class="info-span2"></span><span class="info-span2"></span></div>');
     $('.right-strings').append(infoString);
 }
 
@@ -637,7 +637,7 @@ function renderRightString1(data,cuerda,id_head){
     }
     let strFin = $('</select></div>');
     $('.right-strings').append(strFin);
-    let infoString = $('<div class="info-string" id="info-string-1"><span class="info-span1"></span><span class="info-span1"></span><span class="info-span1"></span><span class="info-span1"></span></div>');
+    let infoString = $('<div class="info-string fadeInRight animated"" id="info-string-1"><span class="info-span1"></span><span class="info-span1"></span><span class="info-span1"></span><span class="info-span1"></span></div>');
     $('.right-strings').append(infoString);
 }
 
@@ -656,10 +656,13 @@ function crearSet(parametros){
             } else {
                 $(".info-disponible").val("Envio Inmediato");
             }
+            $(".crear-set").css("display", "none");
+            $(".add-set-carrito").css("display","block");
+            $(".add-set-carrito").attr('data-producto-id',data[0].id_prod);
+            $(".add-set-carrito").attr('data-imagen-producto',data[0].imagen);
+            $(".add-set-carrito").attr('data-producto-precio',data[0].precio_iva);
+            $(".add-set-carrito").attr('data-producto-nombre',data[0].nombre);
             
-
-
-
         }
     });
 

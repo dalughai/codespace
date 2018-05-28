@@ -25,7 +25,10 @@ if($conexion === false){
     die("ERROR: Error de conexión " . mysqli_connect_error());
 }
 
-
+if (!$conexion->set_charset("utf8")) {
+    printf("Error cargando el conjunto de caracteres utf8: %s\n", $conexion->error);
+    exit();
+ } else {}
 //conexion A SQL_SERVER
 
 // $serverName = "localhost"; 

@@ -15,6 +15,7 @@ var root = "/codespace/";
 
 
 $(document).ready(function(){
+    
     var id_carrito = $('#id_carrito_pedido').val();
     $.ajax({
             url: root + 'libs/actualizar_datos_carrito.php',
