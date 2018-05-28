@@ -10,7 +10,7 @@ if ($id_usuario == '') {
 } else {
     
     $sql = "UPDATE usuarios SET active = 1 WHERE id = '$id_usuario'";
-    $resultado = sqlsrv_query($conexion, $sql);
+    $resultado = mysqli_query($conexion, $sql);
     if ($resultado) {
          $template_seccion = "../templates/home.php";
     } else {

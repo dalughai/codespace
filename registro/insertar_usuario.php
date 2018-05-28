@@ -26,11 +26,11 @@ if( $nombre == '' && $apellido1 == '' && $apellido2 == '' && $email == '' && $pa
     $template_seccion = "../templates/login.php";
 } else {
     
-    $sql = "EXEC tss_insertar_nuevo_usuario"
-       . " @nombre = '$nombre', @apellido1 = '$apellido1', @apellido2 = '$apellido2', @dni='$dni',@sexo='$sexo', @email = '$email', @passwd = '$password', "
-       . " @telefono = '$telefono' ,@direccion = '$direccion', @codigo_postal = '$codigopostal',@ciudad = '$ciudad', @provincia = '$provincia', @comunidad_autonoma = '$comunidad' ";
+    $sql = "CALL tss_insertar_nuevo_usuario"
+       . "('$nombre','$apellido1','$apellido2','$dni','$sexo','$email','$password', "
+       . "'$telefono' ,'$direccion','$codigopostal','$ciudad','$provincia','$comunidad' )";
     
-    $resultado = sqlsrv_query($conexion, $sql);    
+    $resultado = mysqli_query($conexion, $sql);    
     
     if ($resultado) {
         $template_seccion = "../templates/usuario_registrado.php";
@@ -40,9 +40,9 @@ if( $nombre == '' && $apellido1 == '' && $apellido2 == '' && $email == '' && $pa
             
             $sql = "select id from usuarios where email = '$email'";
             
-            $resultado = sqlsrv_query($conexion, $sql);
+            $resultado = mysqli_query($conexion, $sql);
             
-            $id_usuario = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC) ;   
+            $id_usuario = mysqli_fetch_assoc( $resultado ) ;   
             
             $id = $id_usuario['id'];
         
@@ -59,7 +59,7 @@ if( $nombre == '' && $apellido1 == '' && $apellido2 == '' && $email == '' && $pa
     
         
     } else {
-        $error = $email;
+        $error = $sql;
         $template_seccion = "../templates/registro.php";
     }
 

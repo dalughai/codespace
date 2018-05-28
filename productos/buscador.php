@@ -7,25 +7,25 @@ $nombre = (isset($_GET["buscador"])) ? $_GET["buscador"] : "";
 
 $sql = "SELECT * FROM productos WHERE nombre = '$nombre'";
 
-    $resultado = sqlsrv_query($conexion, $sql);
+    $resultado = mysqli_query($conexion, $sql);
 
     if ($resultado) {
         
-        $producto = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC);
+        $producto = mysqli_fetch_assoc( $resultado );
         
         $id_producto = $producto['id'];
         
         $sql = "select categorias.nombre from productos join categorias on categorias.id = productos.id_categoria where productos.id = '$id_producto'";
         
-        $resultado = sqlsrv_query($conexion, $sql);
+        $resultado = mysqli_query($conexion, $sql);
         
-        $categoria = sqlsrv_fetch_array($resultado, SQLSRV_FETCH_ASSOC);
+        $categoria = mysqli_fetch_assoc($resultado );
         
         $sql = "select fabricantes.nombre, fabricantes.imagen from productos join fabricantes on fabricantes.id = productos.id_fabricante where productos.id = '$id_producto'";
         
-        $resultado = sqlsrv_query($conexion, $sql);
+        $resultado = mysqli_query($conexion, $sql);
         
-        $marca = sqlsrv_fetch_array($resultado, SQLSRV_FETCH_ASSOC);
+        $marca = mysqli_fetch_assoc($resultado );
         
         $template_seccion = "../templates/producto.php";
 

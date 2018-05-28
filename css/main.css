@@ -14,17 +14,17 @@ a {
 }
 
 body {
-    background: url("../images/fondo.png");
+    /* background: url("../images/fondo.png");
     background-repeat: repeat;
-    background-size: 50px;
-    /* background: rgba(245,245,245,1);
+    background-size: 50px; */
+    background: rgba(245,245,245,1);
     background: -moz-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 66%, rgba(235,232,235,1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(245,245,245,1)), color-stop(35%, rgba(255,255,255,1)), color-stop(66%, rgba(255,255,255,1)), color-stop(100%, rgba(235,232,235,1)));
     background: -webkit-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 66%, rgba(235,232,235,1) 100%);
     background: -o-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 66%, rgba(235,232,235,1) 100%);
     background: -ms-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 66%, rgba(235,232,235,1) 100%);
     background: linear-gradient(to right, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 66%, rgba(235,232,235,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ebe8eb', GradientType=1 ); */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ebe8eb', GradientType=1 );
     overflow-x:hidden;
 }
 
@@ -743,26 +743,75 @@ item-carrusel{
 }
 .cuerdas-izq{
     margin: 35px;
+    margin-bottom: 15px;
 }
 .cuerdas-der{
     margin: 35px;
+    margin-bottom: 15px;
+}
+.info-string{
+    margin-left: 45px;
+    margin-right: 45px;  
+    border-bottom: black solid 1px;
+}
+.info-string span{
+    margin: 15px;
+
 }
 
-.custom-instru{
-
+#info-string-1{
+    display: none;
+    transition: 1s;
+}
+#info-string-2{
+    display: none;
+}
+#info-string-3{
+    display: none;
+}
+#info-string-4{
+    display: none;
+}
+#info-string-5{
+    display: none;
+}
+#info-string-6{
+    display: none;
+}
+#info-string-7{
+    display: none;
+}
+#info-string-8{
+    display: none;
 }
 .custom-ncuerdas{
     display: none;
 }
+
 .custom-datos{
     display: none;
     transition: 1s;
+    margin-top: 40px;
+    margin-left: 35px;
+    margin-right: 35px;
 }
 .custom-div-ncuerdas{
     transition: 1s;
 }
 
+.add-set-carrito{
+    display: none;
+}
 
+.boton{
+    display: none;
+}
+.boton a{
+  color: black;
+  background: #929292;
+  padding: 10px;
+  border-radius: 5px;
+}
 
 
 
@@ -850,12 +899,58 @@ item-carrusel{
     width: 50px;
 }
 .texto-pedido{
-    
+    padding-top: 75px;
     position: relative;
-    top: 60px;   
+    /* top: 60px;    */
 }
-th .fas{
-    color: red;
+.texto-cabecera{
+    padding-top: 55px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #535353;
+}
+.texto-cabecera h1{
+    font-size: 30px;
+    color: #535353;
+    
+    text-align: center;
+}
+.texto-cabecera h6{
+    font-size: 14px;
+    color: #777777;
+    text-align: center;
+}
+.cabecera-pedido{
+    background-color: rgb(230, 228, 228);  
+}
+.producto-pedido{
+    display: flex;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.pedido-box{
+    border: grey 1px solid;
+}
+.pedido-boton button{
+    margin-left: 45px;
+    margin-top: 15px;
+}
+.eliminar{
+    color: rgb(110, 109, 109);
+    position: absolute;
+    left: 35px;
+    top:70px;
+}
+.eliminar:hover{
+    color: #9E0707;
+}
+.pedido-show{
+    display: block;
+}
+.pedido-show img{
+    margin: 15px;
+    width: 150px;
+    height: 150px;
 }
 
 
@@ -891,8 +986,61 @@ th .fas{
 
 
 
+/* ////////////// MI CUENTA */
 
+.texto-cabecera i{
+    color: #535353;
+}
+.texto-cabecera a{
+    text-decoration: none;
+    color: #535353;
+}
+.panel-usuario{
+    position: relative;
+    margin-left: -15px;
+    margin-bottom: 35px;
+}
+.panel-usuario ul {
+    margin-left: -15px;
+    margin-right: 35px;
+}
+.panel-usuario div ul li{
+    list-style: none;
+    text-align: center;
+}
+.panel-usuario div ul li a{
+    text-decoration: none;
+}
+.panel-usuario div ul li:hover{
+    box-shadow: 2px 2px 5px #999;
+}
+.panel-usuario-icono{
+    padding: 5px;
+    border: black solid 1px;
+}
+.panel-usuario-texto{
+    position: relative;
+    width: 100%;    
+    padding: 15px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    border: black solid 1px;
+    border-radius: 5    px;
+}
+.panel-usuario-texto i {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    color:#696969;
+}
+.panel-usuario-texto span{
+    color:#696969
+}
+.usuario-opcion{
 
+    
+    
+}
 
 
 

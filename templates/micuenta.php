@@ -1,47 +1,68 @@
 <div id="body-container" class="container">  
-    <div class="row mx-0 d-flex justify-content-around login-head"><h1>ADMINISTRACION DE USUARIO </h1></div>
-    <div class="row d-flex justify-content-around">
-        
-        <div class="login-sesion col-6">
-            <table class="table table-striped table-dark">
-              <tbody>
-                <tr>
-                  <th scope="row"></th>
-                  <td>Nombre</td>
-                  <td><?php echo $_SESSION['usuario']['nombre']?></td>
-                </tr>
-                <tr>
-                  <th scope="row"></th>
-                  <td>Primer Apellido</td>
-                  <td><?php echo $_SESSION['usuario']['apellido_1']?></td>
-                </tr>
-                <tr>
-                  <th scope="row"></th>
-                  <td>Segundo Apellido</td>
-                  <td><?php echo $_SESSION['usuario']['apellido_2']?></td>
-                </tr>
-                <tr>
-                  <th scope="row"></th>
-                  <td>Email</td>
-                  <td><?php echo $_SESSION['usuario']['email']?></td>
-                </tr>
-                  
-              </tbody>
-                
-            </table>
-            <a href="cerrar_sesion.php">
-                <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Cerrar Sesion</button>
-            </a>
+    <div>
+        <div class="col-12 texto-cabecera">
+                <h1> MI CUENTA </h1>
+                <h6><a href="cerrar_sesion.php"> Salir <i class="fas fa-sign-out-alt"></i></a></h6>
         </div>
-
     </div>
-    <div class="row text-center">
-        <div class="col-12 ">
-                <?php if(isset($error)) { ?>
-            <div class="alert alert-danger" role="alert">
-                <?php echo $error?>
-            </div>
-        <?php } ?>
+
+    <div class="row panel-usuario">
+        <div class="col-6">
+            <ul>
+                <li>
+                    <a href="">
+                        <div class="panel-usuario-texto">
+                                <i class="fas fa-list-ol fa-2x"></i>
+                                <span>HISTORIAL Y DETALLE DE MIS PEDIDOS</span>
+                        </div>
+                        
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                            <div class="panel-usuario-texto">
+                                    <i class="fas fa-address-card fa-2x"></i>
+                                    <span>MIS DIRECCIONES</span>
+                            </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                            <div class="panel-usuario-texto">
+                                    <i class="fas fa-address-book fa-2x"></i>
+                                    <span>MIS DATOS PERSONALES</span>
+                            </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-6">
+            <ul>
+                <li>
+                    <a href="">
+                            <div class="panel-usuario-texto">
+                                    <i class="fas fa-strikethrough fa-2x"></i>
+                                    <span>MIS CUSTOM SETS</span>
+                            </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="panel-usuario-texto">
+                                <i class="fas fa-box fa-2x"></i>
+                                <span>MI STRING BOX</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="panel-usuario-texto">
+                                <i class="fas fa-star fa-2x"></i>
+                                <span>MIS FAVORITOS</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
     

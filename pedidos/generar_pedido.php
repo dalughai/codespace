@@ -13,23 +13,23 @@ $sql="select u.id as id_usuario, c.id as id_carrito,p.id as id_producto,p.imagen
             join usuarios as u on c.id_cliente = u.id
             where c.id = $id_carrito";
         
-        $resultado_producto = sqlsrv_query($conexion, $sql);
+        $resultado_producto = mysqli_query($conexion, $sql);
 
 
 $sql = "select usuarios.* , direcciones.*, direcciones.direccion as dir from usuarios 
 join carrito on carrito.id_cliente = usuarios.id 
 join direcciones on direcciones.id = usuarios.direccion
 where carrito.id = $id_carrito";
-        $resultado = sqlsrv_query($conexion, $sql);
+        $resultado = mysqli_query($conexion, $sql);
 if($resultado){
-    $usuario = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC);
+    $usuario = mysqli_fetch_assoc( $resultado);
 }
 
 $direccion = $usuario['dir'];
 $sql = "select * from pedidos where id_cliente = $id_usuario and id_carrito = $id_carrito";
-$resultado = sqlsrv_query($conexion, $sql);
+$resultado = mysqli_query($conexion, $sql);
 if($resultado){
-    $pedido = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC);
+    $pedido = mysqli_fetch_assoc( $resultado);
 }
 
 
@@ -53,12 +53,12 @@ $pdf->addSociete( "To String Shop",
                   "Tel: 635946097\n" .
                   "29006 MALAGA\n" );
 $pdf->fact_dev( "Factura Numero ", "" );
-$pdf->addDate(date_format($pedido['date_add'], 'd-m-Y'));
+$pdf->addDate(date("d/m/y"));
 $pdf->addClient($usuario['id']);
 $pdf->addPageNumber("1");
 $pdf->addClientAdresse($usuario['nombre'] . " ". $usuario["apellido_1"] . " ". $usuario["apellido_2"] . "\n". $usuario["dir"] . "\n". $usuario["ciudad"] . " ". $usuario["provincia"] . " ". $usuario["codigo_postal"] . "\n". $usuario["comunidad_autonoma"] . "\n". $usuario["telefono"]. "\n". $usuario["email"]);
 $pdf->addReglement("Pago Tarjeta");
-$pdf->addEcheance(date_format($pedido['date_add'], 'd-m-Y'));
+$pdf->addEcheance(date("d/m/y"));
 $pdf->addNumTVA("PEDIDO - " . $pedido['id'] );
 $pdf->addReference("To String Shop");
 $cols=array( "REFERENCIA"    => 23,
@@ -86,7 +86,7 @@ $y    = 109;
 
 
 if($resultado_producto){
-    while($producto = sqlsrv_fetch_array( $resultado_producto, SQLSRV_FETCH_ASSOC)){
+    while($producto = mysqli_fetch_assoc( $resultado_producto )){
 
 $producto_ref = $producto['referencia'];
 $producto_nombre = $producto['nombre'];
@@ -111,9 +111,9 @@ $articulos = $articulos + $producto_cantidad;
 $base = number_format(($precio_final /1.21),2);
 $pdf->addCadreEuros($base,$iva,$precio_final,$articulos);
 $sql = "insert into factura (id_cliente, fecha_factura, precio_sin_iva, precio_iva, direccion_facturacion, direccion_envio,referencia) 
-VALUES ($id_usuario, GETDATE(),$base, $precio_final,'$direccion','$direccion','$id_usuario.$id_usuario.$id_carrito')";
+VALUES ($id_usuario, NOW(),$base, $precio_final,'$direccion','$direccion','$id_usuario.$id_usuario.$id_carrito')";
 
-    $resultado = sqlsrv_query($conexion, $sql);
+    $resultado = mysqli_query($conexion, $sql);
 if($resultado){
     $pdfdoc = $pdf->Output();
     $pdftosend = chunk_split(base64_encode($pdfdoc));

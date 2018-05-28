@@ -90,7 +90,7 @@
             <?php
     $sql = "SELECT * FROM productos ";
 
-    $resultado = sqlsrv_query($conexion, $sql);
+    $resultado = mysqli_query($conexion, $sql);
 
     if ($resultado) {
     ?>
@@ -99,7 +99,7 @@
                         <div class="car">
                             
                             <?php 
-            while( $producto = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC) ) {
+            while( $producto = mysqli_fetch_assoc( $resultado ) ) {
                 
                 ?>
                         
@@ -141,7 +141,7 @@
     <?php            
     } else {
         $error = "Error de conexión";
-        print_r( sqlsrv_errors());
+        print_r( mysqli_errors());
         echo $error;
     }
 

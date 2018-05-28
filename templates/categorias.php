@@ -3,9 +3,9 @@
 
     $sql = "SELECT * FROM categorias where id = $idcategoria";
 
-    $resultado = sqlsrv_query($conexion, $sql);
+    $resultado = mysqli_query($conexion, $sql);
 
-    $categoria = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC);    
+    $categoria = mysqli_fetch_assoc( $resultado );    
 ?>
 
 <div id="body-container" class="container">  
@@ -27,10 +27,10 @@
             <?php 
                 $sql = "SELECT * FROM fabricantes ";
 
-                $resultado = sqlsrv_query($conexion, $sql);
+                $resultado = mysqli_query($conexion, $sql);
 
                 if ($resultado) {
-                    while( $categoria = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC) ) {       
+                    while( $categoria = mysqli_fetch_assoc( $resultado ) ) {       
             ?>
               <option value="<?php echo $categoria['id'] ?>"><?php echo $categoria['nombre'] ?></option>
             <?php   } 
@@ -67,13 +67,13 @@
 		<!-- Products -->
         
     <?php
-        $sql = "SELECT productos.* FROM productos JOIN categorias ON productos.id_categoria = categorias.id WHERE categoria_padre = '$idcategoria'";
+        $sql = "SELECT productos.* FROM productos JOIN categorias ON productos.id_categoria = categorias.id WHERE categoria_padre = '$idcategoria' order by productos.id";
 
-    $resultado = sqlsrv_query($conexion, $sql);
+    $resultado = mysqli_query($conexion, $sql);
 
     if ($resultado) {
                             
-     while( $producto = sqlsrv_fetch_array( $resultado, SQLSRV_FETCH_ASSOC) ) {
+     while( $producto = mysqli_fetch_assoc( $resultado ) ) {
                 
         ?>
 		<div class="product">
