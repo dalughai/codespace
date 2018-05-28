@@ -6,14 +6,15 @@
                 <h2>Selecciona la fecha de entrega</h2>
         </div>
         <div>
+        <p>Date: <input type="text" id="datepicker"></p>
 
-                <div id="datepicker"></div>
         </div>
+        
 </div>
 
 <script>
         $(function () {
-        //    $.datepicker.setDefaults($.datepicker.regional["es"]);
+        $.datepicker.setDefaults($.datepicker.regional["es"]);
 
         $("#datepicker").datepicker({
         firstDay: 1

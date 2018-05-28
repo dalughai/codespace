@@ -1,4 +1,4 @@
-import $ from '../jquery';
+import $ from 'jquery';
 import DEFAULTS from './defaults';
 import methods from './methods';
 import handlers from './handlers';
