@@ -50,7 +50,7 @@ BEGIN
             set precio_total = precio_total + precio_cuerda;
             set precio_cuerda = (select precio_iva from productos where id = cuerda_7);
             set precio_total = precio_total + precio_cuerda;
-            set precio_total = precio_total + 3;
+            set precio_total = precio_total + 2;
             
             set stock_cuerda = (select stock from productos where id = cuerda_1);
 				if stock_cuerda < 1 then
@@ -84,7 +84,7 @@ BEGIN
             
 				set categoria = 30;
 				set descripcion = 'Set Custom para Guitarra Eléctrica de 7 Cuerdas';
-                set imagen = '/codespace/images/productos/tsselectrica';
+                set imagen = '/codespace/images/productos/tsselectrica7';
 
 			insert into sets
 				(num_cuerdas,categoria,nombre, referencia,id_usuario,precio_iva,date_add,stock)
