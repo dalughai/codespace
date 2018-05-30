@@ -11,9 +11,7 @@ $cantidad_get =  (isset($_POST["cantidad"])) ? $_POST["cantidad"] : "";
 
 
 $sql = "select cantidad from carrito_producto where id_producto = '$id_producto' and id_carrito = '$id_carrito'";
-//echo $id_producto;
-//echo $id_carrito;
-//echo $cantidad_get;
+
 $resultado = mysqli_query($conexion, $sql);
 $cantidad_producto = mysqli_fetch_assoc( $resultado );
 $cantidad = $cantidad_producto['cantidad'];
@@ -45,8 +43,8 @@ if ($resultado) {
             echo json_encode($array_datos);
         }
 } else {
-    echo "Error";
-        $error = "Error de autentificación";
+    echo "Error en el ultimo paso";
+        $error = "Fallo";
         $template_seccion = "../templates/home.php";
 }
 

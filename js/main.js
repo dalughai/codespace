@@ -37,7 +37,7 @@ $(document).ready(function(){
       $('.car').slick({
           infinite: true,
           slidesToShow: 5,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
           autoplay: true,
           autoplaySpeed: 1000
 });

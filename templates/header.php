@@ -265,19 +265,19 @@
 
     <ul class="categorias-menu">
       <li class="nav-item botonc botonizq">
-        <a href="<?php echo $root ?>categorias?id=1">Cuerdas G.Electrica</a>
+        <a href="<?php echo $root ?>categorias?id=1">Guitarra Electrica</a>
       </li>
       <li class="nav-item botonc b2">
-        <a href="<?php echo $root ?>categorias?id=2">Cuerdas G.Acustica</a>
+        <a href="<?php echo $root ?>categorias?id=2">Guitarra Acustica</a>
       </li>
       <li class="nav-item botonc b3">
-        <a href="<?php echo $root ?>categorias?id=3">Cuerdas G.Clasica</a>
+        <a href="<?php echo $root ?>categorias?id=3">Guitarra Clasica</a>
       </li>
       <li class="nav-item botonc b4">
-        <a href="<?php echo $root ?>categorias?id=4">Cuerdas B.Electrico</a>
+        <a href="<?php echo $root ?>categorias?id=4">Bajo Electrico</a>
       </li>
       <li class="nav-item botonc b5">
-        <a href="<?php echo $root ?>categorias?id=5">Cuerdas B.Acustico</a>
+        <a href="<?php echo $root ?>categorias?id=5">Bajo Acustico</a>
       </li>
       <li class="nav-item botonc botonder">
         <a href="<?php echo $root ?>categorias?id=6">Accesorios</a>

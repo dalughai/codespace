@@ -231,7 +231,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 .botonizq{
     position: relative;
-    left: -25px;
+    left: -35px;
 }
 .botonizq a:hover{
     color: #ccff00;

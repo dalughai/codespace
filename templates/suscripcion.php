@@ -45,3 +45,4 @@
   <img src="<?php echo $root ?>images/cubo.gif"><br/>
   <button data-remodal-action="confirm" class="remodal-confirm">Ir a mi pedido</button>
 </div>
+

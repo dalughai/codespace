@@ -7,6 +7,7 @@
 
     $categoria = mysqli_fetch_assoc( $resultado );    
 ?>
+<input type="hidden" class="categoria" name="categoria" value="<?php echo $idcategoria ?>"> 
 
 <div id="body-container" class="container">  
     <div class="row d-flex justify-content-around categoria-show">
@@ -22,7 +23,7 @@
     <div class="filtro">
         <div class="titulo-filtro">FILTRAR POR:</div>
         <div>
-            <select class="custom-select custom-select-md">
+            <select class="custom-select custom-select-md filtro-marcas">
               <option selected>Marca: </option>
             <?php 
                 $sql = "SELECT * FROM fabricantes ";
@@ -39,15 +40,17 @@
             </select>
         </div>
         <div>
-            <select class="custom-select custom-select-md">
+            <select class="custom-select custom-select-md filtro-tipo">
               <option selected>Tipo de producto: </option>
               <option value="1">Juego de cuerdas</option>
               <option value="2">Cuerdas Sueltas</option>
-              <option value="3">Sets Customizados</option>
+              <option value="3">Puas</option>
+              <option value="4">Manteimiento</option>
+
             </select>
         </div>
         <div>
-            <select class="custom-select custom-select-md">
+            <select class="custom-select custom-select-md filtro-precio">
               <option selected>Precio: </option>
               <option value="1">Mas Baratos Primero</option>
               <option value="2">Mas Caro Primero</option>

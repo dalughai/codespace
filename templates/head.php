@@ -32,6 +32,7 @@
     <script src="<?php echo $root?>js/custom.js"></script>
     <script src="<?php echo $root?>js/stringbox.js"></script>
     <script src="<?php echo $root?>js/date.js"></script>
+    <script src="<?php echo $root?>js/filtro.js"></script>
     <script src="<?php echo $root?>js/moment/moment.min.js"></script>
     <script src="<?php echo $root?>js/moment/moment-with-locales.min.js"></script>
 

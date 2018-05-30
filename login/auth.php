@@ -24,7 +24,7 @@ if ($resultado) {
     
     if($usuario) {
 
-        $_SESSION["usuario"] = $usuario;
+       
         
         
         if($usuario["active"] == 0){
@@ -32,7 +32,7 @@ if ($resultado) {
             $template_seccion = "../templates/login.php";
         } else {
             
-            
+         $_SESSION["usuario"] = $usuario;
         if(isset($_SESSION["carrito"])) {
     
         } else {

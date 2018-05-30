@@ -128,13 +128,127 @@ function crearStringBox(id_carrito,id_usuario,dia_entrega){
                 $('.stringbox_h1').text("¡Has creado tu StringBox con exito!");
                 $('.stringbox_h2').text("Puedes editar la fecha de entrega en el apartado StringBox de tu Panel de Usuario");
             },500);
-            
+           
+           var descripcion = "El contenido de la caja es el siguiente: <br/>";
+           var id_stringbox = 0;
+           for(var desc in data){
+                descripcion += "Producto: " + data[desc]['nombre'] + " |-| " +  data[desc]['descripcion_corta'] + " x" +data[desc]['cantidad']+" <br/>";
+                id_stringbox = data[desc]['id_stringbox'];
+           }
+           insertarStringboxProducto(id_usuario,id_carrito,id_stringbox,descripcion);
+           //modificarCarrito(id_usuario,id_carrito);
+           
             setTimeout(function(){
                 inst.close();
             },5000);
         }
     });
 }
+function insertarStringboxProducto(id_usuario,id_carrito,id_stringbox,descripcion){
+    var id_nuevo_sb = 0;
+    var parametros = {
+        "id_carrito": id_carrito,
+        "id_stringbox" : id_stringbox,
+        "descripcion" : descripcion
+    };
+    $.ajax({
+        type: "POST",
+        url: root + "/libs/insertar_stringbox_productos.php",
+        data: parametros,
+        success: function(data){
+            
+        id_nuevo_sb = data[0]['id'];
+        modificarCarrito(id_nuevo_sb,id_usuario,id_carrito);
+        }
+    });
+    
+}
+function modificarCarrito(id_producto,id_usuario,id_carrito){
+    var parametros = {
+        "id_carrito" : id_carrito,
+        "id_usuario" : id_usuario
+    };
+    console.log("El id nuevo es :" + id_producto );
+    $.ajax({
+        type: "POST",
+        url: root + "/libs/modificar_carrito.php",
+        data: parametros,
+        success: function(data){
+
+            var id_nuevo_carrito = data['id'];
+            
+            insertarNuevoStringBox(id_producto,id_nuevo_carrito);
+        }
+    });
+
+}
+function insertarNuevoStringBox(id_producto,id_carrito){
+    var parametros = {
+        "id_producto" : id_producto,
+        "id_carrito" : id_carrito,
+        "cantidad": '1'
+        };
+    $.ajax({
+        type: "POST",
+        url: root + "/libs/insertar_producto_carrito.php",
+        data: parametros,
+        success: function(data){
+            $("#cantidad").html(data[cantidad]['cantidad']);
+            $("#precio").html(data[cantidad]['precio_total'] + '€');    
+            debugger 
+            $('#carrito').attr('data-carrito-id',id_carrito);
+            actualizarCarro(id_carrito);
+        }
+    });
+}
+function actualizarCarro(id_carrito){
+    var parametros = {
+        "id_carrito" : id_carrito
+    };
+    
+        $.ajax({
+        type: "POST",
+        url: root + "/libs/actualizar_producto_carrito.php",
+        data: parametros,
+        beforeSend: function () {
+                    //alert("Funciona");
+            },
+        success: function(data){
+            debugger
+            total = 0;
+            var cantidad = 0;
+                $("div").remove('.items-carrito');
+                var contenedor_carrito = $('<div class="items-carrito row d-flex justify-content-start">');
+                $('#carritod').append(contenedor_carrito);
+                for(var producto in data){
+                    var elemento_div_open = $('<div class="col-12 item-carrito p-2">');
+                    var elemento_imagen = $('<img class="carrito-imagen" src="">').attr("src",data[producto]['imagen']);
+                    var elemento_nombre = $('<p> </p> <br/>').text(data[producto]['nombre'] + " ");
+                    var elemento_precio = $('<p> </p>').text(". " + (data[producto]['precio_iva'] + " € "));
+                    var elemento_cantidad = $('</br><p> </p>').text("- Cantidad: " + (data[producto]['cantidad']));
+                    var elemento_div_close = $('</div>');
+
+                    $('.total').text("precio final");
+                    $('.items-carrito').append(elemento_div_open);
+                    $('.items-carrito').append(elemento_imagen);
+                    $('.items-carrito').append(elemento_nombre);
+                    $('.items-carrito').append(elemento_precio);
+                    $('.items-carrito').append(elemento_cantidad);                        
+                    $('.items-carrito').append(elemento_div_close);
+                    $('.items-carrito').append(elemento_div_close); 
+
+                    total = total + parseInt(data[producto]['precio_total']);
+                    //cantidad = cantidad + data[producto]['cantidad'];
+                }
+                $(".total").text(total + '€');
+                $("#precio").text(total + '€');
+                //*$(".cantidad").text(cantidad);
+
+
+        }
+    });
+};
+
 function getListaCarrito(id_carrito){
     $.ajax({
         type: "POST",
