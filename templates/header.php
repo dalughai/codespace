@@ -47,7 +47,7 @@
                 <input id="buscar" name="buscador" class="form-control ml-3 mr-2 col-8"  type="text" placeholder="Introduzca un producto" value="">
             </div>
             </form>                            
-            <div id="buscadord" class="row" data-id-producto="">
+            <div id="buscadord" class="row fadeInDown animated" data-id-producto="">
 
                     <div class="items-buscador row d-flex justify-content-start text-center">
 
@@ -93,10 +93,12 @@
                 </div>
             </div>
             <div id="carritod" class="row" data-id-producto="">
-                
+            <div class="items-carrito row d-flex justify-content-start text-center">
+                    
+            </div>
                 <div class="col-12 p-2">
-                    <span>Productos del carrito &nbsp &nbsp &nbsp      </span>
-                    <p>Precio total: &nbsp  &nbsp  <span class="total"></span></p>
+                    <!-- <span>Productos del carrito &nbsp &nbsp &nbsp      </span>
+                    <p>Precio total: &nbsp  &nbsp  <span class="total"></span></p> -->
                     <form action="<?php echo $root?>pedidos/" method="POST">
                                 <input type="hidden" id="id_carrito_pedido" name="id_carrito_pedido" 
                                        value="
@@ -116,9 +118,7 @@
                 
                 </div>
             
-                <div class="items-carrito row d-flex justify-content-start text-center">
-                    
-                </div>
+
         </div>
     </div>
         </div>

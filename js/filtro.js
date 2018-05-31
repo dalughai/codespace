@@ -83,7 +83,7 @@ function renderProductos(sql,categoria,where,marca,tipo, precio){
             $("div").remove('.product');
 
             for(var producto in data){
-                debugger
+                
                 var id_prod = data[producto]['p_id'];
                 var divprod = $('<div class="product">'
                 +'<a href="'+ root + 'productos?id=' + id_prod +'">'

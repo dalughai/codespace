@@ -1,5 +1,6 @@
 <?php 
 
+header('Content-Type: application/json');
 
 require '../startApp.php';
 
@@ -12,7 +13,15 @@ $sql = "delete carrito_producto
 $resultado = mysqli_query($conexion, $sql);
 $array_datos = array();
 if($resultado){
-    echo "Producto Eliminado con Exito!";
+    $sql = "select sum(cantidad) as cantidad from carrito_producto WHERE id_carrito = $id_carrito;";
+
+    $resultado = mysqli_query($conexion, $sql);
+    if($resultado){
+        while($datos = mysqli_fetch_assoc( $resultado )){
+            array_push($array_datos,$datos);
+        }
+        echo json_encode($array_datos);
+    }
 }
 
 ?>

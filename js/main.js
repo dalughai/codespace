@@ -17,22 +17,24 @@ var root = "/codespace/";
 $(document).ready(function(){
     
     var id_carrito = $('#id_carrito_pedido').val();
-    $.ajax({
-            url: root + 'libs/actualizar_datos_carrito.php',
-            type: 'POST',
-            data: {id_carrito : id_carrito},
-            success: function(data){
-                if(data[cantidad]['cantidad'] == null){
-                    $('#cantidad').text( 0 );
-                    $('#precio').text('0€');
-                } else {    
-                    $('#cantidad').text(data[cantidad]['cantidad']);
-                    $('#precio').text(data[cantidad]['precio_total'] + '€');
-                }
-            }
-        });
+        actualizarCarrito(id_carrito);
 });
-
+function actualizarCarrito(id_carrito){
+    $.ajax({
+        url: root + 'libs/actualizar_datos_carrito.php',
+        type: 'POST',
+        data: {id_carrito : id_carrito},
+        success: function(data){
+            if(data[cantidad]['cantidad'] == null){
+                $('#cantidad').text( 0 );
+                $('#precio').text('0€');
+            } else {    
+                $('#cantidad').text(data[cantidad]['cantidad']);
+                $('#precio').text(data[cantidad]['precio_total'] + '€');
+            }
+        }
+    });
+}
 $(document).ready(function(){
       $('.car').slick({
           infinite: true,
@@ -171,35 +173,88 @@ $(document).ready(function(){
 
 
 
+    $('.cantidad_menos').on('click',function(){
+        var cantidad = 1;
+        var id_carrito = $('.id_carrito').val();
+        var id_producto = $(this).attr('data-id');
+        var precio = $(this).attr('data-precio');
+        var cantidad_total = $('.cantidad_total').text();
+        cantidad_total --;
+        $.ajax({
+            url: root + 'libs/reducir_cantidad.php',
+            type: 'POST',
+            data: {
+                id_carrito: id_carrito,
+                id_producto: id_producto
+              },
+            success: function(data){
+                if(data[0]['cantidad' == 0]){
+                    eliminarProducto(id_producto,id_carrito);
+                }else {
+                    $('.cantidad-info'+id_producto).val(data[0]['cantidad'] + " Unidades");
+                    $('.info-precio'+id_producto).text(data[0]['cantidad'] * precio);
+                    $('.cantidad_total').text(cantidad_total);
+                    $('#cantidad').text(cantidad_total);
+                    actualizarCarrito(id_carrito);
+
+                }
+            }
+        });
+    });
 
 
+    $('.cantidad_mas').on('click',function(){
+        var cantidad = 1;
+        var id_carrito = $('.id_carrito').val();
+        var id_producto = $(this).attr('data-id');
+        var precio = $(this).attr('data-precio');
+        var cantidad_total = $('.cantidad_total').text();
+        cantidad_total ++;
+        $.ajax({
+            url: root + 'libs/aumentar_cantidad.php',
+            type: 'POST',
+            data: {
+                id_carrito: id_carrito,
+                id_producto: id_producto
+              },
+            success: function(data){
+                if(data[0]['cantidad' == 0]){
+                    eliminarProducto(id_producto,id_carrito);
+                }else {
+                    $('.cantidad-info'+id_producto).val(data[0]['cantidad'] + " Unidades");
+                    $('.info-precio'+id_producto).text(data[0]['cantidad'] * precio);
+                    $('.cantidad_total').text(cantidad_total);
+                    $('#cantidad').text(cantidad_total);
+                    actualizarCarrito(id_carrito);                    
+                }
+            }
+        });
 
-
-
-
-
-
-
+    });
 
 
 
     $('.eliminar').on('click',function(){
         var id_producto = $(this).attr('data-id');
         var id_carrito = $(this).attr('data-carrito');
-        $.ajax({
-            url: root + 'libs/eliminar_producto_pedido.php',
-            type: 'POST',
-            data: {
-                    id_producto: id_producto,
-                    id_carrito: id_carrito
-                  },
-            success: function(data){
-                $('.pr'+id_producto).remove('.texto-pedido');
-                $("tr").remove('.pr'+id_producto);
-            }
-        });
+        eliminarProducto(id_producto, id_carrito);
     });
-
+function eliminarProducto(id_producto, id_carrito){
+    $.ajax({
+        url: root + 'libs/eliminar_producto_pedido.php',
+        type: 'POST',
+        data: {
+                id_producto: id_producto,
+                id_carrito: id_carrito
+              },
+        success: function(data){
+            $('div').remove('.pr_pe'+id_producto);
+            $('#cantidad').text(data[0]['cantidad']);
+            $('.cantidad_total').text(data[0]['cantidad']);
+            actualizarCarrito(id_carrito);
+        }
+    });
+}
     function obtener_registros(valorBusqueda){
         var datos = new Array();
         $.ajax({
@@ -299,26 +354,33 @@ $(document).ready(function(){
                 },
             success: function(data){
                 
+
                 total = 0;
                 var cantidad = 0;
                     $("div").remove('.items-carrito');
                     var contenedor_carrito = $('<div class="items-carrito row d-flex justify-content-start">');
                     $('#carritod').append(contenedor_carrito);
                     for(var producto in data){
-                        var elemento_div_open = $('<div class="col-12 item-carrito p-2">');
+                        if(data[producto]['cantidad'] > 1){
+                            var un = " Unidades"
+                        } else {
+                            var un = " Unidad"
+                        }
+                        var elemento_div_open = $('<div id="item-'+ data[producto]['id_producto'] +'" class="col-12 item-carrito p-2">');
                         var elemento_imagen = $('<img class="carrito-imagen" src="">').attr("src",data[producto]['imagen']);
-                        var elemento_nombre = $('<p> </p> <br/>').text(data[producto]['nombre'] + " ");
-                        var elemento_precio = $('<p> </p>').text(". " + (data[producto]['precio_iva'] + " € "));
-                        var elemento_cantidad = $('</br><p> </p>').text("- Cantidad: " + (data[producto]['cantidad']));
+                        var elemento_nombre = $('<p class="item-nombre"> </p>').text(data[producto]['nombre'] + " ");
+                        var elemento_precio = $('<p class="item-precio"> </p>').text((data[producto]['precio_iva'] + " € "));
+                        var elemento_cantidad = $('<p class="item-unidad"> </p>').text((data[producto]['cantidad']) + un);
                         var elemento_div_close = $('</div>');
 
                         $('.total').text("precio final");
                         $('.items-carrito').append(elemento_div_open);
-                        $('.items-carrito').append(elemento_imagen);
-                        $('.items-carrito').append(elemento_nombre);
-                        $('.items-carrito').append(elemento_precio);
-                        $('.items-carrito').append(elemento_cantidad);                        
-                        $('.items-carrito').append(elemento_div_close);
+                        $('#item-'+ data[producto]['id_producto'] +'').append(elemento_imagen);
+                        $('#item-'+ data[producto]['id_producto'] +'').append(elemento_nombre);
+                        $('#item-'+ data[producto]['id_producto'] +'').append(elemento_cantidad);
+                        $('#item-'+ data[producto]['id_producto'] +'').append(elemento_precio);
+                        $('#item-'+ data[producto]['id_producto'] +'').append(elemento_div_close);                        
+                        $('#item-'+ data[producto]['id_producto'] +'').append(elemento_div_close);
                         $('.items-carrito').append(elemento_div_close); 
 
                         total = total + parseInt(data[producto]['precio_total']);

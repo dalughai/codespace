@@ -296,7 +296,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 #carrito{
     border-radius: 4px;
     display: inline-flex;
-    width: 250px;
+    width: 271px;
     height: 37px;
     border: solid black 1px;
     background-color: #FFFFFF;
@@ -316,16 +316,51 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     display: none;
     position: absolute;
     top: 45px;
-    right: 32px;
-    width: 460px;
+    right: 73px;
+    width: 368px;
     background-color: #FFFFFF; 
-    border: black double 3px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0rem black;
+}
+
+}
+.items-carrito {
+    position: relative;
+}
+.item-carrito p{
+    margin-top: 5px;
+    display: inline-block;
+    margin-bottom: 45px;
+}
+.item-nombre{
+    position: absolute;
+}
+.item-unidad{
+    position: absolute;
+    right: 54px;
+    color: grey;
+}
+.item-precio{
+    position: absolute;
+    top: 65px;
+    font-size: 23px;
+    left: 165px;
+}
+.item-unidad{
+    position: relative;
+    margin-left: 53px;
+    margin-top: 15px;
+    color: #3f3d3d;
 }
 .ir-pedido{
-    position: absolute;
-    top: 5px;
-    right: 5px;
+    position: relative;
+    width: 350px;
+    border-color: darkslategrey;
+    background-color: #5C5C5C;
     }
+.ir-pedido:hover{
+    background-color: rgb(13, 87, 136);
+}
 #carrito .fas {
     position:  relative;
     margin: 10px;
@@ -337,6 +372,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 #carrito .cantidad-texto{
     margin: 5px;
+    margin-left: 20px;
 }
 #carrito .precio{
     margin: 5px;
@@ -377,10 +413,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     visibility: hidden;
     position: absolute;
     top: 45px;
-    left: 40px;
+    left: 83px;
     width: 360px;
     background-color: #FFFFFF; 
-    border: black double 3px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0rem black;
 }
 .divlupa{
     position: relative;
@@ -414,9 +451,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     margin: 15px;
 }
 .carrito-imagen{
-    width: 85px;
-    height: 85px;
-    margin-left: 15px;
+    width: 105px;
+    height: 105px;
+    margin-left: 35px;
+    margin-right: 20px;
 }
 .buscador-imagen{
     width: 75px;
@@ -428,9 +466,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     width: 100%;
     position: relative;
 }
-.item-carrito p{
-    margin-top: 5px;
-}
+
 
  @media screen and (max-width: 1300px) {
             .botonc {
@@ -972,10 +1008,10 @@ item-carrusel{
 .pedido-box{
     border: grey 1px solid;
 }
-.pedido-boton button{
-    margin-left: 45px;
-    margin-top: 15px;
+.pedido-boton{
+    text-align: center;
 }
+
 .eliminar{
     color: rgb(110, 109, 109);
     position: absolute;
@@ -986,20 +1022,47 @@ item-carrusel{
     color: #9E0707;
 }
 .pedido-show{
-    display: block;
 }
 .pedido-show img{
     margin: 15px;
     width: 150px;
     height: 150px;
 }
+.confirmar{
+    margin: 25px;
+}
+.cantidad-producto-pedido{
+    text-align: center;
+}
 
+.cantidad-info{
+    text-align: center;
+}
+.cantidad_menos{
+    width: 45px;
+    
 
-
-
-
-
-
+}
+.cantidad_menos:hover {
+    box-shadow: 2px 2px 5px #999;
+    color:black;
+    font-weight: bold;
+    background: red;
+    border: black 1px solid;
+}
+.cantidad_mas{
+    width: 45px;
+}
+.cantidad_mas:hover {
+    box-shadow: 2px 2px 5px #999;
+}
+.cantidad_mas:hover {
+    box-shadow: 2px 2px 5px #999;
+    color:black;
+    font-weight: bold;
+    background: green;
+    border: black 1px solid;
+}
 /*QUIENES SOMOS--------------------------------------------------------------------*/
 #cuerpo_who{
     margin-top: 10px;

@@ -67,46 +67,7 @@
 	<header class="bp-header cf"><!-- ... --></header>
 	<!-- Product grid -->
 	<section class="grid">
-		<!-- Products -->
-        
-    <?php
-        $sql = "SELECT productos.* FROM productos JOIN categorias ON productos.id_categoria = categorias.id WHERE categoria_padre = '$idcategoria' order by productos.id";
 
-    $resultado = mysqli_query($conexion, $sql);
-
-    if ($resultado) {
-                            
-     while( $producto = mysqli_fetch_assoc( $resultado ) ) {
-                
-        ?>
-		<div class="product">
-            <a href="<?php echo $root?>productos?id=<?php echo $producto['id'] ?>">
-			<div class="product__info">
-				<img class="product__image" src="<?php echo $producto['imagen'] ?>" alt="Product 1" />
-				<h3 class="product__title"><?php echo $producto['nombre'] ?></h3>
-				<span class="product__price"><?php echo $producto['precio_iva'] ?> €</span>
-				<button class="añadir btn btn-dark my-2 my-sm-0">Ver Producto </button>
-		
-                   <!--             <button id="" 
-                                        data-producto-id="<?php echo $producto['id']?>" 
-                                        data-carrito-id="<?php echo $_SESSION['carrito']['id']?>"
-                                        data-producto-nombre="<?php echo $producto['nombre']?>" 
-                                        data-ruta="<?php echo $root?>"
-                                        data-imagen-producto="<?php echo $root ?><?php echo $producto['imagen']?>.png";
-                                        data-producto-precio="<?php echo $producto['precio_iva']?>" 
-                                        class="añadir btn btn-dark my-2 my-sm-0">Añadir</button>
--->
-			</div>
-            </a>
-		</div>
-
-   <?php  
-     }
-    } else {
-        $error = "Error de conexión";
-        print_r( sqlsrv_errors());
-        echo $error;
-    } ?>
 		</section>
     </div><!-- /view -->
     <!-- product compare wrapper -->

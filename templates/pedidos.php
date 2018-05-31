@@ -1,8 +1,17 @@
+<?php
+        $sql = "select sum(cantidad) as c from carrito_producto where id_carrito = $id_carrito";
+
+        $resultado = mysqli_query($conexion, $sql);
+
+        $total_carrito = mysqli_fetch_assoc( $resultado );
+
+?>
+
 <div id="body-container" class="container">  
     <div class="rowe pedido-show">
         <div class="col-12 texto-cabecera">
             <h1> PRODUCTOS DE SU CARRITO</h1>
-            <h6>Su carrito contiene X productos</h6>
+            <h6>Su carrito contiene <span class="cantidad_total"><?php echo $total_carrito['c'] ?></span> productos</h6>
         </div>
         <div class="row">
             <div class="col-12 producto-pedido">
@@ -26,7 +35,7 @@
             </div>
         </div>
         <?php
-            $sql="select u.id as id_usuario, c.id as id_carrito,p.id as id_producto,p.imagen,p.descripcion_corta, p.nombre, p.precio_iva, cp.cantidad
+            $sql="select u.id as id_usuario, c.id as id_carrito,p.id as id_producto,p.imagen,p.descripcion_corta, p.nombre, p.precio_iva, cp.cantidad, p.id_categoria
             from carrito as c
             join carrito_producto as cp on cp.id_carrito = c.id
             join productos as p on cp.id_producto = p.id
@@ -39,7 +48,7 @@
             while( $producto = mysqli_fetch_assoc( $resultado ) ) {
         ?>
         <div class="row">
-            <div class="col-12 producto-pedido">
+            <div class="col-12 producto-pedido pr_pe<?php echo $producto['id_producto']?>">
                 <div class="col-2 imagen-pedido pedido-box">
 
                     <img src="<?php echo $producto['imagen']?>">
@@ -56,10 +65,23 @@
                 <div class="col-2 cantidad-producto-pedido texto-pedido  pedido-box">
                     <?php 
                         if($producto['cantidad'] > 1) { ?> 
-                            <?php echo $producto['cantidad'] ?> Unidades
+                        <input type="text" class=" form-control cantidad-info<?php echo $producto['id_producto']?>" readonly="readonly" value="<?php echo $producto['cantidad'] ?> Unidades"></br>
+                            
                         <?php } else { ?>
-                            <?php echo $producto['cantidad'] ?> Unidad
+                            <input type="text" class=" form-control cantidad-info<?php echo $producto['id_producto']?>" readonly="readonly" value="<?php echo $producto['cantidad'] ?> Unidad"></br>
                     <?php } ?>
+
+                    <div>
+                        <?php 
+                            if($producto['id_categoria'] <> 32){
+                                
+                          ?>
+                        <input class="cantidad_menos" type="button"  data-id="<?php echo $producto['id_producto']?>" data-precio="<?php echo $producto['precio_iva']?>" value="-">
+                        <input class="cantidad_mas" type="button"  data-id="<?php echo $producto['id_producto']?>" data-precio="<?php echo $producto['precio_iva']?>" value="+">
+                        <?php
+                                }
+                        ?>
+                    </div>
                 </div>
                 <div class="col-1 pedido-box">
                     <i class="eliminar fas fa-times fa-3x" 
@@ -68,7 +90,7 @@
                     </i>
                 </div>
                 <div class="col-1 texto-pedido pedido-box">
-                    <?php echo $producto['precio_iva']?> €<br/>
+                    <span class="info-precio<?php echo $producto['id_producto']?>"><?php echo $producto['precio_iva']?></span> €<br/>
 
                 </div>
                 
@@ -80,11 +102,11 @@
         ?>
 
     <div class="row">
-                <div class="col-6 pedido-boton">
+                <div class="col-12 pedido-boton">
                     <form action="<?php echo $root?>pedidos/generar_pedido.php" method="POST">
-                        <input type="hidden" name="id_carrito" value="<?php echo $id_carrito?>">
+                        <input type="hidden" class="id_carrito" name="id_carrito" value="<?php echo $id_carrito?>">
                         <input type="hidden" name="id_usuario" value="<?php echo $id_usuario?>">
-                        <button type="submit" class="btn btn-success my-2 my-sm-0" data-url="<?php echo $root?>pedidos/generar_pedido.php">Confirmar Pedido!</button>
+                        <button type="submit" class="btn btn-info btn-lg confirmar" data-url="<?php echo $root?>pedidos/generar_pedido.php">Confirmar Pedido!</button>
                     </form>
             </div>
     </div>
