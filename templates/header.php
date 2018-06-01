@@ -13,7 +13,7 @@
                     <a href="">AYUDA</a>
                 </li>
                 <li>
-                    <a href="">SUGERENCIAS</a>
+                    <a href="">NOSOTROS</a>
                 </li>
             </ul>
         </div>

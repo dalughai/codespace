@@ -84,7 +84,7 @@ BEGIN
             
 				set categoria = 30;
 				set descripcion = 'Set Custom para Guitarra Eléctrica de 7 Cuerdas';
-                set imagen = '/codespace/images/productos/tsselectrica7';
+                set imagen = '/tostringshop/images/productos/tsselectrica7';
 
 			insert into sets
 				(num_cuerdas,categoria,nombre, referencia,id_usuario,precio_iva,date_add,stock)

@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
     
-var sql = "select *, productos.id as p_id from productos";
+var sql = "select productos.*,productos.nombre as nombre_producto, productos.id as p_id from productos";
 var where = "";
 var marca = "";
 var tipo = "";
@@ -89,7 +89,7 @@ function renderProductos(sql,categoria,where,marca,tipo, precio){
                 +'<a href="'+ root + 'productos?id=' + id_prod +'">'
 			    +'<div class="product__info">'
 				+'<img class="product__image" src="' + data[producto]['imagen'] +'" alt="Product 1" />'
-				+'<h3 class="product__title">'+ data[producto]['nombre']+'</h3>'
+				+'<h3 class="product__title">'+ data[producto]['nombre_producto']+'</h3>'
 				+'<span class="product__price">'+ data[producto]['precio_iva']+' €</span>'
 				+'<button class="añadir btn btn-dark my-2 my-sm-0">Ver Producto </button>'
                 +'</div> </a> </div>');

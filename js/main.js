@@ -11,7 +11,7 @@ var ruta = "";
 var contenedor_buscador = "";
 var cierre_contenedor = "";
 var elemento_div_close = $('</div>');
-var root = "/codespace/";
+var root = "/tostringshop/";
 
 
 $(document).ready(function(){
@@ -32,6 +32,9 @@ function actualizarCarrito(id_carrito){
                 $('#cantidad').text(data[cantidad]['cantidad']);
                 $('#precio').text(data[cantidad]['precio_total'] + '€');
             }
+            var cant = $('#cantidad').text();
+            console.log(cant);
+            
         }
     });
 }
@@ -167,8 +170,12 @@ $(document).ready(function(){
 
 
 
-
-
+    var tot = $('.cantidad_total').text();
+    
+    if( (tot) < 1){
+        $('.pedido-boton').css('display','none');
+        $('.producto-pedido').css('display','none');
+    }
 
 
 
@@ -188,14 +195,17 @@ $(document).ready(function(){
                 id_producto: id_producto
               },
             success: function(data){
-                if(data[0]['cantidad' == 0]){
+            
+                if(data[0]['cantidad'] < 1){
                     eliminarProducto(id_producto,id_carrito);
                 }else {
                     $('.cantidad-info'+id_producto).val(data[0]['cantidad'] + " Unidades");
                     $('.info-precio'+id_producto).text(data[0]['cantidad'] * precio);
                     $('.cantidad_total').text(cantidad_total);
                     $('#cantidad').text(cantidad_total);
+
                     actualizarCarrito(id_carrito);
+
 
                 }
             }
@@ -252,6 +262,12 @@ function eliminarProducto(id_producto, id_carrito){
             $('#cantidad').text(data[0]['cantidad']);
             $('.cantidad_total').text(data[0]['cantidad']);
             actualizarCarrito(id_carrito);
+            var tot = $('.cantidad_total').text();
+            console.log(tot);
+            if( (tot-1) < 1){
+                $('.pedido-boton').css('display','none');
+                $('.producto-pedido').css('display','none');
+            }
         }
     });
 }

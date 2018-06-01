@@ -1,6 +1,6 @@
 <?php
 
-$root = "/codespace/";
+$root = "/tostringshop/";
 $carpeta_fotos = $root . "images/fotos_tienda/";
 $fotos_productos = $root . "images/productos/";
     
