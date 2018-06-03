@@ -285,19 +285,18 @@ function eliminarProducto(id_producto, id_carrito){
                 contenedor_buscador = $('<div class="items-buscador row d-flex justify-content-start">');
                 $('#buscadord').append(contenedor_buscador);
                 for(var producto in data){
-                    var elemento_div_open = $('<div class="col-12 item-buscador p-2"> ');
-                    var elemento_imagen = $('<img class="buscador-imagen" src="">').attr("src",data[producto]['imagen']);
-                    var elemento_nombre = $('<p class="nombre-producto"> </p>').text(data[producto]['nombre'] + " ");
+                    var elemento_div_open = $('<div class="col-12 item-buscador p-2"> '+
+                    '<img class="buscador-imagen" src="'+data[producto]['imagen']+'">'+
+                    '<p class="nombre-producto" data-id="'+data[producto]['id']+'">'+data[producto]['nombre']+ ' </p></div>');
                     
                     //var elemento_precio = $('<p> </p>').text(". " + precio + " € ");
-                    elemento_div_close = $('</a></div>');
+                    elemento_div_close = $('</div>');
                     
                     $('.items-buscador').append(elemento_div_open);
-                    $('.items-buscador').append(elemento_div_open);
-                    $('.items-buscador').append(elemento_imagen);
-                    $('.items-buscador').append(elemento_nombre);
+                    //$('.items-buscador').append(elemento_div_open);
+                    //$('.items-buscador').append(elemento_imagen);
+                    //$('.items-buscador').append(elemento_nombre);
                     //$('.items-carrito').append(elemento_precio);
-                    $('.items-buscador').append(elemento_div_close);
                 }
                 $('#buscadord').append(elemento_div_close);
                 //console.log(datos['nombre']);
@@ -309,7 +308,7 @@ function eliminarProducto(id_producto, id_carrito){
     var eventDelegation = function(evento){
         $("#id_producto").val($(this).attr('id'));
         $("#buscar").val($(this).text());
-};
+    };
     $('#buscadord').on('click','.nombre-producto', eventDelegation);
        
     $('#buscar').on('keyup',function(){
@@ -343,6 +342,7 @@ function eliminarProducto(id_producto, id_carrito){
             success: function(data){
                 $("#cantidad").html(data[cantidad]['cantidad']);
                 $("#precio").html(data[cantidad]['precio_total'] + '€');
+                var precio_pay = data[cantidad]['precio_total'];
             }
         });
         

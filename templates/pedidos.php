@@ -5,6 +5,12 @@
 
         $total_carrito = mysqli_fetch_assoc( $resultado );
 
+        $sql = "select sum(productos.precio_iva * carrito_producto.cantidad) as total from carrito_producto
+                join productos on productos.id = carrito_producto.id_producto where id_carrito = $id_carrito";
+
+        $resultado = mysqli_query($conexion, $sql);
+
+        $total_pay = mysqli_fetch_assoc( $resultado );
 ?>
 
 <div id="body-container" class="container">  
@@ -103,18 +109,33 @@
 
     <div class="row">
                 <div class="col-12 pedido-boton">
+                <form action="<?php echo $root?>pedidos/generar_pedido.php" method="POST">
+                <input type="hidden" class="id_carrito" name="id_carrito" value="<?php echo $id_carrito?>">
+                <input type="hidden" name="id_usuario" value="<?php echo $id_usuario?>">
+                    <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_test_BoQ6nuKBoeRBsC5TtBU5RPDL"
+                        data-amount= ""
+                        data-name="To String Shop"
+                        data-description="Introduce los datos de tu tarjeta"
+                        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                        data-locale="auto"
+                        data-currency="eur">
+                    </script>
+                </form>
                     <form action="<?php echo $root?>pedidos/generar_pedido.php" method="POST">
                         <input type="hidden" class="id_carrito" name="id_carrito" value="<?php echo $id_carrito?>">
                         <input type="hidden" name="id_usuario" value="<?php echo $id_usuario?>">
-                        <button type="submit" class="btn btn-info btn-lg confirmar" data-url="<?php echo $root?>pedidos/generar_pedido.php">Confirmar Pedido!</button>
+                        <!-- <button type="submit" class="btn btn-info btn-lg confirmar" data-url="<?php echo $root?>pedidos/generar_pedido.php">Confirmar Pedido!</button> -->
                     </form>
+                    <!-- <a href="<?php echo $root?>pasarela"><button type="submit" class="btn btn-info btn-lg pasarela">Pasarela Prueba!</button></a> -->
             </div>
     </div>
 
 
 <script>
 $(document).ready(function(){
-   $(".pedido").click(function() {
+   $(".stripe-button-el").submit(function() {
       url = $(this).attr("data-url");
       window.open(url, '_blank');
       return false;

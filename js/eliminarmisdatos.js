@@ -1,0 +1,37 @@
+
+$(document).ready(function(){
+    id_usuario = $('.id_usuario').val();
+    
+    
+    $('.eliminar-datos').on('click',function(){
+        deleteDatos(id_usuario);
+        
+    });
+
+
+
+   
+});
+function deleteDatos(id_usuario){
+    $.ajax({
+        type: "POST",
+        url: root + "/libs/delete_misdatos.php",
+        data: {id_usuario: id_usuario},
+        success: function(data){
+
+            $("div").remove('.product');
+            for(var productos in data){
+                var id_prod = data[productos]['id'];
+                var producto = $('<div class="product mp-custom">'
+                +'<a href="'+ root + 'productos?id=' + id_prod +'">'
+			    +'<div class="product__info">'
+				+'<img class="product__image" src="' + data[productos]['imagen'] +'" alt="Product 1" />'
+				+'<h3 class="product__title">'+ data[productos]['nombre']+'</h3>'
+				+'<span class="product__price">'+ data[productos]['precio_iva']+' €</span>'
+				+'<button class="añadir btn btn-dark my-2 my-sm-0">Ver Producto </button>'
+                +'</div> </a> </div>');
+                $('.contenedor_datos').append(producto);
+            }
+        }
+    });
+}

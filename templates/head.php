@@ -35,6 +35,9 @@
     <script src="<?php echo $root?>js/filtro.js"></script>
     <script src="<?php echo $root?>js/moment/moment.min.js"></script>
     <script src="<?php echo $root?>js/moment/moment-with-locales.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="<?php echo $root?>js/pasarela.js"></script>
+
 
     
 </head>

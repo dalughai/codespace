@@ -1,3 +1,4 @@
+
 <div id="body-container" class="container">  
     <div>
         <div class="col-12 texto-cabecera">
@@ -10,7 +11,7 @@
         <div class="col-6">
             <ul>
                 <li>
-                    <a href="">
+                    <a href="<?php echo $root ?>micuenta/mispedidos">
                         <div class="panel-usuario-texto">
                                 <i class="fas fa-list-ol fa-2x"></i>
                                 <span>HISTORIAL Y DETALLE DE MIS PEDIDOS</span>
@@ -19,7 +20,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="<?php echo $root ?>micuenta/misdirecciones">
                             <div class="panel-usuario-texto">
                                     <i class="fas fa-address-card fa-2x"></i>
                                     <span>MIS DIRECCIONES</span>
@@ -27,7 +28,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="<?php echo $root ?>micuenta/misdatos">
                             <div class="panel-usuario-texto">
                                     <i class="fas fa-address-book fa-2x"></i>
                                     <span>MIS DATOS PERSONALES</span>
@@ -39,7 +40,7 @@
         <div class="col-6">
             <ul>
                 <li>
-                    <a href="">
+                    <a href="<?php echo $root ?>micuenta/miscustomsets"> 
                             <div class="panel-usuario-texto">
                                     <i class="fas fa-strikethrough fa-2x"></i>
                                     <span>MIS CUSTOM SETS</span>
@@ -47,7 +48,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="<?php echo $root ?>micuenta/mistringbox">
                         <div class="panel-usuario-texto">
                                 <i class="fas fa-box fa-2x"></i>
                                 <span>MI STRING BOX</span>
@@ -55,10 +56,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="<?php echo $root ?>micuenta/eliminardatos">
                         <div class="panel-usuario-texto">
-                                <i class="fas fa-star fa-2x"></i>
-                                <span>MIS FAVORITOS</span>
+                                <i class="fas fa-trash-alt fa-2x"></i>
+                                <span>ELIMINAR MIS DATOS</span>
                         </div>
                     </a>
                 </li>

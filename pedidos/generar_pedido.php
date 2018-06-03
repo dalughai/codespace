@@ -6,6 +6,7 @@ $usuario = (isset($_SESSION["usuario"])) ? $_SESSION["usuario"] : "";
 $carrito = (isset($_SESSION["carrito"])) ? $_SESSION["carrito"] : "";
 $id_carrito = $carrito['id'];
 $id_usuario = $usuario['id'];
+$idc = $id_carrito;
 $sql="select u.id as id_usuario, c.id as id_carrito,p.id as id_producto,p.imagen,p.descripcion_corta, p.referencia, p.nombre, p.precio_iva, cp.cantidad
             from carrito as c
             join carrito_producto as cp on cp.id_carrito = c.id
@@ -110,10 +111,32 @@ $articulos = $articulos + $producto_cantidad;
 }
 $base = number_format(($precio_final /1.21),2);
 $pdf->addCadreEuros($base,$iva,$precio_final,$articulos);
+
+$sql = "update pedidos set total_IVA = '$precio_final' where id_carrito = '$idc'";
+$resultado = mysqli_query($conexion, $sql);
+
+
+
+
 $sql = "insert into factura (id_cliente, fecha_factura, precio_sin_iva, precio_iva, direccion_facturacion, direccion_envio,referencia) 
 VALUES ($id_usuario, NOW(),$base, $precio_final,'$direccion','$direccion','$id_usuario.$id_usuario.$id_carrito')";
 
     $resultado = mysqli_query($conexion, $sql);
+
+// // Set your secret key: remember to change this to your live secret key in production
+// // See your keys here: https://dashboard.stripe.com/account/apikeys
+// \Stripe\Stripe::setApiKey("sk_test_wOUzaV1EmGSRSK9GaQYV2bHD");
+
+// // Token is created using Checkout or Elements!
+// // Get the payment token ID submitted by the form:
+// $token = $_POST['stripeToken'];
+
+// $charge = \Stripe\Charge::create([
+//     'amount' => $precio_final,
+//     'currency' => 'usd',
+//     'description' => 'Pedido en To String Shop',
+//     'source' => $token,
+// ]); 
 if($resultado){
     $pdfdoc = $pdf->Output();
     $pdftosend = chunk_split(base64_encode($pdfdoc));
@@ -122,6 +145,8 @@ if($resultado){
     $email = $usuario['email'];
     $cuerpo = "Muchas Gracias por su compra, adjuntamos la factura de su compra a continuacion. Un saludo!";
     enviarEmailPDF($email, $asunto, $cuerpo, $usuario['nombre'],$pdftosend);
+    
+    
     
 } else {
         echo $sql;
