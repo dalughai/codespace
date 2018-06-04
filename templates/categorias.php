@@ -63,12 +63,15 @@
     </div>
 <!-- Main view -->
     <div class="view">
-	<!-- Blueprint header -->
-	<header class="bp-header cf"><!-- ... --></header>
-	<!-- Product grid -->
-	<section class="grid">
+            <!-- Blueprint header -->
+            <header class="bp-header cf"><!-- ... --></header>
+            <!-- Product grid -->
+                <section class="grid">
+                
+                
+                </section>
+            
 
-		</section>
     </div><!-- /view -->
     <!-- product compare wrapper -->
     <section class="compare">

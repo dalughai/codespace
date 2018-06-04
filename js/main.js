@@ -33,7 +33,6 @@ function actualizarCarrito(id_carrito){
                 $('#precio').text(data[cantidad]['precio_total'] + '€');
             }
             var cant = $('#cantidad').text();
-            console.log(cant);
             
         }
     });
@@ -134,10 +133,11 @@ $(document).ready(function(){
 
 
 
-
-
-
-
+    $('#page_container').pagination({
+        items: 100,
+        itemsOnPage: 10,
+        cssStyle: 'compact-theme'
+    });
 
 
 

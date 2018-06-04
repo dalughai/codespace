@@ -17,6 +17,6 @@ app.use(bodyParser.urlencoded());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Definir el API
-app.use('/api', routes())
+app.use('/api', routes());
 
-app.listen(3000)
+app.listen(3000);

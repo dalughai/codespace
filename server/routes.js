@@ -1,12 +1,12 @@
 // Import multiple
 //import { Router,Express } from 'express'
 
-import { Router} from 'express'
-import controller from './controllers/'
+import { Router} from 'express';
+import controller from './controllers/';
 
-import mysql from './config/mysql'
+import mysql from './config/mysql';
 
-var connection = mysql.connection
+var connection = mysql.connection;
 
 
 export default () => {
@@ -19,8 +19,39 @@ export default () => {
 
     console.log("controller", JSON.stringify(controller))
 
-    api.get('/tareas', controller.tareas)
+    api.get('/tareas', controller.tareas);
     
+    api.get('/productos', controller.productos);
+
+    
+    api.get('/producto/:id_producto', function(req,res){
+        var id_producto = req.params.id_producto;
+        connection.query('SELECT * from productos where id = '+ id_producto +'' , function (error, results, fields) {
+            if (error){
+                console.log("my error ", error);
+                var results = {
+                    error: error
+                }
+    
+                //Asignar response
+                res.setHeader('Content-Type', 'application/json')
+                res.status(500);
+                res.send(JSON.stringify(results))
+            } else{
+                console.log('The result: ', JSON.stringify(results));
+    
+                //Asignar response
+                res.setHeader('Content-Type', 'application/json')
+                res.send(JSON.stringify({'producto':results}))
+                //return JSON.stringify(results)
+            }
+        });
+    });
+
+    api.get('/productos/update', function(req,res){
+        var id_producto = req.body.id_producto;
+    });
+
     // /api/tarea/add
     api.post('/tarea/add', function (req, res) {
     

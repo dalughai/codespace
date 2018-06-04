@@ -22,6 +22,7 @@
     <script src="<?php echo $root?>js/slick.min.js"></script>
     <link href="<?php echo $root?>css/slick.css" rel="stylesheet" type="text/css"> 
     <link href="<?php echo $root?>css/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $root?>css/simplePagination.css" rel="stylesheet" type="text/css"> 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
     <link href="<?php echo $root?>css/animate.css" rel="stylesheet" type="text/css"> 
@@ -33,6 +34,8 @@
     <script src="<?php echo $root?>js/stringbox.js"></script>
     <script src="<?php echo $root?>js/date.js"></script>
     <script src="<?php echo $root?>js/filtro.js"></script>
+    <script src="<?php echo $root?>js/filtro.js"></script>
+    <script src="<?php echo $root?>js/jquery.simplePagination.js"></script>
     <script src="<?php echo $root?>js/moment/moment.min.js"></script>
     <script src="<?php echo $root?>js/moment/moment-with-locales.min.js"></script>
     <script src="https://js.stripe.com/v3/"></script>

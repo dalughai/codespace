@@ -4,12 +4,14 @@ var init = function(){
 
 	
 	var ruta = "http://localhost";
-	var imagen_hard = "../images/productos/EB2626";
+
+
 	var editarDelegation = function(evento){
 		var table = $('#example1').DataTable();
 		var data = table.row( $(this).parents('tr') ).data();
-        alert("El id es: " + data.id );
-    };
+		location.href ='../catalogo/ed_producto.html?id='+data.id +'';
+	};
+	
 	var eliminarDelegation = function(evento){
 		var table = $('#example1').DataTable();
 		var data = table.row( $(this).parents('tr') ).data();
@@ -21,7 +23,7 @@ var init = function(){
 		alert($(this).val());
 	});
 
-	jQuery.get( "api/tareas", function(datos){
+	jQuery.get( "/api/tareas", function(datos){
 		
 		var table = $('#example1').DataTable({
 			data: datos.tareas,
@@ -66,8 +68,9 @@ var init = function(){
 		// })
 
 		
-	} 
-	);
+	});
+
+
 	$('#listaElementos').on('click','.tarea',function(evnt){
 
 		jQuery.post( "api/tarea/delete",{id:evnt.target.id.substring(6)} , function(tarea){
