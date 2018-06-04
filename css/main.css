@@ -70,6 +70,12 @@ background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgb
 background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, rgba(23,23,23,1) 100%); 
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#171717', GradientType=0 ); 
 }
+.fila0{
+    /* background-color: #1D5469; */
+    background-color: #0C4979;
+    margin:0;
+    height: 30px;
+}
 .fila1{
     margin-top: -10px;
     margin-bottom: -20px;
@@ -78,6 +84,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 .fila_1 span{
     color: #f4f4f4;
     margin-top: 25px; 
+}
+.enlaces-header-f0 a{
+    color: rgb(254, 255, 255);
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    
 }
 .enlaces-header a{
     color: #f4f4f4;
@@ -119,11 +132,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     margin: 15px;
     margin-top: 25px;
 }
+
+.header-list-f0 li {
+    margin-top: 2px;
+    margin-right: 45px;
+}
 #user{
     color: #C8E2E2;
 }
 .fas {
-    color: #C8E2E2;
+    /* color: #0C4979; */
+    color: black;
 }
 #menu div{
     border: solid white 1px;
@@ -132,7 +151,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 #presentacion img{
     
     margin-top: 10px;
-    width: 40px;
+    width: 80px;
 }
 #presentacion span{
     position: relative;
@@ -156,7 +175,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 
 #logo img{
-    width: 300px;
+    width: 235px;
     margin-top: -45px;
     /* margin-bottom: 20px; */
     margin-left: 15px;
@@ -174,7 +193,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     min-width: 575px;
     padding: 0;
 }
-
+.cproducto{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
 .navbar-collapse{
     z-index: 2;
 }
@@ -419,13 +441,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     border-radius: 4px;
     box-shadow: 0 0 10px 0rem black;
 }
+.item-buscador{
+    display: inline-flex;
+}
 .divlupa{
     position: relative;
     width: 100%;
     
 }
 .lupa .fas{
-    color: #ffffff;
+    color: #1d4c94;
 }
 .lupa{
     position: absolute;
@@ -445,6 +470,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 
 .nombre-producto{
     z-index: 3;
+    margin-left: 10px;
 }
 
 .pie-carrito{
@@ -842,10 +868,9 @@ item-carrusel{
 .boton{
     display: none;
 }
-.boton a{
+.boton input{
   color: black;
-  background: #929292;
-  padding: 10px;
+ padding: 10px;
   border-radius: 5px;
   text-align: center;
 }

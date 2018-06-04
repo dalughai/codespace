@@ -2,19 +2,9 @@
 var init = function(){
 
 
-
-
-
-
-
-
-
-
-
-
 	
-	var ruta = "../..";
-	var imagen_hard = "../images/productos/EB2626.png";
+	var ruta = "http://localhost";
+	var imagen_hard = "../images/productos/EB2626";
 	var editarDelegation = function(evento){
 		var table = $('#example1').DataTable();
 		var data = table.row( $(this).parents('tr') ).data();
@@ -42,7 +32,7 @@ var init = function(){
 					data: datos.tareas,
 					render : function ( url, type, full) {
 						if(full.ruta == 1){
-							return '<img height="75px" width="75px" src="'+ ruta + full.imagen + '"/>';
+							return '<img height="75px" width="75px" src="'+ ruta + full.imagen + '.png"/>';
 						} else {
 							return '<img height="75px" width="75px" src="'+ full.imagen+'"/>';
 						}

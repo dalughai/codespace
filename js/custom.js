@@ -9,7 +9,7 @@ mySet.cuerda5 = 0;
 mySet.cuerda6 = 0;
 mySet.cuerda7 = 0;
 mySet.cuerda8 = 0;
-
+mySet.descripcion = "Custom Set compuesto por: <br/><br/>";
 
 let id_ghead = 0;
 let paseCuerda1 = false;
@@ -64,7 +64,8 @@ $(document).ready(function(){
                 "cuerda_3" : mySet.cuerda3,
                 "cuerda_4" : mySet.cuerda4,
                 "cuerda_5" : mySet.cuerda5,
-                "cuerda_6" : mySet.cuerda6
+                "cuerda_6" : mySet.cuerda6,
+                "descripcion" : mySet.descripcion
             };
             crearSet(parametros);
         }
@@ -78,7 +79,8 @@ $(document).ready(function(){
                 "cuerda_4" : mySet.cuerda4,
                 "cuerda_5" : mySet.cuerda5,
                 "cuerda_6" : mySet.cuerda6,
-                "cuerda_7" : mySet.cuerda7
+                "cuerda_7" : mySet.cuerda7,
+                "descripcion" : mySet.descripcion
             };
             crearSet(parametros);
         }
@@ -93,7 +95,8 @@ $(document).ready(function(){
                 "cuerda_5" : mySet.cuerda5,
                 "cuerda_6" : mySet.cuerda6,
                 "cuerda_7" : mySet.cuerda7,
-                "cuerda_8" : mySet.cuerda8
+                "cuerda_8" : mySet.cuerda8,
+                "descripcion" : mySet.descripcion
             };
             crearSet(parametros);
         }
@@ -119,14 +122,14 @@ $(document).ready(function(){
             var dat = $('<span class="' + clase +'">'+ miCuerda[1] +'</span><span class="' + clase +'">'+ miCuerda[2] +'</span><span class="' + clase +'">Calibre '+ miCuerda[4] +'</span><span class="' + clase +'">'+ miCuerda[3] +'€</span>');
             $("#info-string-"+miCuerda[5]).css("display", "block");
             $('#info-string-'+miCuerda[5]).append(dat);
-            if(miCuerda[5] == 1) {paseCuerda1 = true; mySet.cuerda1 = miCuerda[0];}
-            if(miCuerda[5] == 2) {paseCuerda2 = true; mySet.cuerda2 = miCuerda[0];}
-            if(miCuerda[5] == 3) {paseCuerda3 = true; mySet.cuerda3 = miCuerda[0];}
-            if(miCuerda[5] == 4) {paseCuerda4 = true; mySet.cuerda4 = miCuerda[0];}
-            if(miCuerda[5] == 5) {paseCuerda5 = true; mySet.cuerda5 = miCuerda[0];}
-            if(miCuerda[5] == 6) {paseCuerda6 = true; mySet.cuerda6 = miCuerda[0];}
-            if(miCuerda[5] == 7) {paseCuerda7 = true; mySet.cuerda7 = miCuerda[0];}
-            if(miCuerda[5] == 8) {paseCuerda8 = true; mySet.cuerda8 = miCuerda[0];}
+            if(miCuerda[5] == 1) {paseCuerda1 = true; mySet.cuerda1 = miCuerda[0]; mySet.descripcion = mySet.descripcion + "    1. " +  miCuerda[7] + "<br/>";}
+            if(miCuerda[5] == 2) {paseCuerda2 = true; mySet.cuerda2 = miCuerda[0]; mySet.descripcion = mySet.descripcion + "    2. " +  miCuerda[7] + "<br/>";}
+            if(miCuerda[5] == 3) {paseCuerda3 = true; mySet.cuerda3 = miCuerda[0]; mySet.descripcion = mySet.descripcion + "    3. " +  miCuerda[7] + "<br/>";}
+            if(miCuerda[5] == 4) {paseCuerda4 = true; mySet.cuerda4 = miCuerda[0]; mySet.descripcion = mySet.descripcion + "    4. " +  miCuerda[7] + "<br/>";}
+            if(miCuerda[5] == 5) {paseCuerda5 = true; mySet.cuerda5 = miCuerda[0]; mySet.descripcion = mySet.descripcion + "    5. " + miCuerda[7] + "<br/>";}
+            if(miCuerda[5] == 6) {paseCuerda6 = true; mySet.cuerda6 = miCuerda[0]; mySet.descripcion = mySet.descripcion + "    6. " + miCuerda[7] + "<br/>";}
+            if(miCuerda[5] == 7) {paseCuerda7 = true; mySet.cuerda7 = miCuerda[0]; mySet.descripcion = mySet.descripcion + "    7. " + miCuerda[7] + "<br/>";}
+            if(miCuerda[5] == 8) {paseCuerda8 = true; mySet.cuerda8 = miCuerda[0]; mySet.descripcion = mySet.descripcion + "    8. " + miCuerda[7] + "<br/>";}
         } 
         // console.log(mySet);
         // console.log("--------------------------");
@@ -465,7 +468,7 @@ function renderLeftString8(data,cuerda,id_head){
     $('#strName8').text(cuerda + " Cuerda");
 
     for(var producto in data){
-    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],8,id_head);
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],8,id_head,data[producto]['descripcion']);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
     var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
@@ -485,7 +488,7 @@ function renderLeftString7(data,cuerda,id_head){
     $('#strName7').text(cuerda + " Cuerda");
 
     for(var producto in data){
-    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],7,id_head);
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],7,id_head,data[producto]['descripcion']);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
     var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
@@ -505,7 +508,7 @@ function renderLeftString6(data,cuerda,id_head){
     $('#strName6').text(cuerda + " Cuerda");
 
     for(var producto in data){
-    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],6,id_head);
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],6,id_head,data[producto]['descripcion']);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
     var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
@@ -525,7 +528,7 @@ function renderLeftString5(data,cuerda,id_head){
     $('#strName5').text(cuerda + " Cuerda");
 
     for(var producto in data){
-    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],5,id_head);
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],5,id_head,data[producto]['descripcion']);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
     var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
@@ -545,7 +548,7 @@ function renderLeftString4(data,cuerda,id_head){
     $('#strName4').text(cuerda + " Cuerda");
 
     for(var producto in data){
-    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],4,id_head);
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],4,id_head,data[producto]['descripcion']);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
     var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
@@ -565,7 +568,7 @@ function renderRightString4(data,cuerda,id_head){
     $('#strName4').text(cuerda + " Cuerda");
 
     for(var producto in data){
-    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],4,id_head);
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],4,id_head,data[producto]['descripcion']);
 
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
@@ -586,7 +589,7 @@ function renderRightString3(data,cuerda,id_head){
     $('#strName3').text(cuerda + " Cuerda");
 
     for(var producto in data){
-    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],3,id_head);
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],3,id_head,data[producto]['descripcion']);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
     var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
@@ -607,7 +610,7 @@ function renderRightString2(data,cuerda,id_head){
 
     for(var producto in data){
 
-    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],2,id_head);
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],2,id_head,data[producto]['descripcion']);
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);
     var string = $('<option class="infots" value=""></option>').val(miCuerda).text(data[producto]['nombre'] + " " + data[producto]['descripcion_corta']);
@@ -628,7 +631,7 @@ function renderRightString1(data,cuerda,id_head){
     $('#strName1').text(cuerda + " Cuerda");
 
     for(var producto in data){
-    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],1,id_head);
+    var miCuerda = new Array(data[producto]['id'],data[producto]['marca'],data[producto]['referencia'],data[producto]['precio_iva'],data[producto]['calibre'],1,id_head,data[producto]['descripcion']);
 
     if(data[producto]['calibre'])
     //let string = $('<option value=""></option>').val(data[producto]['id']).text(data[producto]['nombre'] + " 0" + data[producto]['calibre']);

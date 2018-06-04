@@ -61,15 +61,15 @@
                 
                 <div id="presentacion" class="row d-flex justify-content-center text-center">
                     <div class="col-sm-12 col-lg-4 p-2">
-                        <img src="<?php echo $root ?>images/fotos_tienda/repair.svg">
+                        <img src="<?php echo $root ?>images/fotos_tienda/setup.png">
                         <span>Maxima calidad para tu instrumento</span>
                     </div>    
                     <div class="col-sm-12 col-lg-4 p-2">
-                        <img src="<?php echo $root ?>images/fotos_tienda/security.svg">
+                        <img src="<?php echo $root ?>images/fotos_tienda/lock.png">
                         <span>Mayor seguridad en los pagos</span>
                     </div> 
                     <div class="col-sm-12 col-lg-4 p-2">
-                        <img src="<?php echo $root ?>images/fotos_tienda/almacen.svg">
+                        <img src="<?php echo $root ?>images/fotos_tienda/storage.png">
                         <span>El mayor almacen de cuerdas de Europa</span>
                     </div> 
                 </div>

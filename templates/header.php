@@ -1,8 +1,23 @@
 <div class="container">
 <header>
+    <div class="fila0 enlaces-header-f0">
+    <ul class="header-list-f0">
+                <li>
+                    <a href="">¿QUIENES SOMOS?</a>
+                </li>
+                <li>
+                    <a href="">CONTACTO: 635946097</a>
+                </li>
+                
+                <li>
+                    <a class="mail" href="">e-mail: info@tostringshop.com</a>
+                </li>
+                
+            </ul>
+    </div>
     <div class="row fila1">
         <div id="enlaces-izquierda" class="col-4 enlaces-header">
-            <ul class="header-list">
+            <!-- <ul class="header-list">
                 <li>
                     <a href="">ENVIOS</a>
                 </li>
@@ -15,14 +30,14 @@
                 <li>
                     <a href="">NOSOTROS</a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
 
         <div id="logo" class="col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
             <a href="<?php echo $root ?>index.php"><img src="<?php echo $carpeta_fotos?>/logo4.png"></a>
         </div>
         <div id="enlaces-derecha" class="col-4 enlaces-header">
-            <ul class="header-list">
+            <!-- <ul class="header-list">
                 <li>
                     <a href="">NOTICIAS</a>
                 </li>
@@ -35,7 +50,7 @@
                 <li>
                     <a href="<?php echo $root ?>micuenta">USUARIO</a>
                 </li>
-            </ul>
+            </ul> -->
             
         </div>
     </div>
@@ -62,7 +77,7 @@
             <?php 
                 if((isset($_SESSION['usuario']))){                                 
             ?>
-                <a href="<?php echo $root ?>micuenta"  >Bienvenido <?php echo $_SESSION['usuario']['nombre'] ?></a>
+                <a href="<?php echo $root ?>micuenta" >Bienvenido <?php echo $_SESSION['usuario']['nombre'] ?></a>
                 
             <?php
                 } else {

@@ -64,15 +64,15 @@
                 </div>
             </div>
                 <!-- </form> -->
-                <div class="col-md-12 mb-3 boton">    
-                        <a class="crear-set fadeIn animated">Crear Set</a>
+                <div class="col-md-12 mb-3 ">    
+                        <a class="crear-set fadeIn animated"><input id="crear_custom" class="boton btn "type="button" value="Crear Custom Set"></a>
                         <a data-producto-id="" 
                                 data-carrito-id="<?php echo $_SESSION['carrito']['id'] ?>"
                                 data-producto-nombre="" 
-                                data-imagen-producto="";
+                                data-imagen-producto=""
                                 data-producto-precio="" 
                                 class="add-set-carrito fadeInUp animated añadir">
-                                Añadir al carrito           
+                                <input id="a_a" class="boton btn "type="button" value="Añadir al carrito">      
                         </a>
                 </div>
     </div>

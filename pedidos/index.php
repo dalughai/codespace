@@ -5,15 +5,13 @@ $titulo = "Pedidos";
 
 if(isset($_SESSION["usuario"])) {
     $template_seccion = "../templates/pedidos.php";
-} else {
-    $error = "Debes iniciar sesion para realizar un pedido!";
-    $template_seccion = "../templates/login.php";
-}
+
+
 $carrito = $_SESSION['carrito'];
 $usuario = $_SESSION['usuario'];
 $id_carrito = $carrito['id'];
 $id_usuario = $usuario['id'];
-$refenrecia = random_string(10);
+$referencia = random_string(10);
 
 $sql = "select id from pedidos where id_cliente = $id_usuario and id_carrito = $id_carrito";
 $resultado = mysqli_query($conexion, $sql);
@@ -22,8 +20,10 @@ $consulta = mysqli_fetch_assoc( $resultado );
 if(sizeof($consulta) > 0){
 
 } else {
-    echo $refenrecia;
-    $sql = "insert into pedidos (id_cliente, id_carrito,id_estado,date_add,referencia) VALUES ($id_usuario, $id_carrito,1, NOW(),'$refenrecia')";
+    echo $referencia." ";
+    echo $id_carrito." ";
+    echo $id_usuario." ";
+    $sql = "insert into pedidos (id_cliente, id_carrito,id_estado,date_add,referencia) VALUES ($id_usuario, $id_carrito,1, NOW(),'$referencia')";
 
     $resultado = mysqli_query($conexion, $sql);
 
@@ -32,6 +32,11 @@ if(sizeof($consulta) > 0){
     } else {
         echo "Error";
             $error = "Error de autentificación";}
+}
+
+} else {
+    $error = "Debes iniciar sesion para realizar un pedido!";
+    $template_seccion = "../templates/login.php";
 }
 
 include "../templates/main.php";

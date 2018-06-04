@@ -1,6 +1,7 @@
 <?php
 session_start();
 require '../startApp.php';
+header("Content-Type: text/html; charset=iso-8859-1 ");
 
 $usuario = (isset($_SESSION["usuario"])) ? $_SESSION["usuario"] : "";
 $carrito = (isset($_SESSION["carrito"])) ? $_SESSION["carrito"] : "";
@@ -15,6 +16,12 @@ $sql="select u.id as id_usuario, c.id as id_carrito,p.id as id_producto,p.imagen
             where c.id = $id_carrito";
         
         $resultado_producto = mysqli_query($conexion, $sql);
+$sql="select id from factura order by id desc limit 1";
+        $resultado = mysqli_query($conexion, $sql);
+        
+$fact = mysqli_fetch_assoc( $resultado);
+$id_fact = $fact["id"]+1;
+
 
 
 $sql = "select usuarios.* , direcciones.*, direcciones.direccion as dir from usuarios 
@@ -48,16 +55,16 @@ require('invoice.php');
 
 $pdf = new PDF_Invoice( 'P', 'mm', 'A4' );
 $pdf->AddPage();
-$pdf->Image('../images/fotos_tienda/logo5.png',10,8,50);
+$pdf->Image('../images/fotos_tienda/tostringshop.png',10,8,50);
 $pdf->addSociete( "To String Shop",
                   "Calle Alextebuna N-35\n" .
                   "Tel: 635946097\n" .
                   "29006 MALAGA\n" );
-$pdf->fact_dev( "Factura Numero ", "" );
+$pdf->fact_dev( "Factura Numero $id_fact ", "" );
 $pdf->addDate(date("d/m/y"));
 $pdf->addClient($usuario['id']);
 $pdf->addPageNumber("1");
-$pdf->addClientAdresse($usuario['nombre'] . " ". $usuario["apellido_1"] . " ". $usuario["apellido_2"] . "\n". $usuario["dir"] . "\n". $usuario["ciudad"] . " ". $usuario["provincia"] . " ". $usuario["codigo_postal"] . "\n". $usuario["comunidad_autonoma"] . "\n". $usuario["telefono"]. "\n". $usuario["email"]);
+$pdf->addClientAdresse(utf8_decode($usuario['nombre'] . " ". $usuario["apellido_1"] . " ". $usuario["apellido_2"] . "\n". $usuario["dir"] . "\n". $usuario["ciudad"] . " ". $usuario["provincia"] . " ". $usuario["codigo_postal"] . "\n". $usuario["comunidad_autonoma"] . "\n". $usuario["telefono"]. "\n". $usuario["email"]));
 $pdf->addReglement("Pago Tarjeta");
 $pdf->addEcheance(date("d/m/y"));
 $pdf->addNumTVA("PEDIDO - " . $pedido['id'] );
@@ -80,9 +87,6 @@ $pdf->addLineFormat($cols);
 
 
 
-
-
-
 $y    = 109;
 
 
@@ -98,7 +102,7 @@ $producto_precio = $producto['precio_iva'];
 
 $line = array( "REFERENCIA"    => "$producto_ref",
                "DESCRIPCION"  => "$producto_nombre\n" .
-                                 "$producto_descripcion",
+                utf8_decode("$producto_descripcion"),
                "CANTIDAD"     => "$producto_cantidad",
                "PRECIO"      => "$producto_precio",
                "TOTAL" => $producto_precio * $producto_cantidad,
@@ -114,8 +118,6 @@ $pdf->addCadreEuros($base,$iva,$precio_final,$articulos);
 
 $sql = "update pedidos set total_IVA = '$precio_final' where id_carrito = '$idc'";
 $resultado = mysqli_query($conexion, $sql);
-
-
 
 
 $sql = "insert into factura (id_cliente, fecha_factura, precio_sin_iva, precio_iva, direccion_facturacion, direccion_envio,referencia) 
@@ -137,6 +139,11 @@ VALUES ($id_usuario, NOW(),$base, $precio_final,'$direccion','$direccion','$id_u
 //     'description' => 'Pedido en To String Shop',
 //     'source' => $token,
 // ]); 
+
+
+
+
+
 if($resultado){
     $pdfdoc = $pdf->Output();
     $pdftosend = chunk_split(base64_encode($pdfdoc));

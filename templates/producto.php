@@ -2,7 +2,7 @@
     if(!isset($_SESSION["carrito"])){
     }
 ?>
-<div id="body-container" class="container">  
+<div id="body-container" class="container cproducto">  
 
     <div class="row d-flex justify-content-center">
         <h1><?php echo $producto['nombre']?></h1>
