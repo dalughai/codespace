@@ -6,7 +6,7 @@ export default (function (req, res) {
 
     //req.params.variable
 
-    connection.query('SELECT id, imagen, nombre, referencia, id_categoria, precio_iva, stock, estado, ruta from productos order by id', function (error, results, fields) {
+    connection.query('SELECT productos.id as id, imagen, productos.nombre, referencia, categorias.nombre as id_categoria, precio_iva, stock, estado_producto.nombre as estado, ruta from productos join categorias on categorias.id = productos.id_categoria join estado_producto on estado_producto.id = productos.estado order by id', function (error, results, fields) {
         if (error){
             console.log("my error ", error)
             var results = {

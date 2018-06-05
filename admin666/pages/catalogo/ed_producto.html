@@ -28,6 +28,9 @@
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/remodal.css">
+  <link rel="stylesheet" href="../../css/remodal-default-theme.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -292,6 +295,7 @@
                     <div class="form-group">
                       <label for="exampleInputEmail1">Nombre del Producto</label>
                       <input type="text" class="form-control nombre" id="exampleInputEmail1" value="">
+                      <input type="hidden" class="form-control id" value="">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Referencia</label>
@@ -330,8 +334,7 @@
                     </div>
                         
                   <div class="box-footer">
-                        <button type="submit" class="btn btn-primary">Guardar y Permanecer</button>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-primary guardar">Guardar y Permanecer</button>
                       </div>
                 </form>
             </div>
@@ -341,7 +344,7 @@
                 <!-- ./row -->
               </section>
 
-
+              
 
 
 
@@ -390,7 +393,12 @@
 
 
 
+<div data-remodal-id="modal">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h1>¡PRODUCTO MODIFICADO CORRECTAMENTE!</h1>
 
+  <img class="img-remodal"src="../../images/ok.gif">
+</div>
 
 
 <!-- jQuery 3 -->
@@ -433,6 +441,8 @@
 
 
 <script src="./js/ed_producto.js"></script>
+<script src="../../js/remodal.js"></script>
+
 </body>
 </html>
 

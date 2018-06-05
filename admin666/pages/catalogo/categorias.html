@@ -27,7 +27,9 @@
   <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/remodal.css">
+  <link rel="stylesheet" href="../../css/remodal-default-theme.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -162,68 +164,66 @@
         <li class="header">MAIN NAVIGATION</li>
         <!-- Mis apartados -->
         <!-- Inicio de seccion CATALOGO -->
-          <li class="treeview">
-              <a href="#">
-                <i class="fa fa-edit"></i> <span>Catalogo</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="../../pages/catalogo/productos.html"><i class="fa fa-circle-o"></i> Productos</a></li>
-                <li><a href="../../pages/catalogo/sets.html"><i class="fa fa-circle-o"></i> Sets</a></li>
-                <li><a href="../../pages/catalogo/categorias.html"><i class="fa fa-circle-o"></i> Categorias</a></li>
-                <li><a href="../../pages/catalogo/fabricantes.html"><i class="fa fa-circle-o"></i> Fabricantes</a></li>
-              </ul>
-          </li>
-        <!-- Fin de seccion -->
-        <!-- Inicio de seccion PEDIDOS -->
-        <li class="treeview">
-            <a href="#">
-              <i class="fa fa-edit"></i> <span>Pedidos</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Pedidos</a></li>
-              <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Estados</a></li>
-              <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Facturas</a></li>
-              <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Mensajes de Pedidos</a></li>
-            </ul>
-        </li>
-      <!-- Fin de seccion -->
-      <!-- Inicio de seccion CLIENTES -->
-      <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>Clientes</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Clientes</a></li>
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Direcciones</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Carritos de compra</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Mensajes de Clientes</a></li>
-          </ul>
-      </li>
-    <!-- Fin de seccion -->
-    <!-- Inicio de seccion ADMINISTRACION -->
-    <li class="treeview">
-        <a href="#">
-          <i class="fa fa-edit"></i> <span>Administración</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Configuración</a></li>
-          <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
-          <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Correo Electronico</a></li>
-          <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Preferencias</a></li>
-        </ul>
-    </li>
+  <!-- Inicio de seccion CATALOGO -->
+  <li class="treeview">
+      <a href="#">
+        <i class="fa fa-edit"></i> <span>Catalogo</span>
+        <span class="pull-right-container">
+          <i class="fa fa-angle-left pull-right"></i>
+        </span>
+      </a>
+      <ul class="treeview-menu">
+          <li><a href="../catalogo/nuevo.html"><i class="fa fa-circle-o"></i> Nuevo Producto</a></li>
+          <li><a href="../catalogo/productos.html"><i class="fa fa-circle-o"></i> Productos</a></li>
+          <li><a href="../catalogo/categorias.html"><i class="fa fa-circle-o"></i> Categorias</a></li>
+          <li><a href="../catalogo/fabricantes.html"><i class="fa fa-circle-o"></i> Fabricantes</a></li>
+      </ul>
+  </li>
+<!-- Fin de seccion -->
+<!-- Inicio de seccion PEDIDOS -->
+<li class="treeview">
+    <a href="#">
+      <i class="fa fa-edit"></i> <span>Pedidos</span>
+      <span class="pull-right-container">
+        <i class="fa fa-angle-left pull-right"></i>
+      </span>
+    </a>
+    <ul class="treeview-menu">
+      <li><a href="../pedidos/pedidos.html"><i class="fa fa-circle-o"></i> Pedidos</a></li>
+      <li><a href="../pedidos/estados.html"><i class="fa fa-circle-o"></i> Estados</a></li>
+      <li><a href="../pedidos/facturas.html"><i class="fa fa-circle-o"></i> Facturas</a></li>
+    </ul>
+</li>
+<!-- Fin de seccion -->
+<!-- Inicio de seccion CLIENTES -->
+<li class="treeview">
+  <a href="#">
+    <i class="fa fa-edit"></i> <span>Clientes</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li><a href="../clientes/clientes.html"><i class="fa fa-circle-o"></i> Clientes</a></li>
+    <li><a href="../clientes/carritos.html"><i class="fa fa-circle-o"></i> Carritos de compra</a></li>
+    
+  </ul>
+</li>
+<!-- Fin de seccion -->
+<!-- Inicio de seccion ADMINISTRACION -->
+<li class="treeview">
+<a href="#">
+  <i class="fa fa-edit"></i> <span>Administración</span>
+  <span class="pull-right-container">
+    <i class="fa fa-angle-left pull-right"></i>
+  </span>
+</a>
+<ul class="treeview-menu">
+  <li><a href="../administracion/configuracion.html"><i class="fa fa-circle-o"></i> Configuración</a></li>
+  <li><a href="../administracion/usuarios.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+  <li><a href="../administracion/preferencia.html"><i class="fa fa-circle-o"></i> Preferencias</a></li>
+</ul>
+</li>
     <!-- Fin de seccion -->
     <!-- FIN de Mis apartados -->
         <li class="active treeview">
@@ -265,89 +265,19 @@
 
 
    <!-- Main content -->
-   <section class="content">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="box">
-          <div class="box-header">
-            <h3 class="box-title">Categorias</h3>
-          </div>
-          <!-- /.box-header -->
-          <div class="box-body">
-            <table id="example1" class="table table-bordered table-striped">
-              <thead>
-
-                <tr>
-                  <th>ID</th>
-                  <th>Nombre</th>
-                  <th>Descripción</th>
-                  <th>Estado</th>
-                  <th>Editar</th>
-              </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 4.0 </td>
-                  <td>Win 95+</td>
-                  <td>X</td>
-                  <td><a href="ed_producto.html">EDITAR</a></td>
-
-                </tr>
-            
-
-              <tr>
-                <td>Trident</td>
-                <td>Internet
-                  Explorer 5.0
-                </td>
-                <td>Win 95+</td>
-                <td>5</td>
-                <td>C</td>
-
-              </tr>
-              <tr>
-                <td>Trident</td>
-                <td>Internet
-                  Explorer 5.5
-                </td>
-                <td>Win 95+</td>
-                <td>5.5</td>
-                <td>A</td>
-
-              </tr>
-              
-              <tr>
-                <td>Other browsers</td>
-                <td>All others</td>
-                <td>-</td>
-                <td>-</td>
-                <td>U</td>
-              </tr>
-              </tbody>
-              <tfoot>
-              <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Estado</th>
-                <th>Editar</th>
-
-              </tr>
-              </tfoot>
-            </table>
-          </div>
-          <!-- /.box-body -->
-        </div>
-        <!-- /.box -->
-      </div>
-      <!-- /.col -->
+   <div class="box-body table-responsive no-padding">
+      <table id="categorias"class="table table-hover">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripcion</th>
+          <th>Activo</th>
+          
+        </tr>
+        </thead>
+      </table>
     </div>
-    <!-- /.row -->
-  </section>
-  <!-- /.content -->
-</div>
-
 
 
 
@@ -435,6 +365,8 @@
 <script src="../../dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<script src="./js/categorias.js"></script>
+<script src="../../js/remodal.js"></script>
 </body>
 </html>
 

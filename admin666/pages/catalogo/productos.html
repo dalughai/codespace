@@ -27,6 +27,10 @@
   <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/remodal.css">
+  <link rel="stylesheet" href="../../css/remodal-default-theme.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -161,68 +165,66 @@
         <li class="header">MAIN NAVIGATION</li>
         <!-- Mis apartados -->
         <!-- Inicio de seccion CATALOGO -->
-          <li class="treeview">
-              <a href="#">
-                <i class="fa fa-edit"></i> <span>Catalogo</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                  <li><a href="./nuevo.html"><i class="fa fa-circle-o"></i> Nuevo Producto</a></li>
-                <li><a href="./productos.html"><i class="fa fa-circle-o"></i> Productos</a></li>
-                <li><a href="./categorias.html"><i class="fa fa-circle-o"></i> Categorias</a></li>
-                <li><a href="./fabricantes.html"><i class="fa fa-circle-o"></i> Fabricantes</a></li>
-              </ul>
-          </li>
-        <!-- Fin de seccion -->
-        <!-- Inicio de seccion PEDIDOS -->
-        <li class="treeview">
-            <a href="#">
-              <i class="fa fa-edit"></i> <span>Pedidos</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="../pedidos/pedidos.html"><i class="fa fa-circle-o"></i> Pedidos</a></li>
-              <li><a href="../pedidos/estados.html"><i class="fa fa-circle-o"></i> Estados</a></li>
-              <li><a href="../pedidos/facturas.html"><i class="fa fa-circle-o"></i> Facturas</a></li>
-              <li><a href="../pedidos/mensajes.html"><i class="fa fa-circle-o"></i> Mensajes de Pedidos</a></li>
-            </ul>
-        </li>
-      <!-- Fin de seccion -->
-      <!-- Inicio de seccion CLIENTES -->
-      <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>Clientes</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="../clientes/clientes.html"><i class="fa fa-circle-o"></i> Clientes</a></li>
-            <li><a href="../clientes/direcciones.html"><i class="fa fa-circle-o"></i> Direcciones</a></li>
-            <li><a href="../clientes//carritos.html"><i class="fa fa-circle-o"></i> Carritos de compra</a></li>
-            <li><a href="../clientes//mensajes.html"><i class="fa fa-circle-o"></i> Mensajes de Clientes</a></li>
-          </ul>
-      </li>
-    <!-- Fin de seccion -->
-    <!-- Inicio de seccion ADMINISTRACION -->
-    <li class="treeview">
-        <a href="#">
-          <i class="fa fa-edit"></i> <span>Administración</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="../administracion/configuracion.html"><i class="fa fa-circle-o"></i> Configuración</a></li>
-          <li><a href="../administracion//usuarios.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
-          <li><a href="../administracion/correo.html"><i class="fa fa-circle-o"></i> Correo Electronico</a></li>
-          <li><a href="../administracion/preferencia.html"><i class="fa fa-circle-o"></i> Preferencias</a></li>
-        </ul>
-    </li>
+  <!-- Inicio de seccion CATALOGO -->
+  <li class="treeview">
+      <a href="#">
+        <i class="fa fa-edit"></i> <span>Catalogo</span>
+        <span class="pull-right-container">
+          <i class="fa fa-angle-left pull-right"></i>
+        </span>
+      </a>
+      <ul class="treeview-menu">
+          <li><a href="../catalogo/nuevo.html"><i class="fa fa-circle-o"></i> Nuevo Producto</a></li>
+          <li><a href="../catalogo/productos.html"><i class="fa fa-circle-o"></i> Productos</a></li>
+          <li><a href="../catalogo/categorias.html"><i class="fa fa-circle-o"></i> Categorias</a></li>
+          <li><a href="../catalogo/fabricantes.html"><i class="fa fa-circle-o"></i> Fabricantes</a></li>
+      </ul>
+  </li>
+<!-- Fin de seccion -->
+<!-- Inicio de seccion PEDIDOS -->
+<li class="treeview">
+    <a href="#">
+      <i class="fa fa-edit"></i> <span>Pedidos</span>
+      <span class="pull-right-container">
+        <i class="fa fa-angle-left pull-right"></i>
+      </span>
+    </a>
+    <ul class="treeview-menu">
+      <li><a href="../pedidos/pedidos.html"><i class="fa fa-circle-o"></i> Pedidos</a></li>
+      <li><a href="../pedidos/estados.html"><i class="fa fa-circle-o"></i> Estados</a></li>
+      <li><a href="../pedidos/facturas.html"><i class="fa fa-circle-o"></i> Facturas</a></li>
+    </ul>
+</li>
+<!-- Fin de seccion -->
+<!-- Inicio de seccion CLIENTES -->
+<li class="treeview">
+  <a href="#">
+    <i class="fa fa-edit"></i> <span>Clientes</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li><a href="../clientes/clientes.html"><i class="fa fa-circle-o"></i> Clientes</a></li>
+    <li><a href="../clientes/carritos.html"><i class="fa fa-circle-o"></i> Carritos de compra</a></li>
+    
+  </ul>
+</li>
+<!-- Fin de seccion -->
+<!-- Inicio de seccion ADMINISTRACION -->
+<li class="treeview">
+<a href="#">
+  <i class="fa fa-edit"></i> <span>Administración</span>
+  <span class="pull-right-container">
+    <i class="fa fa-angle-left pull-right"></i>
+  </span>
+</a>
+<ul class="treeview-menu">
+  <li><a href="../administracion/configuracion.html"><i class="fa fa-circle-o"></i> Configuración</a></li>
+  <li><a href="../administracion/usuarios.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+  <li><a href="../administracion/preferencia.html"><i class="fa fa-circle-o"></i> Preferencias</a></li>
+</ul>
+</li>
     <!-- Fin de seccion -->
     <!-- FIN de Mis apartados -->
       
@@ -382,7 +384,12 @@
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
+<div data-remodal-id="modal">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h1>¡PRODUCTO ELIMINADO CORRECTAMENTE!</h1>
 
+  <img class="img-remodal"src="../../images/ok.gif">
+</div>
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -422,6 +429,8 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="../../dist/js/pages/dashboard.js"></script>
+<script src="../../js/remodal.js"></script>
+
 <!-- AdminLTE for demo purposes -->
 <!-- <script src="dist/js/demo.js"></script>  -->
 

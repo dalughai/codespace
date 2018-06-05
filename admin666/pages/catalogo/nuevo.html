@@ -27,7 +27,9 @@
   <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/remodal.css">
+  <link rel="stylesheet" href="../../css/remodal-default-theme.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -163,69 +165,66 @@
           <li class="header">MAIN NAVIGATION</li>
           <!-- Mis apartados -->
           <!-- Inicio de seccion CATALOGO -->
-            <li class="treeview">
-                <a href="#">
-                  <i class="fa fa-edit"></i> <span>Catalogo</span>
-                  <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="./nuevo.html"><i class="fa fa-circle-o"></i> Nuevo Producto</a></li>
-                  <li><a href="./productos.html"><i class="fa fa-circle-o"></i> Productos</a></li>
-                  <li><a href="./categorias.html"><i class="fa fa-circle-o"></i> Categorias</a></li>
-                  <li><a href="./fabricantes.html"><i class="fa fa-circle-o"></i> Fabricantes</a></li>
-                </ul>
-            </li>
-          <!-- Fin de seccion -->
-          <!-- Inicio de seccion PEDIDOS -->
-          <li class="treeview">
-              <a href="#">
-                <i class="fa fa-edit"></i> <span>Pedidos</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="../pedidos/pedidos.html"><i class="fa fa-circle-o"></i> Pedidos</a></li>
-                <li><a href="../pedidos/estados.html"><i class="fa fa-circle-o"></i> Estados</a></li>
-                <li><a href="../pedidos/facturas.html"><i class="fa fa-circle-o"></i> Facturas</a></li>
-                <li><a href="../pedidos/mensajes.html"><i class="fa fa-circle-o"></i> Mensajes de Pedidos</a></li>
-              </ul>
-          </li>
-        <!-- Fin de seccion -->
-        <!-- Inicio de seccion CLIENTES -->
-        <li class="treeview">
-            <a href="#">
-              <i class="fa fa-edit"></i> <span>Clientes</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="../clientes/clientes.html"><i class="fa fa-circle-o"></i> Clientes</a></li>
-              <li><a href="../clientes/direcciones.html"><i class="fa fa-circle-o"></i> Direcciones</a></li>
-              <li><a href="../clientes//carritos.html"><i class="fa fa-circle-o"></i> Carritos de compra</a></li>
-              <li><a href="../clientes//mensajes.html"><i class="fa fa-circle-o"></i> Mensajes de Clientes</a></li>
-            </ul>
-        </li>
-      <!-- Fin de seccion -->
-      <!-- Inicio de seccion ADMINISTRACION -->
-      <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>Administración</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="../administracion/configuracion.html"><i class="fa fa-circle-o"></i> Configuración</a></li>
-            <li><a href="../administracion//usuarios.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
-            <li><a href="../administracion/correo.html"><i class="fa fa-circle-o"></i> Correo Electronico</a></li>
-            <li><a href="../administracion/preferencia.html"><i class="fa fa-circle-o"></i> Preferencias</a></li>
-          </ul>
-      </li>
-
+  <!-- Inicio de seccion CATALOGO -->
+  <li class="treeview">
+      <a href="#">
+        <i class="fa fa-edit"></i> <span>Catalogo</span>
+        <span class="pull-right-container">
+          <i class="fa fa-angle-left pull-right"></i>
+        </span>
+      </a>
+      <ul class="treeview-menu">
+          <li><a href="../catalogo/nuevo.html"><i class="fa fa-circle-o"></i> Nuevo Producto</a></li>
+          <li><a href="../catalogo/productos.html"><i class="fa fa-circle-o"></i> Productos</a></li>
+          <li><a href="../catalogo/categorias.html"><i class="fa fa-circle-o"></i> Categorias</a></li>
+          <li><a href="../catalogo/fabricantes.html"><i class="fa fa-circle-o"></i> Fabricantes</a></li>
+      </ul>
+  </li>
+<!-- Fin de seccion -->
+<!-- Inicio de seccion PEDIDOS -->
+<li class="treeview">
+    <a href="#">
+      <i class="fa fa-edit"></i> <span>Pedidos</span>
+      <span class="pull-right-container">
+        <i class="fa fa-angle-left pull-right"></i>
+      </span>
+    </a>
+    <ul class="treeview-menu">
+      <li><a href="../pedidos/pedidos.html"><i class="fa fa-circle-o"></i> Pedidos</a></li>
+      <li><a href="../pedidos/estados.html"><i class="fa fa-circle-o"></i> Estados</a></li>
+      <li><a href="../pedidos/facturas.html"><i class="fa fa-circle-o"></i> Facturas</a></li>
+    </ul>
+</li>
+<!-- Fin de seccion -->
+<!-- Inicio de seccion CLIENTES -->
+<li class="treeview">
+  <a href="#">
+    <i class="fa fa-edit"></i> <span>Clientes</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li><a href="../clientes/clientes.html"><i class="fa fa-circle-o"></i> Clientes</a></li>
+    <li><a href="../clientes/carritos.html"><i class="fa fa-circle-o"></i> Carritos de compra</a></li>
+    
+  </ul>
+</li>
+<!-- Fin de seccion -->
+<!-- Inicio de seccion ADMINISTRACION -->
+<li class="treeview">
+<a href="#">
+  <i class="fa fa-edit"></i> <span>Administración</span>
+  <span class="pull-right-container">
+    <i class="fa fa-angle-left pull-right"></i>
+  </span>
+</a>
+<ul class="treeview-menu">
+  <li><a href="../administracion/configuracion.html"><i class="fa fa-circle-o"></i> Configuración</a></li>
+  <li><a href="../administracion/usuarios.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+  <li><a href="../administracion/preferencia.html"><i class="fa fa-circle-o"></i> Preferencias</a></li>
+</ul>
+</li>
     <!-- Fin de seccion -->
     <!-- FIN de Mis apartados -->
         <li class="active treeview">
@@ -268,8 +267,8 @@
 
     <section class="content-header">
             <h1>
-              Catalogo
-              <small>De Productos</small>
+              Nuevo
+               Producto
             </h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -291,31 +290,50 @@
                   <div class="box-body">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Nombre del Producto</label>
-                      <input type="text" class="form-control" id="exampleInputEmail1" >
+                      <input type="text" class="form-control nombre" val="" required>
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Referencia</label>
-                      <input type="text" class="form-control" id="exampleInputPassword1">
+                      <input type="text" class="form-control ref" val="" required>
                     </div>
                     <div class="form-group">
                             <label for="exampleInputPassword1">Precio</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1">
+                            <input type="text" class="form-control precio" "" required>
                     </div>
                     <div class="form-group">
                             <label>Categorias</label>
-                            <select class="form-control">
-                              <option></option>
-                              <option>Cuerdas Guitarra Electrica</option>
-                              <option>option 2</option>
-                              <option>option 3</option>
-                              <option>option 4</option>
-                              <option>option 5</option>
+                            <select class="form-control categorias" val="">
+                              <option> </option>
+                              <option value="25">Set Guitarra Electrica</option>
+                              <option value="26">Set Guitarra Acustica</option>
+                              <option value="27">Set Guitarra Clasica</option>
+                              <option value="28">Set Bajo Electrico</option>
+                              <option value="29">Set Bajo Acustico</option>
+                              <option value="10">Cuerda Suelta Guitarra Electrica</option>
+                              <option value="11">Cuerda Suelta Guitarra Acustica</option>
+                              <option value="12">Cuerda Suelta Guitarra Clasica</option>
+                              <option value="13">Cuerda Suelta Bajo Electrico</option>
+                              <option value="14">Cuerda Suelta Bajo Acustico</option>
+                              <option value="6">Accesorios</option>
+                              <option value="7">Puas</option>
+                              <option value="8">Cables</option>
                             </select>
                           </div>
                     <div class="form-group">
+                              <label>Marca</label>
+                              <select class="form-control marca" val="">
+                                <option> </option>
+                                <option value="1">Ernie Ball</option>
+                                <option value="2">Daddario</option>
+                                <option value="4">Elixir</option>
+                                <option value="5">To String Shop</option>
+               
+                              </select>
+                      </div>
+                    <!-- <div class="form-group">
                       <label for="exampleInputFile">Imagen</label>
                       <input type="file" id="exampleInputFile">
-                    </div>
+                    </div> -->
                   </div>
                   <!-- /.box-body -->
     
@@ -327,7 +345,7 @@
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body pad">
-                                <textarea class="textarea" placeholder="Escriba la descripción corta del producto"
+                                <textarea class="textarea desc_corta" placeholder="Escriba la descripción corta del producto"
                                           style="width: 100%; height: 100px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                             </div>
                           </div>
@@ -338,14 +356,13 @@
                       </div>
                       <!-- /.box-header -->
                       <div class="box-body pad">
-                          <textarea class="textarea" placeholder="Escriba la description del producto"
+                          <textarea class="textarea desc" placeholder="Escriba la description del producto"
                                     style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                       </div>
                     </div>
                         
                   <div class="box-footer">
-                        <button type="submit" class="btn btn-primary">Guardar y Permanecer</button>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-primary crear">Crear Producto</button>
                       </div>
                 </form>
             </div>
@@ -389,7 +406,12 @@
 
 
 
-
+<div data-remodal-id="modal">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <h1>¡PRODUCTO CREADO CORRECTAMENTE!</h1>
+  
+    <img class="img-remodal"src="../../images/ok.gif">
+  </div>
 
 
 
@@ -443,6 +465,8 @@
 <script src="../../dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<script src="./js/nuevo_producto.js"></script>
+<script src="../../js/remodal.js"></script>
 </body>
 </html>
 
