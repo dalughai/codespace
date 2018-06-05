@@ -7,6 +7,7 @@
 
     $categoria = mysqli_fetch_assoc( $resultado );    
 ?>
+
 <input type="hidden" class="categoria" name="categoria" value="<?php echo $idcategoria ?>"> 
 
 <div id="body-container" class="container">  
@@ -62,16 +63,16 @@
 	<button class="action action--button action--compare"><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
     </div>
 <!-- Main view -->
-    <div class="view">
+    <div id="page-container" class="view">
             <!-- Blueprint header -->
             <header class="bp-header cf"><!-- ... --></header>
             <!-- Product grid -->
-                <section class="grid">
+            <div class="cont">
+                <div class="container_pag grid">
                 
                 
-                </section>
-            
-
+                </div>
+            </div>
     </div><!-- /view -->
     <!-- product compare wrapper -->
     <section class="compare">
@@ -79,3 +80,7 @@
         <button class="action action--close"><i class="fa fa-remove"></i><span class="action__text action__text--invisible">Close comparison overlay</span></button>
     </section>
 </div>
+<script>
+
+
+</script>

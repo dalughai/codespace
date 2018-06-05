@@ -195,7 +195,6 @@ function insertarNuevoStringBox(id_producto,id_carrito){
         success: function(data){
             $("#cantidad").html(data[cantidad]['cantidad']);
             $("#precio").html(data[cantidad]['precio_total'] + '€');    
-            debugger 
             $('#carrito').attr('data-carrito-id',id_carrito);
             actualizarCarro(id_carrito);
         }

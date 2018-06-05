@@ -2,13 +2,13 @@
 session_start();
 require '../startApp.php';
 header("Content-Type: text/html; charset=iso-8859-1 ");
-
+require_once('../libs/stripe-php/init.php');
 $usuario = (isset($_SESSION["usuario"])) ? $_SESSION["usuario"] : "";
 $carrito = (isset($_SESSION["carrito"])) ? $_SESSION["carrito"] : "";
 $id_carrito = $carrito['id'];
 $id_usuario = $usuario['id'];
 $idc = $id_carrito;
-$sql="select u.id as id_usuario, c.id as id_carrito,p.id as id_producto,p.imagen,p.descripcion_corta, p.referencia, p.nombre, p.precio_iva, cp.cantidad
+$sql="select u.id as id_usuario, c.id as id_carrito,p.id as id_producto,p.imagen,p.descripcion_corta, p.referencia, p.nombre, p.precio_iva, cp.cantidad, p.id_categoria
             from carrito as c
             join carrito_producto as cp on cp.id_carrito = c.id
             join productos as p on cp.id_producto = p.id
@@ -98,6 +98,9 @@ $producto_nombre = $producto['nombre'];
 $producto_descripcion = $producto['descripcion_corta'];
 $producto_cantidad = $producto['cantidad'];
 $producto_precio = $producto['precio_iva'];
+$producto_cat = $producto['id_categoria'];
+
+
 
 
 $line = array( "REFERENCIA"    => "$producto_ref",
@@ -125,23 +128,85 @@ VALUES ($id_usuario, NOW(),$base, $precio_final,'$direccion','$direccion','$id_u
 
     $resultado = mysqli_query($conexion, $sql);
 
-// // Set your secret key: remember to change this to your live secret key in production
-// // See your keys here: https://dashboard.stripe.com/account/apikeys
-// \Stripe\Stripe::setApiKey("sk_test_wOUzaV1EmGSRSK9GaQYV2bHD");
-
-// // Token is created using Checkout or Elements!
-// // Get the payment token ID submitted by the form:
-// $token = $_POST['stripeToken'];
-
-// $charge = \Stripe\Charge::create([
-//     'amount' => $precio_final,
-//     'currency' => 'usd',
-//     'description' => 'Pedido en To String Shop',
-//     'source' => $token,
-// ]); 
 
 
+// ////////////////////////////////////////////////////////////////
 
+if($producto_cat == 32){
+    $stremail = $usuario['email'];
+    // Set your secret key: remember to change this to your live secret key in production
+    // See your keys here: https://dashboard.stripe.com/account/apikeys
+    \Stripe\Stripe::setApiKey("sk_test_wOUzaV1EmGSRSK9GaQYV2bHD");
+    
+    // Token is created using Checkout or Elements!
+    // Get the payment token ID submitted by the form:
+    $token = $_POST['stripeToken'];
+    
+    $customer = \Stripe\Customer::create(array(
+        "email" => $stremail,
+        "source" => $token,
+      ));
+    $plan = \Stripe\Plan::create(array(
+        "amount" => ($precio_final*100),
+        "interval" => "month",
+        "product" => array(
+          "name" => "String Box"
+        ),
+        "currency" => "eur",
+        "id" => "StringBox"."$id_usuario"."$id_usuario"."$id_carrito"
+      ));
+
+    $sub = \Stripe\Subscription::create(array(
+        "customer" => $customer,
+        "items" => array(
+          array(
+            "plan" => $plan,
+          ),
+        )
+      ));
+
+} else {
+    $stremail = $usuario['email'];
+// Set your secret key: remember to change this to your live secret key in production
+// See your keys here: https://dashboard.stripe.com/account/apikeys
+\Stripe\Stripe::setApiKey("sk_test_wOUzaV1EmGSRSK9GaQYV2bHD");
+
+// Token is created using Checkout or Elements!
+// Get the payment token ID submitted by the form:
+$token = $_POST['stripeToken'];
+
+$customer = \Stripe\Customer::create(array(
+    "email" => $stremail,
+    "source" => $token,
+  ));
+
+$charge = \Stripe\Charge::create([
+    'amount' => ($precio_final*100),
+    'currency' => 'eur',
+    'customer' => $customer,
+    'description' => 'Pedido de '.$stremail.' en To String Shop',
+]); 
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+
+$sql = "insert into carrito (id_cliente,date_add) VALUES ($id_usuario,NOW())";
+    $resultado = mysqli_query($conexion, $sql);
+    
+    if ($resultado) {
+    
+        $sql = "select id from carrito order by id desc limit 1";
+    
+        $resultado_carrito = mysqli_query($conexion, $sql);
+    
+        if($resultado_carrito){
+            $id_carrito = $resultado_carrito;
+    
+            $id_carrito_nuevo = mysqli_fetch_assoc( $id_carrito );
+                            
+            $_SESSION['carrito'] = $id_carrito_nuevo;
+        }
+    }
 
 
 if($resultado){

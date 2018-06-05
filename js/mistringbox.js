@@ -17,7 +17,7 @@ function getStringBox(id_usuario){
             $("div").remove('.product');
             for(var productos in data){
                 var id_prod = data[productos]['id'];
-                var producto = $('<div class="product mp-custom">'
+                var producto = $('<div class="product mp-custom single-item">'
                 +'<a href="'+ root + 'productos?id=' + id_prod +'">'
 			    +'<div class="product__info">'
 				+'<img class="product__image" src="' + data[productos]['imagen'] +'" alt="Product 1" />'

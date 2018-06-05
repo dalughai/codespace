@@ -1,6 +1,5 @@
 
-$(document).ready(function(){
-    
+$(document).ready(function(){    
 var sql = "select productos.*,productos.nombre as nombre_producto, productos.id as p_id from productos";
 var where = "";
 var marca = "";
@@ -85,7 +84,7 @@ function renderProductos(sql,categoria,where,marca,tipo, precio){
             for(var producto in data){
                 
                 var id_prod = data[producto]['p_id'];
-                var divprod = $('<div class="product">'
+                var divprod = $('<div class="single-item product">'
                 +'<a href="'+ root + 'productos?id=' + id_prod +'">'
 			    +'<div class="product__info">'
 				+'<img class="product__image" src="' + data[producto]['imagen'] +'" alt="Product 1" />'

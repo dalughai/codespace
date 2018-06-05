@@ -20,9 +20,7 @@ $consulta = mysqli_fetch_assoc( $resultado );
 if(sizeof($consulta) > 0){
 
 } else {
-    echo $referencia." ";
-    echo $id_carrito." ";
-    echo $id_usuario." ";
+
     $sql = "insert into pedidos (id_cliente, id_carrito,id_estado,date_add,referencia) VALUES ($id_usuario, $id_carrito,1, NOW(),'$referencia')";
 
     $resultado = mysqli_query($conexion, $sql);

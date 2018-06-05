@@ -690,13 +690,13 @@ header ul{
 /*Carrusel*/
  @media screen and (max-width: 1100px) {
             .item-carrusel img{
-                margin-left: 15px;
+                margin-left: 80px;
             }        
 }
  @media screen and (max-width: 940px) {
             .item-carrusel img{
                 width: 100px;
-                margin-left: 15px;
+                margin-left: 80px;
             }        
 }
  @media screen and (max-width: 700px) {
@@ -1361,3 +1361,62 @@ footer li{
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 }
+
+  
+
+  
+  /* .container_pag {
+    display: flex;
+    flex-wrap: wrap;
+    width: 720px;
+    justify-content: flex-start;
+  } */
+  
+  /* .single-item {
+    width: 200px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+    margin: 20px;
+    border-radius: 10px;
+    color: #888;
+  } */
+
+  .pagination {
+
+    padding: 20px;
+  }
+  .pagination,
+  .pagination * {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .pagination a {
+    display: inline-block;
+    padding: 0 20px;
+    cursor: pointer;
+    border: solid 1px grey;
+    border-radius: 4px;
+    margin:2px;
+    
+  }
+  .pagination a:hover {
+    
+    border: solid 1px white;
+
+    box-shadow: 0 0 10px 0rem black;
+
+    
+  }
+  .pagination a.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  .pagination a.current {
+    background: #f3f3f3;
+  }

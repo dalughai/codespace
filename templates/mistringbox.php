@@ -6,8 +6,10 @@
             <h1> MI STRING BOX</h1>
             <h6>Aqui puedes visualizar tus String Box que has creado.</h6>
         </div>
-        <div class="row contenedor_datos grid">
+        <div class="cont">
+            <div class="row contenedor_datos container_pag grid">
             
+            </div>
         </div>
     <div class="row">
                 <div class="col-12 mp-pedido-boton">
