@@ -53,8 +53,8 @@
         <div>
             <select class="custom-select custom-select-md filtro-precio">
               <option selected>Precio: </option>
-              <option value="1">Mas Baratos Primero</option>
-              <option value="2">Mas Caro Primero</option>
+              <option value="1">Más Baratos Primero</option>
+              <option value="2">Más Caro Primero</option>
             </select>
         </div>
     </div>

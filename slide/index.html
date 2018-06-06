@@ -1,0 +1,428 @@
+
+<!--Pen by Margus Lillemägi | codepen.io/VisualAngle/-->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SVG Summit Webiste Template</title>    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Margus Lillemagi, visual-angle.com">
+  <!--PRELOAD-PREFETCH-PRECONNECT CONTENT--> 
+  <link rel="preload" href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG">
+  <link rel="prefetch" href="https://visualangle.ee/images/hipster_001.jpg">
+  <link rel="prefetch" href="https://visual-angle.com/images/hipster-2.jpg">
+  <link rel="prefetch" href="https://visual-angle.com/images/hipster-3.jpg">
+  <link rel="prefetch" href="https://visual-angle.com/images/hipster-4.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  
+  <!--FOOTER STYLE-->
+  <style type="text/css">
+     #VisualAngleLink,#pens{
+      position: absolute;
+      text-decoration: none;
+      font-size: 20px;
+      color: #000;
+      bottom: 25px;
+      opacity:0.7;
+    }
+    #VisualAngleLink span,#pens span{
+      font-family:'Ubuntu', arial; 
+      font-size:13px;
+      margin-left:5px;
+      vertical-align: 20%;
+    }
+    #VisualAngleLink:hover,#pens:hover{
+      opacity:1;
+    }
+    #VisualAngleLink { right: 30px; }
+    #pens { left: 30px; }
+  </style>
+</head>
+
+<body>
+  
+<!--HTML CONTAINER-->
+<div id="container">
+
+<!--//////SLIDER BOX 7///////-->
+  
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMidYMid slice" viewBox="0 0 934 584" class="box srgb-filter">
+  <defs>
+    <!--SVG STYLE-->
+    <style type="text/css"><![CDATA[
+      /*LOAD FONT.*/
+      @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+      body{
+        background-color:#2C001E;
+        font-size: 17px; /*Global font size.*/
+        font-family: 'Ubuntu', sans-serif; /*Global font.*/
+        text-rendering: geometricPrecision; /*The browser emphasizes geometric precision over rendering speed and legibility.*/
+      }
+      body, html {
+          height: 100%;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+      }
+      /*HTML CONTAINER DIV*/
+      #container {
+        width:100%;
+        height: 100%;
+      }
+      svg{
+        visibility:hidden;
+      }
+      /*SLIDE BOX*/
+      .box {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+      }
+      /*SLIDE BOX BACKGROUND*/
+      .box:nth-child(7),.box:nth-child(6),.box:nth-child(5),.box:nth-child(4),.box:nth-child(3),.box:nth-child(2),.box:nth-child(1) {
+        background-color: #2c001e;
+      }
+      /*IMAGE TONE FILTER*/
+      #duotone {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size: cover;
+      }
+      /*FOR SVG FILTERS*/
+      .srgb-filter {
+        color-interpolation-filters:sRGB;
+      }
+      /*GLOBAL TEXT*/
+      text {
+        fill: #fff;
+        opacity:0.8;
+      }
+      /*HEADINGS*/
+      [role="heading"]{
+        font-weight:700;
+      }
+      /*Heading level hero*/
+      [role="heading"][aria-level="hero"] {
+        font-size: 6em; 
+      }
+      /*Heading level 1*/
+      [role="heading"][aria-level="1"] {
+        font-size: 3em;
+        text-transform: uppercase;
+      }
+      /*Heading level 2*/
+      [role="heading"][aria-level="2"] {
+        font-size: 0.99em; 
+        font-weight:500;
+      }
+      /*Heading level 3*/
+      [role="heading"][aria-level="3"] {
+       font-size: 1.4em;
+       text-transform: uppercase;
+      }
+      /*Heading level 4*/
+      [role="heading"][aria-level="4"] {
+        font-size: 1.55em; 
+        font-weight:500;
+        text-transform: uppercase;
+      }
+      /*Heading level 5*/
+      [role="heading"][aria-level="5"] {
+        font-size: 1.4em; 
+        font-weight:700;
+      }
+      /*Heading level 6*/
+      [role="heading"][aria-level="6"] {
+        font-size: 2.5em;
+        text-transform: uppercase;
+      }
+      /*Heading level 6*/
+      [role="heading"][aria-level="button"] {
+        font-size: 1.25em;
+        text-transform: uppercase;
+      }
+      /*Heading level 5*/
+      [role="heading"][aria-level="link"] {
+        font-size: 1.4em; 
+        font-weight:700;
+      }
+      /*LOGO*/
+      #logo {
+        max-width:200px;
+        width:100%;
+        position:absolute;
+        overflow:visible;
+        padding-bottom:3%;
+        height:1px;
+        top:20px;
+        left:20px;
+        opacity:0.8;
+        font-size: 1.4em;
+      }
+      /*FOOTER*/
+      #VisualAngleLink,#pens {
+        color: #fff;  
+      }
+      .button, a {
+        cursor:pointer;
+      }
+      .btn-color{
+        fill:#2C001E;
+        opacity:0.8;
+      }
+      .no-select {
+        -webkit-user-select: none;  
+        -moz-user-select: none;    
+        -ms-user-select: none;      
+        user-select: none;
+      }
+      #logo:hover,.btn-color:hover, [aria-level="button"]:hover,[aria-level="link"]:hover{
+      opacity:1;
+      }
+      
+    ]]></style>
+  </defs>
+  
+  <!--SVG JAVASCRIPT-->
+  <script type="text/javascript" xlink:href="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <script type="text/javascript" xlink:href="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/utils/Draggable.min.js"></script>
+  
+  <script type="text/javascript">
+    <![CDATA[
+      document.addEventListener("DOMContentLoaded", function(event) {
+        window.onload = function() {
+
+          TweenMax.set("svg", {visibility: "visible"});
+
+          /* PAGE SLIDER SCRIPT by Diaco m.lotfollahi  : https://diacodesign.com*/
+
+          var box=document.querySelectorAll('.box'),indx=box.length-1,Anim ;
+
+          for(var i=box.length;i--;){
+            box[i].anim = TweenLite.to(box[i],0.8,{yPercent:-100,paused:true});
+          };
+
+          document.addEventListener("mousewheel",Go);
+          document.addEventListener("DOMMouseScroll",Go);
+
+          var D = document.createElement('svg');
+          Draggable.create(D,{
+            trigger:".box",type:'y',minimumMovement:5,cursor:'n-resize',
+            onDrag:function(){var X=this.getDirection("start")=='up'?1:-1;  Go(X);}
+          });
+
+          function Go(e){
+            var SD=isNaN(e)?e.wheelDelta||-e.detail:e;
+            if(SD>0 && indx>0 ){
+              if(!Anim||!Anim.isActive()){Anim=box[indx].anim.play();  indx--;}
+            }else if(SD<0 && indx<box.length-1){
+              if(!Anim||!Anim.isActive()){indx++;  Anim=box[indx].anim.reverse();}
+            };
+            if(isNaN(e))e.preventDefault();
+          };
+
+          /*DYNAMIC DUOTONE FILTER SCRIPT FOR IMAGES*/
+          function convertToDuoTone(color1, color2) {
+            var matrix = document.querySelector('feColorMatrix');
+            var value = [];
+            value = value.concat(
+            [color1[0]/256 - color2[0]/256, 0, 0, 0, color2[0]/256]);
+            value = value.concat(
+            [color1[1]/256 - color2[1]/256, 0, 0, 0, color2[1]/256]);
+            value = value.concat(
+            [color1[2]/256 - color2[2]/256, 0, 0, 0, color2[2]/256]);
+            value = value.concat([0, 0, 0, 1, 0]);
+            matrix.setAttribute('values', value.join(' '));
+          }
+          /*SELECT A DUOTONE FILTER*/
+          // ORANGE
+            convertToDuoTone([221, 72, 20], [44, 0, 30]);
+          // RED
+          //convertToDuoTone([240, 14, 46], [25, 37, 80]);
+          // GREEN
+          //convertToDuoTone([115, 217, 112], [36, 32, 106]);
+
+         };
+      });
+    ]]>
+   </script>
+  
+  <defs>
+    <!--FILTERS FOR BACKGROUND IMAGE-->  
+    <filter id="duotone-filter">
+
+      <!--FILTER DUO TONE EFFECT-->
+      <feColorMatrix
+        type="matrix"
+        values="1  0  0  0  0
+                1  0  0  0  0
+                1  0  0  0  0
+                0  0  0  1  0"/>   
+    </filter>
+    <!--FILTERS FOR AVATAR IMAGES-->  
+    <filter id="trans-filter">
+    <!--FILTER FOR TRANSPARENCY EFFECT-->    
+    <feColorMatrix values="1 0 0 0 0
+                           0 1 0 0 0
+                           0 0 1 0 0
+                           0 1 0 0 0"/>
+   </filter>
+   <!--CLIPPING MASK EFFECT FOR AVATAR IMAGES-->
+   <clipPath id="clipping">
+     <!--MASK-->
+     <path transform="translate(317 86) scale(1)" d="M45 3752.218a20.563 20.563 0 0 1-20.563 20.562 20.563 20.563 0 0 1-20.562-20.562 20.563 20.563 0 0 1 20.563-20.563A20.563 20.563 0 0 1 45 3752.218zM150 29.503a137.369 137.369 0 0 0-137.369 137.37 137.369 137.369 0 0 0 47.326 103.623h179.965a137.369 137.369 0 0 0 47.447-103.624A137.369 137.369 0 0 0 150 29.503z"/>
+   </clipPath>
+  </defs>
+  
+  <!--BACKGROUND IMAGE 7-->  
+  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG" role="image" title="Tallinn Background"/>
+  
+   <!-- BUTTON -->
+  <a xlink="#0" class="button" role="tab" focusable="true"  tabindex="0"> 
+      <rect width="270" height="60" x="332" y="235" class="btn-color" ry="10" rx="10"/>
+      <text text-anchor="middle" role="heading" aria-level="button" x="467" y="273" class="no-select">
+        tickets on sale now
+      </text>
+  </a>
+  
+  <!--LINK TEXT 7-->
+  <a href="#0" role="tab" focusable="true"  tabindex="0">
+  <text text-anchor="middle" role="heading" aria-level="link" x="467" y="356" class="no-select">www.svgsummit.com</text>
+  </a>
+   
+</svg>
+  
+<!--//////SLIDER BOX 6///////-->
+  
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMidYMid slice" viewBox="0 0 934 584" class="box srgb-filter"> 
+  
+  <!--BACKGROUND IMAGE 6--> 
+  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG" role="image" title="Tallinn Background"/>
+  
+  <!--AVATAR IMAGE 6-->
+  <image width="340" height="340" x="300" y="60" filter="url(#trans-filter)" clip-path="url(#clipping)" xlink:href="http://visualangle.ee/image/hipster_002.jpg" role="image" title="avatar" class="avatar"/>
+  
+  <!--HEADING TEXT 6-->    
+  <text text-anchor="middle" y="450">
+  <tspan  role="heading" aria-level="6" x="467" y="395">Hans Miller</tspan>
+  <tspan role="heading" aria-level="2" x="467" y="415">Designer & Front End Developer</tspan>
+  <tspan role="heading" aria-level="5" x="467" y="455">Impossible with SVG</tspan>
+  </text> 
+ 
+</svg>
+  
+<!--//////SLIDER BOX 5///////-->
+  
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMidYMid slice" viewBox="0 0 934 584" class="box srgb-filter">
+  
+  <!--BACKGROUND IMAGE 5--> 
+  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG" role="image" title="Tallinn Background"/>
+  
+  <!--AVATAR IMAGE 5-->  
+  <image width="340" height="340" x="300" y="60" filter="url(#trans-filter)" clip-path="url(#clipping)" xlink:href="http://visualangle.ee/image/hipster_003.jpg" role="image" title="avatar" class="avatar"/>
+ 
+  <!--HEADING TEXT 5-->    
+  <text text-anchor="middle" y="450">
+  <tspan  role="heading" aria-level="6" x="467" y="395">John Sharp</tspan>
+  <tspan role="heading" aria-level="2" x="467" y="415">Senior UX Engineer</tspan>
+  <tspan role="heading" aria-level="5" x="467" y="455">Cracking the SVG Code</tspan>
+  </text> 
+
+</svg>
+
+<!--//////SLIDER BOX 4///////-->
+  
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMidYMid slice" viewBox="0 0 934 584" class="box srgb-filter">
+  
+  <!--BACKGROUND IMAGE 4--> 
+  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG" role="image" title="Tallinn Background"/>
+  
+  <!--AVATAR IMAGE 4-->  
+  <image width="340" height="340" x="300" y="60" filter="url(#trans-filter)" clip-path="url(#clipping)" xlink:href="http://visualangle.ee/image/hipster_004.jpg" role="image" title="avatar" class="avatar"/>
+ 
+  <!--HEADING TEXT 4-->    
+  <text text-anchor="middle" y="450">
+  <tspan  role="heading" aria-level="6" x="467" y="395">Liza Lanier</tspan>
+  <tspan role="heading" aria-level="2" x="467" y="415">Interaction Designer and Animator</tspan>
+  <tspan role="heading" aria-level="5" x="467" y="455">SVG Animations</tspan>
+  </text> 
+</svg>
+
+<!--//////SLIDER BOX 3///////-->
+  
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMidYMid slice" viewBox="0 0 934 584" class="box srgb-filter">
+  
+  <!--BACKGROUND IMAGE 3--> 
+   
+  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG"  role="image" title="Tallinn Background"/>
+    
+  <!--AVATAR IMAGE 3-->  
+  <image width="320" height="320" x="300" y="60" filter="url(#trans-filter)" clip-path="url(#clipping)" xlink:href="http://visualangle.ee/image/hipster_001.jpg" role="image" title="avatar" class="avatar"/>
+ 
+  <!--HEADING TEXT 3-->    
+  <text text-anchor="middle" y="450">
+  <tspan  role="heading" aria-level="6" x="467" y="395">Mike Smart</tspan>
+  <tspan role="heading" aria-level="2" x="467" y="415">Lead Educator </tspan>
+  <tspan role="heading" aria-level="5" x="467" y="455">Introducing SVG</tspan>
+  </text> 
+  
+</svg>
+
+<!--//////SLIDER BOX 2///////-->
+  
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMidYMid slice" viewBox="0 0 934 584" class="box srgb-filter">
+  
+  <!--BACKGROUND IMAGE 2--> 
+  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG" role="image" title="Tallinn Background"/>
+  
+  <!--HEADING TEXT 2-->   
+  <text text-anchor="middle" role="heading" aria-level="6" x="467" y="250">Learn SVG!</text>
+  <text text-anchor="middle" role="heading" aria-level="2" y="275">
+    <tspan dy="1.2em" x="467">2 days, 4 talks, 2 workshops</tspan>
+    <tspan dy="1.2em" x="467">4 industry experts</tspan>
+    <tspan dy="1.2em" x="467">deep dives into SVG</tspan>
+    <tspan dy="1.2em" x="467">tips, tricks, and solid techniques</tspan>
+  </text>
+   
+</svg>
+
+<!--//////SLIDER BOX 1///////-->
+  
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMidYMid slice" viewBox="0 0 934 584" class="box">
+  
+  <!--BACKGROUND IMAGE 1-->  
+  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG" role="image" title="Tallinn Background"/>
+ 
+  <!--HEADING TEXT 1-->    
+  <text text-anchor="middle" y="276">
+    <tspan role="heading" x="355" aria-level="hero">S</tspan>
+    <tspan role="heading" x="413" aria-level="hero">V</tspan>
+    <tspan role="heading" x="470" aria-level="hero">G</tspan>
+    <tspan role="heading" x="555" aria-level="3">Summit</tspan>
+  </text>
+  <text text-anchor="middle"  role="heading" aria-level="2" x="467" y="295">The conference for web developers</text>
+  <text text-anchor="middle" role="heading" aria-level="5" x="467" y="356">Tallinn 27-28 May 2020</text>
+ 
+</svg>
+
+<!--LOGO-->
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice" viewBox="0 0 300 60" id="logo" >
+  <a href="#0" role="tab" focusable="true"  tabindex="0">
+  <path fill="#fff" d="M60.635 1.038c.542 19.538 10.977 37.642 27.609 47.924C87.7 29.426 77.266 11.32 60.635 1.038zM31.152 48.962C47.677 38.68 58.05 20.47 58.616 1.038 42.092 11.32 31.719 29.53 31.152 48.962zm-2.042 0C28.49 29.636 18.173 11.266 1.756 1.038c.62 19.326 10.937 37.696 27.354 47.924zm37.356-6.767a6.768 6.768 0 1 0-13.536 0 6.768 6.768 0 0 0 13.536 0z"/>
+  <text x="95" y="50">Visual Angle</text>
+  </a>
+</svg>
+  
+</div>
+  
+  
+</body>
+</html>

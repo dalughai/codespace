@@ -12,8 +12,11 @@ a {
     text-decoration: none;
     font-family: 'Montserrat';
 }
-
+html{
+    font-family: 'Montserrat';
+}
 body {
+    font-family: 'Montserrat';
     /* background: url("../images/fondo.png");
     background-repeat: repeat;
     background-size: 50px; */
@@ -39,20 +42,6 @@ body {
 video{
     width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1248,6 +1237,7 @@ header ul{
 
 
 .img_404{
+    background-color: white;
     padding: 75px;
     text-align: center;
     width: 100%;
@@ -1279,22 +1269,22 @@ background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(23,23,23,1) 64%, r
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#171717', GradientType=0 );
 }
 #foot-contacto img{
-    width: 200px;
-    margin-top: 15px;
+    width: 50px;
+    margin-top: 5px;
     margin-bottom: 20px;
     margin-left: 850px;
     display: block;
 }
 #fimglogo{
-    padding-top: 15px;
-    width: 200px;
-    margin-top: 15px;
-    margin-bottom: 40px;
-    margin-left: 15px;
+    /* padding-top: 15px; */
+    width: 400px;
+    /* margin-top: 15px;
+    margin-bottom: 40px; */
+    /* margin-left: 15px; */
 }
 
-#foot-contacto {
-
+.ftimg{
+    width: 50px;
 }
 
 .fi{
@@ -1320,7 +1310,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 footer li{
     color: #E0E0E0;
-    font-family:'Roboto';
+    font-family:'Montserrat';
     list-style: none;
 }
 .footer-enlaces a{

@@ -3,7 +3,7 @@
     <div class="fila0 enlaces-header-f0">
     <ul class="header-list-f0">
                 <li>
-                    <a href="<?php echo $root ?>quienes_somos">¿QUIENES SOMOS?</a>
+                    <a href="<?php echo $root ?>quienes_somos">¿QUIÉNES SOMOS?</a>
                 </li>
                 <li>
                     <a href="">CONTACTO: 635946097</a>
@@ -82,7 +82,7 @@
             <?php
                 } else {
             ?>
-                <a href="<?php echo $root ?>login"  >Iniciar Sesion / Registrarse </a>
+                <a href="<?php echo $root ?>login"  >Iniciar Sesión / Registrarse </a>
             <?php
                 }
             ?>
@@ -265,7 +265,7 @@
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0 categorias-menu">
                       <li class="nav-item">
         <a href="">
-            <button id="sesion-hidden" class="btn btn-outline-light my-2 my-sm-0" type="submit">Iniciar Sesion <br>
+            <button id="sesion-hidden" class="btn btn-outline-light my-2 my-sm-0" type="submit">Iniciar Sesión <br>
                 Registrarse</button>
         </a>
                       </li>
@@ -280,19 +280,19 @@
 
     <ul class="categorias-menu">
       <li class="nav-item botonc botonizq">
-        <a href="<?php echo $root ?>categorias?id=1">Guitarra Electrica</a>
+        <a href="<?php echo $root ?>categorias?id=1">Guitarra Eléctrica</a>
       </li>
       <li class="nav-item botonc b2">
-        <a href="<?php echo $root ?>categorias?id=2">Guitarra Acustica</a>
+        <a href="<?php echo $root ?>categorias?id=2">Guitarra Acústica</a>
       </li>
       <li class="nav-item botonc b3">
-        <a href="<?php echo $root ?>categorias?id=3">Guitarra Clasica</a>
+        <a href="<?php echo $root ?>categorias?id=3">Guitarra Clásica</a>
       </li>
       <li class="nav-item botonc b4">
-        <a href="<?php echo $root ?>categorias?id=4">Bajo Electrico</a>
+        <a href="<?php echo $root ?>categorias?id=4">Bajo Eléctrico</a>
       </li>
       <li class="nav-item botonc b5">
-        <a href="<?php echo $root ?>categorias?id=5">Bajo Acustico</a>
+        <a href="<?php echo $root ?>categorias?id=5">Bajo Acústico</a>
       </li>
       <li class="nav-item botonc botonder">
         <a href="<?php echo $root ?>categorias?id=6">Accesorios</a>

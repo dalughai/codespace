@@ -13,8 +13,8 @@
         </div>
         <div class="row info-stringbox">
                 <div class="col-12">
-                        <span class="info-fecha fadeIn animated">Tu String Box se enviara el <b><u><span class="fecha"></span></u></b>  </span><br/>
-                        <span class="info-fecha fadeIn animated">Recibiras tu StringBox el <b><u><span class="dia_fecha"></span></u></b> de cada mes  </span><br/>
+                        <span class="info-fecha fadeIn animated">Tu String Box se enviará el <b><u><span class="fecha"></span></u></b>  </span><br/>
+                        <span class="info-fecha fadeIn animated">Recibirás tu StringBox el <b><u><span class="dia_fecha"></span></u></b> de cada mes  </span><br/>
                         <span class="info-fecha fadeIn animated">Con el siguiente contenido:  </span>
                 </div>
         </div>

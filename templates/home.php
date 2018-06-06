@@ -62,7 +62,7 @@
                 <div id="presentacion" class="row d-flex justify-content-center text-center">
                     <div class="col-sm-12 col-lg-4 p-2">
                         <img src="<?php echo $root ?>images/fotos_tienda/setup.png">
-                        <span>Maxima calidad para tu instrumento</span>
+                        <span>Máxima calidad para tu instrumento</span>
                     </div>    
                     <div class="col-sm-12 col-lg-4 p-2">
                         <img src="<?php echo $root ?>images/fotos_tienda/lock.png">
@@ -70,7 +70,7 @@
                     </div> 
                     <div class="col-sm-12 col-lg-4 p-2">
                         <img src="<?php echo $root ?>images/fotos_tienda/storage.png">
-                        <span>El mayor almacen de cuerdas de Europa</span>
+                        <span>La mayor variedad de cuerdas</span>
                     </div> 
                 </div>
                 
