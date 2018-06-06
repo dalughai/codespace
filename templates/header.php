@@ -3,7 +3,7 @@
     <div class="fila0 enlaces-header-f0">
     <ul class="header-list-f0">
                 <li>
-                    <a href="">¿QUIENES SOMOS?</a>
+                    <a href="<?php echo $root ?>quienes_somos">¿QUIENES SOMOS?</a>
                 </li>
                 <li>
                     <a href="">CONTACTO: 635946097</a>

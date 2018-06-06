@@ -13,7 +13,6 @@ $sql = "SELECT * FROM productos WHERE id = $id_producto";
         
         $producto = mysqli_fetch_assoc( $resultado );
         
-        
         $sql = "select categorias.nombre from productos join categorias on categorias.id = productos.id_categoria where productos.id = '$id_producto'";
         
         $resultado = mysqli_query($conexion, $sql);

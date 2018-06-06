@@ -40,13 +40,19 @@ $(document).ready(function(){
 
 function getDatosProducto(id_producto){
 	jQuery.get( "/api/producto/"+id_producto +"", function(datos){
-		console.log(datos.producto);
+		var desc = datos.producto[0]['descripcion'];
+		
 		$('.id').val(datos.producto[0]['id']);
 		$('.nombre').val(datos.producto[0]['nombre']);
 		$('.ref').val(datos.producto[0]['referencia']);
 		$('.precio').val(datos.producto[0]['precio_iva']);
 		$('.desc_corta').val(datos.producto[0]['descripcion_corta']);
-		$('.desc').val(datos.producto[0]['descripcion']);
+		$('.desc').val(desc);
+		console.log($('.desc').val());
+       
+
+		
+		
 	});
 }
 

@@ -685,7 +685,9 @@ header ul{
 .index_view img {
     
 }
-
+.img-custom:hover{
+    background: src
+}
 
 /*Carrusel*/
  @media screen and (max-width: 1100px) {
@@ -709,10 +711,7 @@ header ul{
     margin-top: 25px;
     padding-bottom: 25px;
 }
-item-carrusel{
-    
-    
-}
+
 .precio-producto{
     color: black;
 }
@@ -723,7 +722,9 @@ item-carrusel{
 }
 
 
-
+.box{
+    transition: 1s;
+}
 
 
 
@@ -1240,19 +1241,17 @@ item-carrusel{
 /*DETALLE PRODUCTO-------------------------------------------------------*/
 
 
+.img_404{
+    padding: 75px;
+    text-align: center;
+    width: 100%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.info-texto{
+    margin: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
 
 
 

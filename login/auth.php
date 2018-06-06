@@ -12,7 +12,7 @@ if ($usuario_email == '' && $usuario_password == '') {
     $error = "Error de autentificación";
     $template_seccion = "../templates/login.php";
 }
-
+$usuario_password = md5($usuario_password);
 $sql = "SELECT * FROM usuarios WHERE email='$usuario_email' AND passwd='$usuario_password'";
 
 $resultado = mysqli_query($conexion, $sql);

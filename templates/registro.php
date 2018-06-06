@@ -1,7 +1,7 @@
 <?php 
     $usuario_email = (isset($_POST["email_create"])) ? $_POST["email_create"] : "";
 ?>
-
+    <script src="<?php echo $root?>js/validacion.js"></script>
 <div id="body-container" class="container">  
     <div class="row mx-0 d-flex justify-content-around login-head"><h1>REGISTRO DE USUARIO</h1></div>
     <div class="row d-flex justify-content-around">
@@ -17,60 +17,60 @@
     <div class="form-row">
     <div class="col-md-3 mb-3">
       <label for="validationServer10">DNI</label>
-      <input type="text" class="form-control" id="validationServer10" placeholder="DNI" name="dni" value="" required>
+      <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" value="" required>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationServer01">Nombre</label>
-      <input type="text" class="form-control" id="validationServer01" placeholder="First name" name="nombre" value="" required>
+      <input type="text" class="form-control" id="nombre" placeholder="First name" name="nombre" value="" required>
     </div>
     
     <div class="col-md-3 mb-3">
       <label for="validationServer024">Primer Apellido</label>
-      <input type="text" class="form-control" id="validationServer024" placeholder="Last name" name="apellido1" value="" required>
+      <input type="text" class="form-control" id="apellido1" placeholder="Last name" name="apellido1" value="" required>
 
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationServer02">Segundo Apellido</label>
-      <input type="text" class="form-control" id="validationServer02" placeholder="Last name" name="apellido2" value="" required>
+      <input type="text" class="form-control" id="apellido2" placeholder="Last name" name="apellido2" value="" required>
     </div>
   </div>
 <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationServer011">Contraseña</label>
-      <input type="password" class="form-control" id="validationServer011" placeholder="Contraseña" name="password" value="" required>
+      <input type="password" class="form-control" id="password" placeholder="Contraseña" name="password" value="" required>
     </div>
     
     <div class="col-md-6 mb-3">
       <label for="validationServer022">Repita Contraseña</label>
-      <input type="password" class="form-control" id="validationServer022" placeholder="Repita la Contraseña" name="repassword" value="" required>
+      <input type="password" class="form-control" id="repassword" placeholder="Repita la Contraseña" name="repassword" value="" required>
     </div>
 </div>
   <div class="form-row">
       
     <div class="col-md-3 mb-3">
       <label for="validationServer03">Codigo Postal</label>
-      <input type="text" class="form-control" id="validationServer03" name="codigopostal" placeholder="Codigo Postal" required>
+      <input type="text" class="form-control" id="codigopostal" name="codigopostal" placeholder="Codigo Postal" required>
       <div class="invalid-feedback">
         Please provide a valid city.
       </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationServer04">Ciudad</label>
-      <input type="text" class="form-control" id="validationServer04" name="ciudad" placeholder="Ciudad" required>
+      <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ciudad" required>
       <div class="invalid-feedback">
         Please provide a valid state.
       </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationServer05">Provincia</label>
-      <input type="text" class="form-control" id="validationServer05" name="provincia" placeholder="Provincia" required>
+      <input type="text" class="form-control" id="provincia" name="provincia" placeholder="Provincia" required>
       <div class="invalid-feedback">
         Please provide a valid zip.
       </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationServer06">Comunidad Autonoma</label>
-      <input type="text" class="form-control" id="validationServer06" name="comunidad" placeholder="Comunidad Autonoma" required>
+      <input type="text" class="form-control" id="comunidad" name="comunidad" placeholder="Comunidad Autonoma" required>
       <div class="invalid-feedback">
         Please provide a valid city.
       </div>
@@ -79,18 +79,18 @@
 <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationServer07">Direccion</label>
-      <input type="text" class="form-control" id="validationServer07" name="direccion" placeholder="Dirección" value="" required>
+      <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección" value="" required>
     </div>
     
     <div class="col-md-3 mb-3">
       <label for="validationServer08">Telefono</label>
-      <input type="text" class="form-control" id="validationServer08" name="telefono" placeholder="Telefono" value="" required>
+      <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" value="" required>
 
     </div>
     <div class="col-md-3 mb-3">
               <label for="validationServer07">Sexo</label><br>
     <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" id="customRadioInline1" name="sexo" value="1" class="custom-control-input">
+      <input type="radio" id="sexo" name="sexo" value="1" class="custom-control-input">
       <label class="custom-control-label" for="customRadioInline1">Hombre</label>
     </div>
     <div class="custom-control custom-radio custom-control-inline">
@@ -101,7 +101,7 @@
   </div>
   <div class="form-group">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required>
+      <input class="form-check-input terminos" type="checkbox" value="" id="terminos" required>
       <label class="form-check-label" for="invalidCheck3">
         Acepto los terminos y condiciones.
       </label>

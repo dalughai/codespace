@@ -76,17 +76,17 @@
                 
                 <div id="boxs" class="row text-center d-flex justify-content-center">
                     <div class="col-sm-12 col-lg-4 col-xl-4 box">
-                       <a href="<?php echo $root ?>custom"> <img class="" src="<?php echo $root ?>images/calibre.jpg"></a>
+                       <a href="<?php echo $root ?>custom"> <img class="img-custom fadeIn animated" src="<?php echo $root ?>images/calibre.jpg"></a>
                         
                     </div>
                     
                     <div class="col-sm-12 col-lg-4 col-xl-4 box">
-                        <a href="<?php echo $root ?>suscripcion">  <img class="" src="<?php echo $root ?>images/mensual.jpeg"></a>
+                        <a href="<?php echo $root ?>suscripcion">  <img class="img-stringbox fadeIn animated" src="<?php echo $root ?>images/mensual.jpeg"></a>
 
                     </div>
                     
                     <div class="col-sm-12 col-lg-4 col-xl-4 box">
-                        <a href="<?php echo $root ?>envios"> <img class="" src="<?php echo $root ?>images/envios.jpg"></a>
+                        <a href="<?php echo $root ?>envios"> <img class="img-envios fadeIn animated" src="<?php echo $root ?>images/envios.jpg"></a>
 
                     </div>
                 </div>

@@ -16,7 +16,7 @@ $sexo = (isset($_POST["sexo"])) ? $_POST["sexo"] : "";
 $codigopostal = (isset($_POST["codigopostal"])) ? $_POST["codigopostal"] : "";
 /*$ = (isset($_POST[""])) ? $_POST[""] : "";*/
 
-
+$password = md5($password);
 
 
 if( $nombre == '' && $apellido1 == '' && $apellido2 == '' && $email == '' && $password == '' && $telefono == '' && $ciudad == '' && $provincia == '' && $comunidad == '' && $sexo == '' && $dni == '' && $codigopostal == '')
@@ -45,13 +45,13 @@ if( $nombre == '' && $apellido1 == '' && $apellido2 == '' && $email == '' && $pa
             $id_usuario = mysqli_fetch_assoc( $resultado ) ;   
             
             $id = $id_usuario['id'];
-        
+            $id = md5($id);
         /*Enviamos mail para activar el usuario*/
     
     $asunto = "Bienvenido a To String Shop!";
     $cuerpo = "Muchas gracias $nombre por Registrarte en To String Shop <br><br>"
             . "Para activar tu cuenta haz click en el siguiente enlace: <br><br>"
-            . "127.0.0.1/codespace/registro/activar_usuario.php?id=$id";
+            . "127.0.0.1/tostringshop/registro/activar_usuario.php?id=$id";
     
     
     enviarEmail($email, $asunto, $cuerpo, $nombre );
@@ -59,7 +59,7 @@ if( $nombre == '' && $apellido1 == '' && $apellido2 == '' && $email == '' && $pa
     
         
     } else {
-        $error = $sql;
+        $error = "ERROR AL INTRODUCIR LOS DATOS";
         $template_seccion = "../templates/registro.php";
     }
 

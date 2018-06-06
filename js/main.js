@@ -141,11 +141,26 @@ $(document).ready(function(){
 
 
 
+$('.img-custom').on('mouseenter',function(){
+    $('.img-custom').attr('src',root + "images/calibreHover.jpg")
+});
+$('.img-custom').on('mouseleave',function(){
+    $('.img-custom').attr('src',root + "images/calibre.jpg")
+});
 
-
-
-
-
+$('.img-stringbox').on('mouseenter',function(){
+    $('.img-stringbox').attr('src',root + "images/string_boxHover.jpg")
+    
+});
+$('.img-stringbox').on('mouseleave',function(){
+    $('.img-stringbox').attr('src',root + "images/mensual.jpeg")
+});
+$('.img-envios').on('mouseenter',function(){
+    $('.img-envios').attr('src',root + "images/enviosHover.jpg")
+});
+$('.img-envios').on('mouseleave',function(){
+    $('.img-envios').attr('src',root + "images/envios.jpg")
+});
 
 
 

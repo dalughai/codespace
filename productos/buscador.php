@@ -13,8 +13,10 @@ $sql = "SELECT * FROM productos WHERE nombre = '$nombre'";
         
         $producto = mysqli_fetch_assoc( $resultado );
         
+
         $id_producto = $producto['id'];
-        
+
+
         $sql = "select categorias.nombre from productos join categorias on categorias.id = productos.id_categoria where productos.id = '$id_producto'";
         
         $resultado = mysqli_query($conexion, $sql);
@@ -26,9 +28,11 @@ $sql = "SELECT * FROM productos WHERE nombre = '$nombre'";
         $resultado = mysqli_query($conexion, $sql);
         
         $marca = mysqli_fetch_assoc($resultado );
-        
-        $template_seccion = "../templates/producto.php";
-
+        if($id_producto < 1){
+            $template_seccion = "../templates/404.php";
+        } else {
+            $template_seccion = "../templates/producto.php";
+        }
     } else {
         $template_seccion = "../templates/home.php";
     }
