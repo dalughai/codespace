@@ -722,13 +722,19 @@ header ul{
 }
 
 
-.box{
-    transition: 1s;
+.img-custom{
+    border-radius: 25px;
+}
+.img-stringbox{
+    border-radius: 25px;
+}
+.img-envios{
+    border-radius: 25px;
 }
 
-
-
-
+.box{
+    margin-bottom:  55px;
+}
 
 
 
