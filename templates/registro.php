@@ -90,7 +90,7 @@
     <div class="col-md-3 mb-3">
               <label for="validationServer07">Sexo</label><br>
     <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" id="sexo" name="sexo" value="1" class="custom-control-input">
+      <input type="radio" id="customRadioInline1" name="sexo" value="1" class="custom-control-input">
       <label class="custom-control-label" for="customRadioInline1">Hombre</label>
     </div>
     <div class="custom-control custom-radio custom-control-inline">

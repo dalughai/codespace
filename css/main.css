@@ -1210,6 +1210,9 @@ header ul{
     top: 263px;
     margin: auto;
 }
+.info-string{
+    font-size: 14px;
+}
 /*CATALOGO----------------------------------------------------------------*/
 
 #categorias{
@@ -1414,4 +1417,8 @@ footer li{
   }
   .pagination a.current {
     background: #f3f3f3;
+  }
+
+  .tss{
+      z-index: 5;
   }

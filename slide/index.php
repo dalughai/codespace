@@ -1,6 +1,6 @@
 
 <!--Pen by Margus Lillemägi | codepen.io/VisualAngle/-->
-
+<?php require '../startApp.php';?>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -244,11 +244,11 @@
           }
           /*SELECT A DUOTONE FILTER*/
           // ORANGE
-            convertToDuoTone([221, 72, 20], [44, 0, 30]);
+          convertToDuoTone([221, 72, 20], [44, 0, 30]);
           // RED
           //convertToDuoTone([240, 14, 46], [25, 37, 80]);
           // GREEN
-          //convertToDuoTone([115, 217, 112], [36, 32, 106]);
+         //convertToDuoTone([80, 203, 254], [0, 0, 85]);
 
          };
       });
@@ -283,20 +283,8 @@
   </defs>
   
   <!--BACKGROUND IMAGE 7-->  
-  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG" role="image" title="Tallinn Background"/>
+  <image width="934" height="584" class="tss"filter="url(#duotone-filter)"  xlink:href="<?php echo $root ?>images/fotos_tienda/tss_1.jpg" title="Tallinn Background"/>
   
-   <!-- BUTTON -->
-  <a xlink="#0" class="button" role="tab" focusable="true"  tabindex="0"> 
-      <rect width="270" height="60" x="332" y="235" class="btn-color" ry="10" rx="10"/>
-      <text text-anchor="middle" role="heading" aria-level="button" x="467" y="273" class="no-select">
-        tickets on sale now
-      </text>
-  </a>
-  
-  <!--LINK TEXT 7-->
-  <a href="#0" role="tab" focusable="true"  tabindex="0">
-  <text text-anchor="middle" role="heading" aria-level="link" x="467" y="356" class="no-select">www.svgsummit.com</text>
-  </a>
    
 </svg>
   
@@ -305,17 +293,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMidYMid slice" viewBox="0 0 934 584" class="box srgb-filter"> 
   
   <!--BACKGROUND IMAGE 6--> 
-  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG" role="image" title="Tallinn Background"/>
+  <image width="934" height="584" class="tss" filter="url(#duotone-filter)"  xlink:href="<?php echo $root ?>images/fotos_tienda/tss_3.jpg" title="Tallinn Background"/>
   
-  <!--AVATAR IMAGE 6-->
-  <image width="340" height="340" x="300" y="60" filter="url(#trans-filter)" clip-path="url(#clipping)" xlink:href="http://visualangle.ee/image/hipster_002.jpg" role="image" title="avatar" class="avatar"/>
-  
-  <!--HEADING TEXT 6-->    
-  <text text-anchor="middle" y="450">
-  <tspan  role="heading" aria-level="6" x="467" y="395">Hans Miller</tspan>
-  <tspan role="heading" aria-level="2" x="467" y="415">Designer & Front End Developer</tspan>
-  <tspan role="heading" aria-level="5" x="467" y="455">Impossible with SVG</tspan>
-  </text> 
  
 </svg>
   
@@ -324,17 +303,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMidYMid slice" viewBox="0 0 934 584" class="box srgb-filter">
   
   <!--BACKGROUND IMAGE 5--> 
-  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG" role="image" title="Tallinn Background"/>
+  <image width="934" height="584" class="tss" filter="url(#duotone-filter)"  xlink:href="<?php echo $root ?>images/fotos_tienda/tss_2.jpg" title="Tallinn Background"/>
   
-  <!--AVATAR IMAGE 5-->  
-  <image width="340" height="340" x="300" y="60" filter="url(#trans-filter)" clip-path="url(#clipping)" xlink:href="http://visualangle.ee/image/hipster_003.jpg" role="image" title="avatar" class="avatar"/>
- 
-  <!--HEADING TEXT 5-->    
-  <text text-anchor="middle" y="450">
-  <tspan  role="heading" aria-level="6" x="467" y="395">John Sharp</tspan>
-  <tspan role="heading" aria-level="2" x="467" y="415">Senior UX Engineer</tspan>
-  <tspan role="heading" aria-level="5" x="467" y="455">Cracking the SVG Code</tspan>
-  </text> 
 
 </svg>
 
@@ -343,17 +313,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMidYMid slice" viewBox="0 0 934 584" class="box srgb-filter">
   
   <!--BACKGROUND IMAGE 4--> 
-  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG" role="image" title="Tallinn Background"/>
+  <image width="934" height="584" class="tss" filter="url(#duotone-filter)" xlink:href="<?php echo $root ?>images/fotos_tienda/tss_1.jpg" title="Tallinn Background"/>
   
-  <!--AVATAR IMAGE 4-->  
-  <image width="340" height="340" x="300" y="60" filter="url(#trans-filter)" clip-path="url(#clipping)" xlink:href="http://visualangle.ee/image/hipster_004.jpg" role="image" title="avatar" class="avatar"/>
- 
-  <!--HEADING TEXT 4-->    
-  <text text-anchor="middle" y="450">
-  <tspan  role="heading" aria-level="6" x="467" y="395">Liza Lanier</tspan>
-  <tspan role="heading" aria-level="2" x="467" y="415">Interaction Designer and Animator</tspan>
-  <tspan role="heading" aria-level="5" x="467" y="455">SVG Animations</tspan>
-  </text> 
 </svg>
 
 <!--//////SLIDER BOX 3///////-->
@@ -362,17 +323,12 @@
   
   <!--BACKGROUND IMAGE 3--> 
    
-  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG"  role="image" title="Tallinn Background"/>
+  <image width="934" height="584" class="tss"  xlink:href="<?php echo $root ?>images/fotos_tienda/tss_3.jpg" title="Tallinn Background"/>
     
   <!--AVATAR IMAGE 3-->  
-  <image width="320" height="320" x="300" y="60" filter="url(#trans-filter)" clip-path="url(#clipping)" xlink:href="http://visualangle.ee/image/hipster_001.jpg" role="image" title="avatar" class="avatar"/>
  
   <!--HEADING TEXT 3-->    
-  <text text-anchor="middle" y="450">
-  <tspan  role="heading" aria-level="6" x="467" y="395">Mike Smart</tspan>
-  <tspan role="heading" aria-level="2" x="467" y="415">Lead Educator </tspan>
-  <tspan role="heading" aria-level="5" x="467" y="455">Introducing SVG</tspan>
-  </text> 
+
   
 </svg>
 
@@ -381,43 +337,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMidYMid slice" viewBox="0 0 934 584" class="box srgb-filter">
   
   <!--BACKGROUND IMAGE 2--> 
-  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG" role="image" title="Tallinn Background"/>
+  <image width="934" height="584" class="tss"  xlink:href="<?php echo $root ?>images/fotos_tienda/tss_2.jpg" title="Tallinn Background"/>
   
   <!--HEADING TEXT 2-->   
-  <text text-anchor="middle" role="heading" aria-level="6" x="467" y="250">Learn SVG!</text>
-  <text text-anchor="middle" role="heading" aria-level="2" y="275">
-    <tspan dy="1.2em" x="467">2 days, 4 talks, 2 workshops</tspan>
-    <tspan dy="1.2em" x="467">4 industry experts</tspan>
-    <tspan dy="1.2em" x="467">deep dives into SVG</tspan>
-    <tspan dy="1.2em" x="467">tips, tricks, and solid techniques</tspan>
-  </text>
+
    
 </svg>
 
 <!--//////SLIDER BOX 1///////-->
-  
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMidYMid slice" viewBox="0 0 934 584" class="box">
+<svg xmlns="" xmlns:xlink=""  preserveAspectRatio="xMidYMid slice" viewBox="0 0 934 584" class="box">
   
   <!--BACKGROUND IMAGE 1-->  
-  <image width="934" height="584" filter="url(#duotone-filter)" xlink:href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ayuntamiento%2C_vistas_panor%C3%A1micas_desde_Toompea%2C_Tallin%2C_Estonia%2C_2012-08-05%2C_DD_21.JPG" role="image" title="Tallinn Background"/>
+  <image width="934" height="584" class="tss" xlink:href="<?php echo $root ?>images/fotos_tienda/tss_1.jpg" title="Tallinn Background"/>
  
   <!--HEADING TEXT 1-->    
-  <text text-anchor="middle" y="276">
-    <tspan role="heading" x="355" aria-level="hero">S</tspan>
-    <tspan role="heading" x="413" aria-level="hero">V</tspan>
-    <tspan role="heading" x="470" aria-level="hero">G</tspan>
-    <tspan role="heading" x="555" aria-level="3">Summit</tspan>
-  </text>
-  <text text-anchor="middle"  role="heading" aria-level="2" x="467" y="295">The conference for web developers</text>
-  <text text-anchor="middle" role="heading" aria-level="5" x="467" y="356">Tallinn 27-28 May 2020</text>
+
  
 </svg>
 
 <!--LOGO-->
-<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice" viewBox="0 0 300 60" id="logo" >
   <a href="#0" role="tab" focusable="true"  tabindex="0">
   <path fill="#fff" d="M60.635 1.038c.542 19.538 10.977 37.642 27.609 47.924C87.7 29.426 77.266 11.32 60.635 1.038zM31.152 48.962C47.677 38.68 58.05 20.47 58.616 1.038 42.092 11.32 31.719 29.53 31.152 48.962zm-2.042 0C28.49 29.636 18.173 11.266 1.756 1.038c.62 19.326 10.937 37.696 27.354 47.924zm37.356-6.767a6.768 6.768 0 1 0-13.536 0 6.768 6.768 0 0 0 13.536 0z"/>
-  <text x="95" y="50">Visual Angle</text>
   </a>
 </svg>
   

@@ -88,8 +88,8 @@
         </div>
         <div clas="row">
             <?php
-    $sql = "SELECT * FROM productos ";
-
+            $idcc = $producto['id_categoria'];
+    $sql = "SELECT * FROM productos where id_categoria = $idcc limit 25";
     $resultado = mysqli_query($conexion, $sql);
 
     if ($resultado) {

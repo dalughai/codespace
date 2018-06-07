@@ -126,7 +126,7 @@ function crearStringBox(id_carrito,id_usuario,dia_entrega){
                 $('.btn-crear-sbox').css('display','none');
                 $('.lista_carrito').css('display','none');
                 $('.stringbox_h1').text("¡Has creado tu StringBox con exito!");
-                $('.stringbox_h2').text("Puedes editar la fecha de entrega en el apartado StringBox de tu Panel de Usuario");
+                //$('.stringbox_h2').text("Puedes apartado StringBox de tu Panel de Usuario");
             },500);
            
            var descripcion = "El contenido de la caja es el siguiente: <br/>";

@@ -17,10 +17,10 @@
                           </ol>
                           <div class="carousel-inner">
                             <div class="carousel-item active">
-                              <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner.jpg" alt="First slide">
+                              <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner6.jpg" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                              <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner9.png" alt="Second slide">
+                              <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner.jpg" alt="Second slide">
                             </div>
                             <div class="carousel-item">
                               <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner4.jpg" alt="Third slide">
@@ -29,7 +29,7 @@
                               <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner5.jpg" alt="Fourth slide">
                             </div>
                             <div class="carousel-item">
-                              <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner6.jpg" alt="5 slide">
+                              <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner9.png" alt="5 slide">
                             </div>
                             <div class="carousel-item">
                               <img class="d-block w-100" src="<?php echo $root ?>images/fotos_tienda/banner7.png" alt="6 slide">
@@ -92,7 +92,7 @@
                 </div>
                 
     <?php
-    $sql = "SELECT * FROM productos ";
+    $sql = "SELECT * FROM productos limit 18 ";
 
     $resultado = mysqli_query($conexion, $sql);
 
