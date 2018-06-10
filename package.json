@@ -1,7 +1,7 @@
 {
   "name": "test",
   "version": "0.0.1",
-  "description": "Mi primera prueba con npm",
+  "description": "To String Shop",
   "main": "index-es7.js",
   "scripts": {
     "start": "node index-es7.js",
@@ -13,7 +13,7 @@
     "tag1",
     "tag2"
   ],
-  "author": "Javier Franco",
+  "author": "Sergio Álvarez García",
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.26.0",

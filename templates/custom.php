@@ -13,7 +13,7 @@
                 <option class="custom-instru" value="1">Guitarra Eléctrica</option>
                 <option class="custom-instru" value="2">Guitarra Acústica</option>
                 <option class="custom-instru" value="3">Guitarra Clasica</option>
-                <option class="custom-instru" value="4">Bajo Elúctrico</option>
+                <option class="custom-instru" value="4">Bajo Eléctrico</option>
                 <option class="custom-instru" value="5">Bajo Acústico</option>
                 </select>
             </div>

@@ -33,7 +33,7 @@ $(document).ready(function(){
         var mesActual = new Date().getMonth() + 1;
         var anioActual = new Date().getFullYear();
 
-        console.log(diaActual);
+        //console.log(diaActual);
         fechaen =convertDateEsToEn(fecha,1);
         let date = new Date(fechaen);
         var ndiaSemana = date.getDay();
@@ -42,7 +42,7 @@ $(document).ready(function(){
         var nanio = date.getFullYear();
         
 
-        console.log(ndia, diaActual);
+        //console.log(ndia, diaActual);
 
         if(ndiaSemana == 0){
             if(ndia == 31){
@@ -79,7 +79,7 @@ $(document).ready(function(){
         }
 
         fecha_envio = ndia + "/" + nmes + "/" + nanio;
-        console.log(fecha_envio);
+        //console.log(fecha_envio);
         $('.info-stringbox').css('display','block');
         $('.fecha').text(fecha_envio);
         $('.dia_fecha').text(dia_envio);
@@ -125,7 +125,9 @@ function crearStringBox(id_carrito,id_usuario,dia_entrega){
                 $('.info-stringbox').css('display','none');
                 $('.btn-crear-sbox').css('display','none');
                 $('.lista_carrito').css('display','none');
-                $('.stringbox_h1').text("¡Has creado tu StringBox con exito!");
+                $('.stringbox_h1').text("¡Has creado tu String Box con exito!");
+                $('.stringbox_h2').text('Ve a Mi Pedido para confirmar la compra');
+
                 //$('.stringbox_h2').text("Puedes apartado StringBox de tu Panel de Usuario");
             },500);
            
@@ -168,7 +170,7 @@ function modificarCarrito(id_producto,id_usuario,id_carrito){
         "id_carrito" : id_carrito,
         "id_usuario" : id_usuario
     };
-    console.log("El id nuevo es :" + id_producto );
+    //console.log("El id nuevo es :" + id_producto );
     $.ajax({
         type: "POST",
         url: root + "/libs/modificar_carrito.php",

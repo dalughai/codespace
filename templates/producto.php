@@ -53,7 +53,9 @@
                 <tr>
                   <th scope="row"></th>
                   <td colspan="2">
-            <?php if(isset($_SESSION["carrito"])){ ?>
+            <?php if(isset($_SESSION["carrito"])){ 
+                        if($categoria['id_categoria'] != 32){                              
+                                                            ?>
                                 <button id="" 
                                         data-producto-id="<?php echo $producto['id']?>" 
                                         data-carrito-id="<?php echo $_SESSION['carrito']['id']?>"
@@ -62,7 +64,7 @@
                                         data-imagen-producto="<?php echo $producto['imagen']?>.png";
                                         data-producto-precio="<?php echo $producto['precio_iva']?>" 
                                         class="añadir btn btn-dark my-2 my-sm-0"><i class="fa fa-shopping-cart"></i> Añadir</button>
-                                                        <?php } ?>
+                                                        <?php } }?>
 
                     </td>
                 </tr>
@@ -114,7 +116,9 @@
                                 </a>
                                 
                                 <?php 
-                                    if((isset($_SESSION['carrito']))){                                 
+                                    if((isset($_SESSION['carrito']))){   
+                                        if($categoria['id_categoria'] != 32){                              
+
                                 ?>
                                 <!--
                                 <a href="<?php echo $root?>libs/insertar_producto_carrito.php?id=<?php echo $producto['id']?>&carrito=<?php echo $_SESSION['carrito']['id']?>&cantidad=1">
@@ -128,7 +132,7 @@
                                         data-producto-precio="<?php echo $producto['precio_iva']?>" 
                                         class="añadir btn btn-dark my-2 my-sm-0"><i class="fa fa-shopping-cart"></i> Añadir</button>
                                 <!--</a>-->
-                                <?php    }  ?>
+                                <?php    }  }?>
 
                             </div>
                             

@@ -345,7 +345,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 .item-nombre{
     position: absolute;
+    
 }
+.item-carrito p{
+    font-size: 13px;
+}
+
 .item-unidad{
     position: absolute;
     right: 54px;
@@ -677,7 +682,9 @@ header ul{
 .img-custom:hover{
     background: src
 }
-
+.info-string{
+    font-size: 11px;
+}
 /*Carrusel*/
  @media screen and (max-width: 1100px) {
             .item-carrusel img{

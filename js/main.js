@@ -46,7 +46,7 @@ $(document).ready(function(){
           autoplaySpeed: 1000
 });
     $('.botonizq').on('mouseenter',function(){
-        console.log("hola");
+        //console.log("hola");
         $(".mc").css("background-image", "url(" + root + "images/famarillo.png)");
         $(".mc").css("background-repeat", "repeat");
         $(".mc").css("background-size", "100px");
@@ -56,12 +56,12 @@ $(document).ready(function(){
         
     })
     $('.botonizq').on('mouseleave',function(){
-        console.log("dios");
+        //console.log("dios");
         $(".mc").css("background", "");
         $("#header-categorias").css("border-color", "#C8E2E2");
     })
     $('.b2').on('mouseenter',function(){
-        console.log("hola");
+        //console.log("hola");
         $(".mc").css("background-image", "url(" + root + "images/fverde.png)");
         $(".mc").css("background-repeat", "repeat");
         $(".mc").css("background-size", "100px");
@@ -70,12 +70,12 @@ $(document).ready(function(){
         
     })
     $('.b2').on('mouseleave',function(){
-        console.log("dios");
+        //console.log("dios");
         $(".mc").css("background", "");
         $("#header-categorias").css("border-color", "#C8E2E2");
     })
     $('.b3').on('mouseenter',function(){
-        console.log("hola");
+        //console.log("hola");
         $(".mc").css("background-image", "url(" + root + "images/frojo.png)");
         $(".mc").css("background-repeat", "repeat");
         $(".mc").css("background-size", "100px");
@@ -84,12 +84,12 @@ $(document).ready(function(){
         
     })
     $('.b3').on('mouseleave',function(){
-        console.log("dios");
+        //console.log("dios");
         $(".mc").css("background", "");
         $("#header-categorias").css("border-color", "#C8E2E2");
     })  
     $('.b4').on('mouseenter',function(){
-        console.log("hola");
+        //console.log("hola");
         $(".mc").css("background-image", "url(" + root + "images/frosa.png)");
         $(".mc").css("background-repeat", "repeat");
         $(".mc").css("background-size", "100px");
@@ -98,12 +98,12 @@ $(document).ready(function(){
         
     })
     $('.b4').on('mouseleave',function(){
-        console.log("dios");
+        //console.log("dios");
         $(".mc").css("background", "");
         $("#header-categorias").css("border-color", "#C8E2E2");
     })
     $('.b5').on('mouseenter',function(){
-        console.log("hola");
+        //console.log("hola");
         $(".mc").css("background-image", "url(" + root + "images/fnaranja.png)");
         $(".mc").css("background-repeat", "repeat");
         $(".mc").css("background-size", "100px");
@@ -112,12 +112,12 @@ $(document).ready(function(){
         
     })
     $('.b5').on('mouseleave',function(){
-        console.log("dios");
+        //console.log("dios");
         $(".mc").css("background", "");
         $("#header-categorias").css("border-color", "#C8E2E2");
     })
     $('.botonder').on('mouseenter',function(){
-        console.log("hola");
+        //console.log("hola");
         $(".mc").css("background-image", "url(" + root + "images/fazul.png)");
         $(".mc").css("background-repeat", "repeat");
         $(".mc").css("background-size", "100px");
@@ -126,7 +126,7 @@ $(document).ready(function(){
         
     })
     $('.botonder').on('mouseleave',function(){
-        console.log("dios");
+        //console.log("dios");
         $(".mc").css("background", "");
         $("#header-categorias").css("border-color", "#C8E2E2");
     })
@@ -278,7 +278,7 @@ function eliminarProducto(id_producto, id_carrito){
             $('.cantidad_total').text(data[0]['cantidad']);
             actualizarCarrito(id_carrito);
             var tot = $('.cantidad_total').text();
-            console.log(tot);
+            //console.log(tot);
             if( (tot-1) < 1){
                 $('.pedido-boton').css('display','none');
                 $('.producto-pedido').css('display','none');
@@ -314,7 +314,7 @@ function eliminarProducto(id_producto, id_carrito){
                     //$('.items-carrito').append(elemento_precio);
                 }
                 $('#buscadord').append(elemento_div_close);
-                //console.log(datos['nombre']);
+                ////console.log(datos['nombre']);
                 //$('.tx').text(datos[0]);
             }
         })

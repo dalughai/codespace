@@ -5,7 +5,7 @@ var where = "";
 var marca = "";
 var tipo = "";
 var precio = "";
-    console.log(root);
+    //console.log(root);
     var categoria = $('.categoria').val();
     renderProductos(sql,categoria,where);
 
@@ -73,7 +73,7 @@ function renderProductos(sql,categoria,where,marca,tipo, precio){
         "consulta" : consulta,
     };
 
-    console.log("Consulta a ejecutar " + consulta);
+    //console.log("Consulta a ejecutar " + consulta);
     $.ajax({
         type: "POST",
         url: root + "/libs/get_productos.php",
