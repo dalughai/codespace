@@ -7,7 +7,7 @@ $id_usuario =  (isset($_POST["id_usuario"])) ? $_POST["id_usuario"] : "";
 
 
 $array_datos = array();
-$sql = "select estado_pedido.nombre as estado, pedidos.*, date_format(pedidos.date_add,'%d %m %Y') as fecha from pedidos join estado_pedido on pedidos.id_estado = estado_pedido.id where id_cliente = $id_usuario";
+$sql = "select pedidos.id as idp, estado_pedido.nombre as estado, pedidos.*, date_format(pedidos.date_add,'%d %m %Y') as fecha from pedidos join estado_pedido on pedidos.id_estado = estado_pedido.id where id_cliente = $id_usuario order by idp desc";
 
 $resultado = mysqli_query($conexion, $sql);
 

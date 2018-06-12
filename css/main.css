@@ -345,7 +345,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 .item-nombre{
     position: absolute;
-    
+    font-weight: bold; 
 }
 .item-carrito p{
     font-size: 13px;
@@ -404,8 +404,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     color: #ffffff;
     border: rgb(58, 56, 56);
     width: 40%;
+    height: 37px;
     transition: 0.8s;
-
+    font-size: 15px;
 }
 #buscar::placeholder{
     color: #ffffff;

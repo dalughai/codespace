@@ -109,7 +109,7 @@
 
     <div class="row">
                 <div class="col-12 pedido-boton">
-                <form action="<?php echo $root?>pedidos/generar_pedido.php" method="POST">
+                <form action="<?php echo $root?>pedidos/generar_pedido.php" method="POST" target="_blank">
                 <input type="hidden" class="id_carrito" name="id_carrito" value="<?php echo $id_carrito?>">
                 <input type="hidden" name="id_usuario" value="<?php echo $id_usuario?>">
                     <script
@@ -133,12 +133,3 @@
     </div>
 
 
-<script>
-$(document).ready(function(){
-   $(".stripe-button-el").submit(function() {
-      url = $(this).attr("data-url");
-      window.open(url, '_blank');
-      return false;
-   });
-});
-</script>
