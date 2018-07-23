@@ -395,8 +395,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     color: #0998C2;
 }
 .logo-carrito{
-    background-color: dimgray;
-    
+    background-color: dimgray; 
 }
 #buscar{
     padding-left: 35px;
